@@ -1,0 +1,325 @@
+{
+    "global":
+    {
+        "language": "Galego",
+        "languages": {
+            "gl":"Galego",
+            "es":"Español",
+            "en":"Inglés"
+        },
+        "title": "app",
+        "browsehappy": "Estás usando un navegador <strong>non actualizado</strong>. Por favor, <a href=\"http://browsehappy.com/?locale=en\">actualiza o teu navegador</a> para mellorar a experiencia.",
+        "theme":
+        {
+            "component":
+            {
+                "hola":"ola",
+                "bookmark":
+                {
+                    "created": "Marcador {{title}} creado",
+                    "removed": "Marcador {{title}} eliminado",
+                    "empty":"Non se atoparon marcadores!"
+                }
+            }
+        },
+        "menu":
+        {
+            "home": "Inicio",
+            "entities":
+            {
+                "main": "Entidades",
+                "countryGbi": "País",
+                "unitGbi": "Unidade",
+                "lineGbi": "Liña",
+                "lineVersionGbi": "Versión de Liña",
+                "country": "País",
+                "unit": "Unidade",
+                "lineVersion": "Versión de Liña",
+                "line": "Liña",
+                "territory": "Territorio",
+                "employeeTerritoryOcupation": "Ocupación de Territorio de Empleados",
+                "employee": "Empleado",
+                "customerGroupTypeHierarchy": "Xerarquía de tipos de grupos de clientes",
+                "customerGroupType": "Tipo de grupos de clientes",
+                "customerGroup": "Grupo de clientes",
+                "customer": "Cliente",
+                "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
+            },
+            "account":
+            {
+                "main": "Conta",
+                "settings": "Axustes",
+                "password": "Contrasinal",
+                "sessions": "Sesións",
+                "login": "Iniciar sesión",
+                "logout": "Cerrar a sesión",
+                "register": "Crear unha conta"
+            },
+            "admin":
+            {
+                "main": "Administración",
+                "userManagement": "Xestión de userlogins",
+                "tracker": "Rexistro dos userlogins",
+                "metrics": "Métricas",
+                "health": "Saúde",
+                "configuration": "Configuración",
+                "logs": "Logs",
+                "audits": "Auditorías",
+                "apidocs": "API",
+                "database": "Base de datos",
+                "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
+            },
+            "language": "Idioma"
+        },
+        "form":
+        {
+            "username": "UserLogin",
+            "username.placeholder": "Nome de userlogin",
+            "newpassword": "Novo contrasinal",
+            "newpassword.placeholder": "Novo contrasinal",
+            "confirmpassword": "Confirmación de novo contrasinal",
+            "confirmpassword.placeholder": "Confirmación de novo contrasinal",
+            "email": "Correo electrónico",
+            "email.placeholder": "O teu enderezo electrónico"
+        },
+        "modal":{
+            "wait": {
+                "title":"Operación en curso",
+                "message":"Estamos procesando a túa solicitude, esta operación pode tardar uns minutos. Por favor espera..."
+            }
+        },
+        "messages":
+        {
+            "info":
+            {
+                "authenticated": "Si xa tes unha conta podes <a class=\"alert-link\" ui-sref=\"account.auth\">iniciar unha sesión</a>.",
+                "register": "¿Aínda non estás rexistrado? <a class=\"alert-link\" ui-sref=\"account.register\">Crea unha conta</a>",
+                "opennewtab": "Pulsa Ctrl para abrir unha nova pestana"
+            },
+            "error":
+            {
+                "dontmatch": "¡Os contrasinais non coinciden!"
+            },
+            "search":
+            {
+                "inforesults":"{{length}} resultados",
+                "noresults": "Sentímolo!, non se atoparon resultados",
+                "results": "Localizados {{totalElements}} rexistros"
+            },
+            "confirmdelete":
+            {
+                "title": "Confirma eliminar",
+                "message": "Esta operación eliminará o elemento seleccionado e non se poderá desfacer. <br/><strong>¿Desexas continuar?</strong>"
+            },
+            "map":{
+                "longitude":"Lonxitude",
+                "area":"Área"
+            },
+            
+            "save":
+            {
+                "error":
+                {
+                    "required":
+                    {
+                        "title": "¡Non se puido completar a operación!",
+                        "message": "Debes especificar datos para os campos requeridos:"
+                    },
+                    "pattern":
+                    {
+                        "title": "¡Atopáronse erros de formato!",
+                        "message": "Introduce valores según o formato nos campos:"
+                    }
+                }
+            },
+            "file": {
+                "upload": {
+                    "success":"Ficheiro rexistrado correctamente",
+                    "error":"Problemas ao subir o ficheiro (Tamaño máximo 10MB)" 
+                },
+                "delete": {
+                    "success":"Ficheiro eliminado correctamente",
+                    "error":"Erro ao eliminar o ficheiro",
+                    "confirm": {
+                        "title":"Confirma eliminar ficheiro",
+                        "message":"Esta operación non se pode desfacer. Desexas continuar?"
+                    }
+                }
+            },
+            "validate":
+            {
+                "newpassword":
+                {
+                    "required": "É necesario que indiques un contrasinal.",
+                    "minlength": "É necesario que o teu contrasinal teña polo menos 5 caracteres",
+                    "maxlength": "O teu contrasinal non pode ter máis de 50 caracteres.",
+                    "strength": "Seguridade do contrasinal:"
+                },
+                "confirmpassword":
+                {
+                    "required": "É necesario que confirmes o teu contrasinal.",
+                    "minlength": "É necesario que o teu contrasinal teña po lo menos 5 caracteres",
+                    "maxlength": "O teu contrasinal non pode ter máis de 50 caracteres."
+                },
+                "email":
+                {
+                    "required": "E necesario que introduzas un email",
+                    "invalid": "O teu correo electrónico non é válido.",
+                    "minlength": "E necesario que o teu email teña polo menos 5 caracteres",
+                    "maxlength": "O teu email non pode ter máis de 50 caracteres",
+                    "duplicated":"Email non válido (duplicado)"
+                },
+                "datetime":
+                {
+                    "required": "E necesario que introduzas unha data",
+                    "invalid": "A data introducida non é válida."
+                },
+                "textarea":
+                {
+
+                    "required": "É necesario que introduzas un texto",
+                    "pattern": "Formato do texto: {{format}}",
+                    "invalid": "O texto introducido non é válido"
+                },
+                "text":
+                {
+                    "required": "É necesario que introduzas un texto",
+                    "pattern": "Formato do texto: {{format}}",
+                    "invalid": "O texto introducido non é válido"
+                },
+                "number":
+                {
+                    "range": "O valor debe estar entre {{min}} e {{max}}",
+                    "required": "É necesario que introduzas un valor numérico",
+                    "invalid": "O valor numérico introducido non é válido.",
+                    "max": "O valor debe ser inferior a: {{max}}",
+                    "min": "O valor debe ser superior a: {{min}}"
+                },
+                "select":
+                {
+                    "required": "É necesario que selecciones un valor"
+                }
+            }
+        },
+        "button":
+        {
+            "yes": "Si",
+            "no": "Non",
+            "close": "Pechar",
+            "accept": "Aceptar",
+            "create": "Crear",
+            "cancel": "Cancelar",
+            "remove": "Eliminar",
+            "delete": "Eliminar",
+            "confirm": "Confirmar",
+            "edit": "Editar",
+            "link": "Vincular",
+            "unlink": "Desvincular",
+            "ok": "Aceptar",
+            "end": "Fin",
+            "next": "Seguinte",
+            "previous": "Anterior",
+            "finish": "Finalizar",
+            "continue":"Continuar",
+            "geoposition": "XeoLocalización",
+            "centermap":"Centrar mapa",
+            "photo":"Foto",
+            "print":"Imprimir",
+            "detail":"Detalles",
+            "add": "Engadir",
+            "save": "Gardar",
+            "clone": "Duplicar",
+            "share": "Compartir",
+            "select":"Seleccionar",
+            "showHide":"Mostrar/Ocultar",
+            "measure":"Medir",
+			"selectfile":"Selecciona arquivo..."
+        },
+        "field":
+        {
+            "id": "ID"
+        },
+        "ribbon":
+        {
+            "dev": "Desarroio"
+        },
+        "item-count": "Monstrando {{first}} - {{second}} de {{total}} artículos."
+    },
+    "entity":
+    {
+        "action":
+        {
+            "addblob": "Engadir ficheiro",
+            "addimage": "Engadir imaxe",
+            "back": "Volver",
+            "cancel": "Cancelar",
+            "delete": "Eliminar",
+            "edit": "Editar",
+            "open": "Abrir",
+            "save": "Gardar",
+            "view": "Vista",
+            "link": "Vincular",
+            "unlink": "Desvincular",
+            "accept": "Aceptar",
+            "select": "Seleccionar",
+            "unselect": "Desmarcar"
+        },
+        "detail":
+        {
+            "field": "Campo",
+            "value": "Valor"
+        },
+        "select":
+        {
+            "title": "Seleccionar elementos"
+        },
+
+        "delete":
+        {
+            "title": "Confirmar operación de borrado"
+        },
+        "unlink":
+        {
+            "title": "Confirmar operación de desvincular"
+        },
+        "validation":
+        {
+            "required": "Este campo é obligatorio.",
+            "minlength": "Este campo require polo menos {{min}} caracteres.",
+            "maxlength": "Este campo non pode superar máis de {{max}} caracteres.",
+            "min": "Este campo debe ser maior que {{min}}.",
+            "max": "Este campo non pode ser maior que {{max}}.",
+            "minbytes": "Este campo debe ter como mínimo {{min}} bytes.",
+            "maxbytes": "Este campo non pode ter máis de {{max}} bytes.",
+            "pattern": "Este campo debe seguir o patrón {{pattern}}.",
+            "number": "Este campo debe ser un número.",
+            "datetimelocal": "Este campo debe ser unha data e hora."
+        }
+    },
+    "component":{
+        "mapPositionPanel": {
+            "latDegree": "Latitude (º)",
+            "latMinutes": "Latitude (minutos)",
+            "lonDegree": "Lonxitude (º)",
+            "lonMinutes": "Lonxitude (minutos)",
+            "N":"Norte",
+            "S":"Sur",
+            "W":"Oeste",
+            "E":"Este",
+            "currentPosition" : "Pos. actual",
+            "addPoint": "Engadir punto"
+        }
+    },
+    "error":
+    {
+        "internalServerError": "Erro do servidor interno",
+        "server.not.reachable": "Servidor non accesible",
+        "url.not.found": "Non atopado",
+        "NotNull": "O campo {{fieldName}} non pode estar baleiro!",
+        "Size": "O campo {{fieldName}} non cumple cos requisitos de tamaño mínimo/máximo!",
+        "userexists": "O nombre de userlogin xa existe!",
+        "emailexists": "O email xa está en uso!",
+        "idexists": "Un novo {{entityName}} non pode ter xa unha identificación"
+    },
+    "footer": "pé de páxina"
+}

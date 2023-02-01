@@ -1,0 +1,70 @@
+{
+    "main":
+    {
+        "meteo":
+        {
+            "sky_state": "Sky",
+            "temperature": "Temp",
+            "wind": "Wind",
+            "significative_wave_height": "wave height",
+            "mean_wave_direction": "Direction",
+            "relative_peak_period": "Period",
+            "precipitation_amount": "Precipitation",
+            "locality": "Locality",
+            "municipality": "Municipality",
+            "province": "Province",
+            "degc": "ºC",
+            "High tides": "High tide",
+            "Low tides": "Low tide"
+
+        },
+        "entities":
+        {
+            "userLogin":
+            {
+                "userRole": "Profile"
+            },
+            "userRole":
+            {
+                "ADMINISTRATOR": "Administrator",
+                "MEMBER": "Participant",
+                "OVERSEE": "Overseer",
+                "CUSTOMER": "Customer",
+                "PUBLIC": "Public",
+                "QUERY": "Query only"
+            },
+            "layerCategory":
+            {
+                "JOURNEYS": "Activity pattern",
+                "POIS": "Additional Layers"
+            },
+            "journeyMember":
+            {
+                "category":
+                {
+                    "single": "Single",
+                    "couple": "Couple",
+                    "group": "Group(<10)",
+                    "largegroup": "Large Group (>10)"
+                },
+                "warning":
+                {
+                    "JOURNEYMEMBER_OUT_OF_RESTRICTED_AREA": "The participant is outside the area of the activity."
+                }
+            }
+
+        },
+        "PAGE_MAP":
+        {
+            "TITLE": "Map",
+            "DEFAULT": "Default",
+            "SATELLITE": "Satellite",
+            "ROUTE": "Route",
+            "BUDDIES": "Buddies",
+
+            "FOOD": "Food",
+            "BEACH": "Beaches",
+            "TOURISM": "Tourism"
+        }
+    }
+}

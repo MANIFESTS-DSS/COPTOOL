@@ -1,0 +1,156 @@
+{
+    "app": {
+        "pollutionreport": {
+            "title":"Informe POLREP",
+            "page": {
+                "dashboard": {
+                    "title": "Informes POLREP"
+                }
+            },
+
+            "home": {
+                "title": "POLREP",
+                "createLabel": "Crear nuevo POLREP",
+                "linkLabel": "Vincular POLREP",
+                "unlinkLabel": "Desvincular POLREP",
+                "createOrEditLabel": "Crear o editar un Cliente",
+                "search": "Buscar Cliente"
+            },
+            "createform":{
+                "step1":"Observador",
+                "step2":"Observador",
+                "step3":"Condiciones Meteorológicas"
+            },
+            "map": {
+                    "activelayer": "Capa Activa",
+                    "centermap": "Centrar",
+                    "confirm": "Confirmar",
+                    "confirmdeletepoint": "Se eliminará el punto seleccionado. Deseas continuar?",
+                    "draw": "Pintar",
+                    "manual": "Manual(Lat/Lon)",
+                    "points": "Eliminar",
+                    "currentPoint":"Ubicación actual",
+                    "edit": "Editar",
+                    "info": {
+                        "draw":"Marca los puntos en el mapa",
+                        "deletePoint":"Indica los puntos a eliminar",
+                        "none":"Inserta las coordenadas manualmente o pulsa para recoger la posición actual de tu dispositivo"
+                    }
+            },
+            "help":{
+                "winddirection":"Dirección desde donde procede el viento medido en grados geográficos. Desde 0º (excluído) hasta 360º (incluído). Valores próximos a 1º y 360º indican viento del norte, 90º  del este, 180º del sur y 270º del oeste",
+                "seadirection":"Dirección desde donde procede el mar en grados geográficos.  Desde 0º (excluído) hasta 360º (incluído), Valores próximos a 1º y 360º indican corriente del sur, cercanos a 90º corriente del oeste, 180º del Norte y 270º del este"            
+            },
+            "created": "Nuevo POLREP creado correctamente.",
+            "continue": "Continúa cubriendo la información de contaminación: Manchas, fotografías, observaciones, ...",
+            "updated": "POLREP actualizado correctamente",
+            "deleted": "POLREP eliminado correctamente",
+            "delete": {
+                "question": "Estás seguro de que quieres eliminar Contingencia {{ id }}?"
+            },
+            "unlink": {
+                "question": "Estás seguro de que quieres desvincular Contingencia {{ id }}?"
+            },
+            "detail": {
+                "mobile": {
+                    "tab": {
+                        "elements":"Detalles contaminación",
+                        "map":"Mapa",
+                        "detail":"Información general"
+                    }
+                },
+                "showDetail":"Mostrar detalles",
+                "review":"Revisar y finalizar",
+                "title": "Contingencia",
+                "tab" :{
+                    "spills": "1.Manchas",
+                    "pollutionsources":"2.Fuentes",
+                    "photos": "3.Fotos",
+                    "caller": "Comunicante",
+                    "observer": "Observador",
+                    "meteo": "Condiciones Meteorológicas",
+                    
+                    
+                    
+                    "comments":"4.Comentarios",
+                    "map": "Mapa"
+                }
+            },
+            "author": "Autor",
+            "begindate": "Fecha Inicio",
+            "caller": "Comunicante",
+            "observer": "Observador",
+            "meteorologicalconditions": "Condiciones Meteorológicas",
+            "callernumber": "Nº Agente",
+            "callerorganization": "Organización",
+            "callertransportnumber": "Señal distintiva",
+            "callertransporttype": "Tipo de transporte",
+            "cloudcover": "Cielo cubierto",
+            "cloudheight": "Altura de las nubes",
+            "enddate": "Fecha Fin",
+            "id": "UUID",
+            "meteocondition": "Condiciones meteorológicas",
+            "observationsystem": "Sistema de observación",
+            "observername": "Nombre Observador",
+            "observerrole": "Cargo Observador (Nº)",
+            "plural": "Informes POLREP",
+            "pollutionepisode": "Episodio de contaminación",
+            "records": "Registros",
+            "reporttime": "Fecha/Hora",
+            "seadirection": "Dirección Mar (º)",
+            "seastatus": "Estado del Mar",
+            "status": "Estado",
+            "userlogin": "UserLogin",
+            "Versión": "Versión",
+            "visibilitystatus": "Visibilidad",
+            "winddirection": "Dirección del viento (º)",
+            "windspeed": "Velocidad del viento",
+            "windstatus": "Estado del viento",
+            "spill": {
+                "info": {
+                    "deletePoints": "Pulsa en el mapa para eliminar los puntos",
+                    "draw": "Pulsa en el mapa para marcar los puntos de la mancha"
+                }
+            }
+        },
+        "windspeedunit":{
+            "m/s": "m/s",
+            "knots": "nudos",
+            "km/h": "km/h"
+        },  
+        "observationsystem": {
+            "visual": "Visual ",
+            "termographic": "Termografía",
+            "teledetection": "Teledetección"
+        },
+        "cloudheight": {
+            "low": "Bajo",
+            "high": "Alto",
+            "medium": "Medio"
+        },
+        "callertransporttype": {
+            "boat": "Embarcación/Vehículo",
+            "plane": "Aeronave",
+            "cycle": "Bicicleta"
+        },
+
+        "seastatus": {
+            "rizado": "Mar rizado",
+            "ovellado": "Marejadilla",
+            "marusia": "Marejada",
+            "fortemarusia": "Fuerte marejada",
+            "mediavaga": "Media vaga",
+            "vaga": "Vaga",
+            "vagallon": "Vagallón",
+            "vagalloncampal": "Vagallón campal"
+        },
+        "visibilitystatus": {
+            "excelente": "Excelente",
+            "moiboa": "Muy Buena",
+            "boa": "Buena",
+            "regular": "Regular",
+            "mala": "Mala",
+            "nula": "Nula"
+        }
+    }
+}

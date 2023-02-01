@@ -1,0 +1,156 @@
+{
+    "app": {
+        "pollutionreport": {
+            "title":"Informe POLREP",
+            "page": {
+                "dashboard": {
+                    "title": "Informes POLREP"
+                }
+            },
+
+            "home": {
+                "title": "POLREP",
+                "createLabel": "Crear novo POLREP",
+                "linkLabel": "Vincular POLREP",
+                "unlinkLabel": "Desvincular POLREP",
+                "createOrEditLabel": "Crear ou editar un Cliente",
+                "search": "Buscar Cliente"
+            },
+            "createform":{
+                "step1":"Observador",
+                "step2":"Observador",
+                "step3":"Condicións Meteorolóxicas"
+            },
+            "map": {
+                    "activelayer": "Capa activa",
+                    "centermap": "Centrar",
+                    "confirm": "Confirmar",
+                    "confirmdeletepoint": "Eliminarase o punto seleccionado. Desexas continuar?",
+                    "draw": "Pintar",
+                    "manual": "Manual(Lat/Lon)",
+                    "points": "Eliminar",
+                    "currentPoint":"Ubicación actual",
+                    "edit": "Editar",
+                    "info": {
+                        "draw":"Marca os puntos no mapa",
+                        "deletePoint":"Indica os puntos a eliminar",
+                        "none":"Insere as coordenadas manualmente ou preme para recoller a posición actual do teu dispositivo"
+                    }
+            },
+            "help":{
+                "winddirection":"Dirección de onde procede o vento medido en graos xeográficos. Dende 0º (excluido) ata 360º (incluido). Valores próximos a 1º e 360º indican vento do norte, 90º  do este, 180º do sur e 270º do oeste",
+                "seadirection":"Dirección de onde procede o mar en graos xeográficos.  Dende 0º (excluido) ata 360º (incluido), Valores próximos a 1º e 360º indican corrente do sur, cercanos a 90º corrente do oeste, 180º do Norte e 270º do este"            
+            },
+            "created": "Novo POLREP creado correctamente.",
+            "continue": "Continúe cubrindo a información de contaminación: Manchas, fotografías, observacións, ...",
+            "updated": "POLREP actualizado correctamente",
+            "deleted": "POLREP eliminado correctamente",
+            "delete": {
+                "question": "Estás seguro de que queres eliminar Continxencia {{ id }}?"
+            },
+            "unlink": {
+                "question": "Estás seguro de que queres desvincular Continxencia {{ id }}?"
+            },
+            "detail": {
+                "mobile": {
+                    "tab": {
+                        "elements":"Detalles contaminación",
+                        "map":"Mapa",
+                        "detail":"Información xeral"
+                    }
+                },
+                "showDetail":"Mostrar detalles",
+                "review":"Revisar e finalizar",
+                "title": "Continxencia",
+                "tab" :{
+                    "spills": "1.Manchas",
+                    "pollutionsources":"2.Fontes",
+                    "photos": "3.Fotos",
+                    "caller": "Comunicante",
+                    "observer": "Observador",
+                    "meteo": "Condicións Meteorolóxicas",
+                    
+                    
+                    
+                    "comments":"4.Comentarios",
+                    "map": "Mapa"
+                }
+            },
+            "author": "Autor",
+            "begindate": "Data Inicio",
+            "caller": "Comunicante",
+            "observer": "Observador",
+            "meteorologicalconditions": "Condicións Meteorolóxicas",
+            "callernumber": "Nº Axente",
+            "callerorganization": "Organización",
+            "callertransportnumber": "Sinal distintiva",
+            "callertransporttype": "Tipo de transporte",
+            "cloudcover": "Ceo cuberto",
+            "cloudheight": "Altura das nubes",
+            "enddate": "Data Fin",
+            "id": "UUID",
+            "meteocondition": "Condicion meteorolóxicas",
+            "observationsystem": "Sistema de observación",
+            "observername": "Nome Observador",
+            "observerrole": "Cargo Observador (Nº)",
+            "plural": "Informes POLREP",
+            "pollutionepisode": "Episodio de contaminación",
+            "records": "Rexistros",
+            "reporttime": "Data/Hora",
+            "seadirection": "Dirección Mar (º)",
+            "seastatus": "Estado do Mar",
+            "status": "Estado",
+            "userlogin": "UserLogin",
+            "Versión": "Versión",
+            "visibilitystatus": "Visibilidade",
+            "winddirection": "Dirección do vento (º)",
+            "windspeed": "Velocidade do vento",
+            "windstatus": "Estado do vento",
+            "spill": {
+                "info": {
+                    "deletePoints": "Preme no mapa para eliminar os puntos",
+                    "draw": "Preme no mapa para marcar os puntos da mancha"
+                }
+            }
+        },
+        "windspeedunit":{
+            "m/s": "m/s",
+            "knots": "nós",
+            "km/h": "km/h"
+        },  
+        "observationsystem": {
+            "visual": "Visual ",
+            "termographic": "Termografía",
+            "teledetection": "Teledetección"
+        },
+        "cloudheight": {
+            "low": "Baixo",
+            "high": "Alto",
+            "medium": "Medio"
+        },
+        "callertransporttype": {
+            "boat": "Embarcación/Vehículo",
+            "plane": "Aeronave",
+            "cycle": "Bicicleta"
+        },
+
+        "seastatus": {
+            "rizado": "Mar rizado",
+            "ovellado": "Mar ovellado",
+            "marusia": "Marusía",
+            "fortemarusia": "Forte marusía",
+            "mediavaga": "Media vaga",
+            "vaga": "Vaga",
+            "vagallon": "Vagallón",
+            "vagalloncampal": "Vagallón campal"
+        },
+        "visibilitystatus": {
+            "excelente": "Excelente",
+            "moiboa": "Moi boa",
+            "boa": "Boa",
+            "regular": "Regular",
+            "mala": "Mala",
+            "nula": "Nula"
+        }
+    }
+}

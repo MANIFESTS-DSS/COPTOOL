@@ -1,0 +1,122 @@
+{
+
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)=(.*)$":
+    {
+        "$1": "$2"
+    },
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)_([a-z]*)=(.*)$":
+    {
+        "$1":
+        {
+            "$2": "$3"
+        }
+    },
+
+    "app":
+    {
+        "pollutionsource":
+        {
+            "title": "Fuentes Cont.",
+            "home":
+            {
+                "title": "Fuente Contaminante",
+                "createLabel": "Crear nueva fuente contaminante",
+                "linkLabel": "Vincular fuente contaminante",
+                "createOrEditLabel": "Crear o editar fuente contaminante",
+                "search": "Buscar fuente contaminante"
+            },
+            "createform":
+            {
+                "step1": "Origen",
+                "step2": "Causa",
+                "step3": "Ubicación"
+            },
+            "created": "Nueva fuente contaminante '{{ code }}' creada correctamente",
+            "updated": "Fuente '{{ code }}': Actualizada correctamente",
+            "deleted": "Fuente '{{code}}'' eliminada correctamente",
+            "delete":
+            {
+                "question": "Deseas eliminar la fuente contaminante {{ code }}?"
+            },
+            "unlink":
+            {
+                "question": "Deseas eliminar la fuente contaminante {{ code }}?"
+            },
+            "messages":
+            {
+                "geometry": "Inserta la localización geográfica de la fuente contaminante pintando directamente en el mapa o estableciendo manualmente las coordenadas del centro.",
+                "affectedarea": "Establece la extensión del área afectada manualmente o midiendo en el mapa (pulsando en el botón de cada campo).",
+                "validate":
+                {
+                    "height":
+                    {
+                        "required": "Debes indicar longitud",
+                        "invalid": "Valor de la longitud no válido"
+                    },
+                    "course":
+                    {
+                        "required": "Debes indicar un valor para la deriva (grados)",
+                        "invalid": "El valor debe estar entre 0 y 360"
+                    }
+                }
+            },
+            "detail":
+            {
+                "title": "Mancha",
+                "tab":
+                {
+                    "caller": "Comunicante",
+                    "observer": "Observador",
+                    "meteo": "Condiciones Meteorológicas",
+                    "spills": "Manchas",
+                    "pollutionsources": "Fuentes",
+                    "photos": "Fotos",
+                    "comments": "Comentarios"
+                },
+                "fieldset":
+                {
+                    "origin": "Origen de la contaminación",
+                    "cause":"Causa"
+                }
+            },
+            "entityname": "Fuente de polución",
+            "code": "Código",
+            "causedescription": "Descripción (de la causa)",
+            "createdtime": "Hora de creación",
+            "description": "Descripción",
+            "geometry": "Geometría",
+            "id": "UUID",
+            "name": "Nombre",
+            "observedtime": "Fecha/hora",
+            "plural": "Fuentes de contaminación",
+            "pollutioncause": "Causa",
+            "pollutionreport": "Informe POLREP",
+            "positions": "Posiciones ",
+            "sourcetrack": "Ruta de la fuente",
+            "sourcetype": "Tipo fuente",
+            "help": {
+                "create":"Si la posición difiere de la actual indícala en el mapa, inserta los comentarios y pulsa Añadir.",
+                "noresults": "No existen fuentes contaminantes. Crea una pulsando el botón <i class='ion-plus-round'></i>"
+            }
+        },
+        "pollutioncause":
+        {
+            "collision": "Colisión",
+            "sink": "Naufragio",
+            "explosion": "Explosión",
+            "runaground": "Embarrancada",
+            "leak": "Derrame operativo",
+            "loadfuel": "Toma de combustible",
+            "unknown": "Desconocido",
+            "others": "Otros"
+        },
+
+        "sourcetype":
+        {
+            "ship": "Barco",
+            "land": "Tierra",
+            "unknown": "Desconocido"
+
+        }
+    }
+}

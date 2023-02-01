@@ -1,0 +1,91 @@
+{
+
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)=(.*)$":
+    {
+        "$1": "$2"
+    },
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)_([a-z]*)=(.*)$":
+    {
+        "$1":
+        {
+            "$2": "$3"
+        }
+    },
+
+    "app":
+    {
+        "logbookrecord":
+        {
+            "title": "Bitácora",
+            "type": "Tipo de mensaje",
+            "style": "Color del marcador",
+            "home":
+            {
+                "title": "Bitácora",
+                "createLabel": "Crear nuevo registro",
+                "linkLabel": "Vincular registro",
+                "createOrEditLabel": "Crear o editar registro",
+                "search": "Buscar registro"
+            },
+            "created": "Nuevo registro '{{ code }}' creado correctamente",
+            "updated": "Registro '{{ code }}' actualizado correctamente",
+            "deleted": "Registro '{{code}}' eliminado correctamente",
+            "delete":
+            {
+                "question": "¿Deseas eliminar el registro {{ code }}?"
+            },
+            "unlink":
+            {
+                "question": "¿Deseas eliminar el registro {{ code }}?"
+            },
+            "detail":
+            {
+                "title": "Registro de bitácora",
+                "fieldset":
+                {
+                    "origin": "Origen de la contaminación",
+                    "cause": "Causa"
+                },
+                "validate": {
+                    "maxfilesize": "No se pueden subir ficheros de más de 10MB, fichero: {{name}}",
+                    "selectfile":"Por favor, selecciona una imagen",
+                    "markphotoonmap":"Por favor, marca la posición de la foto en el mapa",
+                    "drawsegmentonmap": "Introduce los datos solicitados en el formulario y pinta sobre el mapa el segmento afectado",
+                    "confirmdeletepoint": "Esta operación eliminará el punto seleccionado. ¿Estás seguro?"                     
+                }
+            },
+            "$name": "Registro de bitácora",
+            "$plural": "Registros de bitácora",
+            "title": "Título",
+            "message":"Mensaje",
+            "file":"Fichero",
+            "fileName":"Nombre fichero",
+            "filePath": "Ruta",
+            "createdBy": "Emisor",
+            "createdTime":"Fecha/Hora",
+            "geometry":"Ubicación geográfica",
+            "comments":"Comentarios",
+            "episode":"Contigencia",
+            "tags":"Etiquetas",
+            "help": {
+                "create":"Si la posición difiere de la actual indícala en el mapa, inserta  los comentarios y pulsa añadir",
+                "noresults": "No existen fotografías. Crea una pulsando el botón <i class='ion-plus-round'></i>"
+            },
+            "createform": {
+                "success": "Registro de bitácora creado correctamente",
+                "step1": "Detalles",
+                "step2": "Ubicación geográfica",
+                "validate": {
+                    "fileEmpty":"Sin fichero adjunto",
+                    "geometryEmpty":"Ubicación geográfica no especificada"
+                }
+            },
+            "search": {
+                "placeholder": "Búsqueda por texto..."
+            },
+            "messages": {
+                "geometry": "InsertA la localización geográfica estableciendo manualmente las coordenadas o marcando directamente en el mapa"
+            }
+        }
+    }
+}

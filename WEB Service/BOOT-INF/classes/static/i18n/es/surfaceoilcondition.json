@@ -1,0 +1,126 @@
+{
+    "app":
+    {
+        "surfaceoilcondition":
+        {
+             "home":
+            {
+                "title": "Hidrocarburo superficial",
+                "createLabel": "Crear nuevo registro"
+            },
+            "createform":
+            {
+                "step1": "Detalles",
+                "step2": "Ubicación geográfica"
+            },
+             "created": "Nueva mancha de hidrocarburo superficial {{ code }} creada correctamente",
+            "updated": "Mancha  de hidrocarburo superficial {{ code }}: actualizada correctamente",
+            "deleted": "Mahcha  de hidrocarburo superficial {{code}} eliminada correctamente",
+            "delete":
+            {
+                "question": "Deseas eliminar la mancha {{ code }}?"
+            },
+            "unlink":
+            {
+                "question": "Deseas eliminar la mancha {{ code }}?"
+            },
+            "messages":{
+                "geometry": "Inserta la localización geográfica de la mancha de hidrocarburo superficial pintando directamente en el  mapa",
+                "affectedarea": "Establece la extensión del área afectada manualmente o midiendo en el mapa (pulsando en el botón de cada campo).",
+                "validate": {
+                    "height": {
+                        "required":"Debes indicar longitud",
+                        "invalid":"Valor de longitud no válido"
+                    },
+                    "course": {
+                        "required": "Debes indicar un valor para la deriva (grados)",
+                        "invalid":"El valor debe estar entre 0 e 360" 
+                    }
+                }
+            },
+            "help": {
+                "create": "Introduce los datos solicitados en el formulario y pinta sobre el mapa la superficie afectada por el hidrocarburo",
+                "edit": "Introduce los datos solicitados en el formulario y pinta sobre el mapa la superficie afectada por el hidrocarburo",
+                "create_old":"Si la posición difiere de la actual indícalo en el mapa, inserta los comentarios y pulsa añadir.",
+                "noresults": "No existen registros de hidrocarburo superficial. Crea uno pulsando el botón <i class='ion-plus-round'></i>"
+            },
+            "detail":
+            {
+                "title": "Hidrocarburo superficial",
+                "map":
+                {
+                    "deletepoints": "Eliminar puntos",
+                    "edit": "Editar superficie"
+                }
+            },
+            "title": "Hidrocarburo superficial",
+            "id": "ID",
+            "code": "Código",
+            "distribution": "Distribución",
+            "geometry": "Área geográfica",
+            "pitid": "ID Cata",
+            "zoneid": "Zona ID",
+            "pitid": "ID Cata",
+            "burieddepth": "Nivel del contaminante (cm)",
+            "buriedthickness": "Espesor contaminado (cm)",
+            "buriedwater": "Nivel de agua (cm)",
+            "cleanbelow": "Limpio debajo",
+            "pitdepth": "Profundidad de la cata (cm)",
+            "burieddepth": "Nivel del contaminante (cm)",
+            "buriedthickness": "Espesor contaminado (cm)",
+            "buriedwater": "Nivel del agua (cm)",
+            "oildistribution":
+            {
+                "title": "Distribución de la contaminación",
+                "trace": "Trazas( < 1 % )",
+                "sporadic": "Esporádico(1 - 10 % )",
+                "patchy": "Discontinuo(11 - 50 % )",
+                "broken": "Fragmentado(51 - 90 % )",
+                "continuous": "Continuo(91 - 100 % )",
+                "extensive": "Común",
+                "frequent": "Frequente",
+                "uncommon": "Poco común"
+            },
+            "oilthickness":
+            {
+                "title": "Espesor",
+                "to": "Balsa(BA)",
+                "cv": "Cubierta(CV)",
+                "ct": "Capa(CA)",
+                "st": "Mancha(MA)",
+                "fl": "Película(PE)"
+            },
+            "oiledzonestart": "Inicio hidrocarburo",
+            "oiledzoneend": "Fin hidrocarburo",
+
+            "oilcover":"Cobertura del hidrocarburo",
+            "oilcoverlength": "Long. cobertura",
+            "oilcoverwidth": "Ancho cobertura",
+            "latitude": "Latitud",
+            "longitude": "Longitud",
+            "substrate": "Substrato",
+            "plural": "Hidrocarburos superficiales",
+            "substratumtypes": "Tipos de substrato",
+            "tidalzone": "Zona mareal",
+            "level": "Nivel",
+            "oilcharacter":
+            {
+                "title": "Apariencia del hidrocarburo",
+                "fr": "Fresco",
+                "ms": "Mousse",
+                "tb": "Bolas de alquitrán",
+                "pt": "Galletas de alquitrán",
+                "sr": "Residuo oleoso superficial",
+                "ap": "Pavimentos de asfalto"
+            },
+            "level":
+            {
+                "title":"Nivel",
+                "l": "Bajamar",
+                "m": "Media marea",
+                "u": "Pleamar",
+                "s": "Intermareal"
+            }
+        }
+    }
+}

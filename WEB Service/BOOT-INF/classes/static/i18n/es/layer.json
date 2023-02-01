@@ -1,0 +1,140 @@
+{
+
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)=(.*)$":
+    {
+        "$1": "$2"
+    },
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)_([a-z]*)=(.*)$":
+    {
+        "$1":
+        {
+            "$2": "$3"
+        }
+    },
+
+    "app":
+    {
+        "layer":
+        {
+            "home":
+            {
+                "title": "Capa",
+                "createLabel": "Crear capa",
+                "linkLabel": "Asociar capa",
+                "createOrEditLabel": "Crear o editar capa",
+                "search": "Buscar capa"
+            },
+            "createform":
+            {
+                "step1": "Características",
+                "step2": "Ubicación del centro de la capa",
+                "step3": "Extesión del área afectada",
+                "step4": "Deriva",
+                "step5": "Aspecto"
+            },
+            "created": "Capa {{ code }} creada correctamente",
+            "updated": "Capa {{ code }} actualizada correctamente",
+            "deleted": "Capa {{code}} eliminada correctamente",
+            "delete":
+            {
+                "question": "¿Desea eliminar la capa {{ code }}?"
+            },
+            "unlink":
+            {
+                "question": "¿Desea eliminar la capa {{ code }}?"
+            },
+            "search": {
+                "viewEnabled":"Ver capas activas"
+            },
+            "detail":
+            {
+                "title": "Capa",
+                "tab":
+                {
+                    "caller": "Comunicante",
+                    "observer": "Observador",
+                    "meteo": "Condiciones Meteorológicas",
+                    "spills": "Capas",
+                    "pollutionsources": "Fuentes",
+                    "photos": "Fotos",
+                    "comments": "Comentarios"
+                },
+                "fieldset":
+                {
+                    "inputEnabled": {
+                        "title": "Marcar para activar a capa"
+                    },
+                    "properties": "Características",
+                    "aspect": "Aspecto",
+                    "geometry": "Ubicación del centro de la capa",
+                    "affectedarea": "Extensión dEL área afectada",
+                    "course": "Deriva"
+                },
+                "map":
+                {
+                    "deletepoints": "Eliminar puntos",
+                    "edit": "Editar capa"
+                }
+            },
+            "$name": "Capa",
+            "$plural": "Capas",
+            "title": "Título",
+            "code": "Código",
+            "level": "Nivel",
+            "baselayer": "Capa Base",
+            "description": "Descripción",
+            "filters": "Filtros",
+            "id": "Id",
+            "type": "Tipo",
+            "style": "Estilo",
+            "filter": "Filtro",
+            "enabled":"Activa",
+            "disabled":"No activa",
+            "latlonboundingbox":{
+                "title": "Lat/Lon del contorno",
+                "minX": "minX",
+                "minY": "minY",
+                "maxX":"maxX",
+                "maxY":"maxY"
+            } ,
+            "layergroup": "Grupo",
+            "name": "Nombre",
+            "options": "Opciones",
+            "params": "Parámetros",
+            "plural": "Capas",
+            "projection": "Proyección",
+            "queryable": "Consultable",
+            "url": "Url",
+            "projection": "Protección",
+            "queryable": "Consultable",
+            "tags": "Etiquetas",
+			"secondaryUrl": "URL secundaria",
+			"downloadUrl": "URL de descarga",
+			"downloadable": "Capa descargable",
+            
+            "help":
+            {
+                "create": "Si la posición difiere de la actual indícala en el mapa, inserta los comentarios y pulsa Añadir",
+                "noresults": "No existe capas. Crea una pulsando el botón <i class='ion-plus-round'></i>"
+            },
+            "layerclass":
+            {
+                "title": "Clase",
+                "tiles": "Tiles",
+                "wms": "WMS",
+                "wfs": "WFS",
+                "vector": "Vector"
+            },
+            "layertype":
+            {
+                "title": "Tipo capa",
+                "0": "Capa estática",
+                "1": "Capa dinámica (varía con el tiempo)",
+                "2": "Servidor de vertido -> opacidad 40%",
+                "3": "Servidor de vertido: flechas -> opacidad 100%",
+                "4": "Capas con filtros"
+            }
+
+        }
+    }
+}

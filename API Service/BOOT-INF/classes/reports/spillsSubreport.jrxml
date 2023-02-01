@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="spillsSubreport" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c17f6032-ca8f-44a2-aacc-c617c0dc6cce">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Heading 3" fontSize="14" isBold="true"/>
+	<subDataset name="spilldata" uuid="5e665682-1b07-40d9-ad0d-d51c2dac6e73">
+		<parameter name="observedTime" class="java.sql.Timestamp">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="width" class="java.lang.Double">
+			<defaultValueExpression><![CDATA[$F{spill_width}]]></defaultValueExpression>
+		</parameter>
+		<parameter name="height" class="java.lang.Double">
+			<defaultValueExpression><![CDATA[$F{spill_height}]]></defaultValueExpression>
+		</parameter>
+		<parameter name="area" class="java.lang.Double">
+			<defaultValueExpression><![CDATA[$F{spill_area}]]></defaultValueExpression>
+		</parameter>
+		<parameter name="latitude" class="java.lang.Double">
+			<defaultValueExpression><![CDATA[$F{spill_latitude}]]></defaultValueExpression>
+		</parameter>
+		<parameter name="longitude" class="java.lang.Double">
+			<defaultValueExpression><![CDATA[$F{spill_longitude}]]></defaultValueExpression>
+		</parameter>
+		<parameter name="demora" class="java.lang.Double">
+			<defaultValueExpression><![CDATA[$F{spill_demora}]]></defaultValueExpression>
+		</parameter>
+		<parameter name="distance" class="java.lang.Double">
+			<defaultValueExpression><![CDATA[$F{spill_distance}]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[SELECT
+     spill."id" AS spill_id,
+     spill."observedtime" AS spill_observedtime,
+     spill."area" AS spill_area,
+     spill."course" AS spill_course,
+     spill."demora" AS spill_demora,
+     spill."description" AS spill_description,
+     spill."distance" AS spill_distance,
+     spill."distance_unit" AS spill_distance_unit,
+     spill."height" AS spill_height,
+     spill."latitude" AS spill_latitude,
+     spill."longitude" AS spill_longitude,
+     spill."pollutant_origin" AS spill_pollutant_origin,
+     spill."speed" AS spill_speed,
+     spill."speed_unit" AS spill_speed_unit,
+     spill."spill_aparience" AS spill_spill_aparience,
+     spill."spill_aspect" AS spill_spill_aspect,
+     spill."width" AS spill_width,
+     spill."pollutant" AS spill_pollutant
+FROM
+     "public"."spill" spill]]>
+		</queryString>
+		<field name="spill_id" class="java.lang.String"/>
+		<field name="spill_observedtime" class="java.sql.Timestamp"/>
+		<field name="spill_area" class="java.lang.Double"/>
+		<field name="spill_course" class="java.lang.Double"/>
+		<field name="spill_demora" class="java.lang.Double"/>
+		<field name="spill_description" class="java.lang.String"/>
+		<field name="spill_distance" class="java.lang.Double"/>
+		<field name="spill_distance_unit" class="java.lang.String"/>
+		<field name="spill_height" class="java.lang.Double"/>
+		<field name="spill_latitude" class="java.lang.Double"/>
+		<field name="spill_longitude" class="java.lang.Double"/>
+		<field name="spill_pollutant_origin" class="java.lang.String"/>
+		<field name="spill_speed" class="java.lang.Double"/>
+		<field name="spill_speed_unit" class="java.lang.String"/>
+		<field name="spill_spill_aparience" class="java.lang.String"/>
+		<field name="spill_spill_aspect" class="java.lang.String"/>
+		<field name="spill_width" class="java.lang.Double"/>
+		<field name="spill_pollutant" class="java.lang.String"/>
+	</subDataset>
+	<field name="id" class="java.lang.String"/>
+	<field name="createdTime" class="java.sql.Timestamp"/>
+	<field name="geometry" class="java.lang.Object"/>
+	<field name="observedTime" class="java.sql.Timestamp"/>
+	<field name="description" class="java.lang.String"/>
+	<field name="area" class="java.lang.Double"/>
+	<field name="course" class="java.lang.Integer"/>
+	<field name="demora" class="java.lang.Double"/>
+	<field name="distance" class="java.lang.Double"/>
+	<field name="distanceUnit" class="java.lang.String"/>
+	<field name="latitude" class="java.lang.Double"/>
+	<field name="longitude" class="java.lang.Double"/>
+	<field name="speed" class="java.lang.Integer"/>
+	<field name="speedUnit" class="java.lang.String"/>
+	<field name="spillAparience" class="java.lang.String"/>
+	<field name="spillAspect" class="java.lang.String"/>
+	<field name="pollutant" class="java.lang.String"/>
+	<field name="pollutantOrigin" class="java.lang.String"/>
+	<field name="height" class="java.lang.Double"/>
+	<field name="width" class="java.lang.Double"/>
+	<detail>
+		<band height="80" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="20" uuid="75bf2ab9-6096-42cc-aafa-ba66593ccda3"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement x="0" y="0" width="555" height="20" uuid="70b9f4ed-4621-4624-9fb6-0ecbd5ea8d60"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CARACTERÍSTICAS DA CONTAMINACIÓN]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="0" y="20" width="555" height="60" uuid="53b60ae1-3b67-4042-8364-4b6b829582b4"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<componentElement>
+					<reportElement key="table" x="0" y="0" width="250" height="60" uuid="32500e7b-4500-4895-93ba-7c8c41b6c2e8"/>
+					<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+						<datasetRun subDataset="spilldata" uuid="a939e70c-dd53-488f-bc4b-a9e51ca26eb6">
+							<datasetParameter name="observedTime">
+								<datasetParameterExpression><![CDATA[$F{observedTime}]]></datasetParameterExpression>
+							</datasetParameter>
+							<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource(1)]]></dataSourceExpression>
+						</datasetRun>
+						<jr:column width="250" uuid="30909afa-b45e-49af-a49d-1e6691a31103">
+							<jr:columnHeader height="30" rowSpan="1">
+								<box>
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<staticText>
+									<reportElement x="0" y="0" width="250" height="30" uuid="2c6257c9-4959-4281-bf05-4de5aa62ee79"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle"/>
+									<text><![CDATA[DATA E HORA LOCAL DA OBSERVACIÓN]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell height="29" rowSpan="1">
+								<box>
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textField isBlankWhenNull="true">
+									<reportElement x="0" y="0" width="250" height="29" uuid="e42c0dfc-e5d0-4d0f-84cb-9b91bda9c854"/>
+									<textElement verticalAlignment="Middle">
+										<paragraph leftIndent="3"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$P{observedTime}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+					</jr:table>
+				</componentElement>
+				<componentElement>
+					<reportElement key="table" x="250" y="0" width="305" height="60" uuid="c0c46e25-b00a-48d4-9edf-4705b9ad7e4b"/>
+					<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+						<datasetRun subDataset="spilldata" uuid="86824ce8-6e6a-4616-83d2-bd86f779ddff">
+							<datasetParameter name="width">
+								<datasetParameterExpression><![CDATA[$F{width}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="height">
+								<datasetParameterExpression><![CDATA[$F{height}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="area">
+								<datasetParameterExpression><![CDATA[$F{area}]]></datasetParameterExpression>
+							</datasetParameter>
+							<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource(1)]]></dataSourceExpression>
+						</datasetRun>
+						<jr:columnGroup width="305" uuid="a46ae0a1-3e8d-4f43-ab47-7e660783b91b">
+							<jr:columnHeader height="30" rowSpan="1">
+								<box>
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<staticText>
+									<reportElement x="0" y="0" width="304" height="30" uuid="b90ce487-8fbb-49e7-b0b6-d536ee4e2023"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font isBold="true"/>
+									</textElement>
+									<text><![CDATA[EXTENSIÓN DA ÁREA AFECTADA]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:column width="103" uuid="e6de9fff-a79e-4d3a-a06a-1215590864e2">
+								<jr:columnHeader height="30" rowSpan="1">
+									<box>
+										<pen lineWidth="1.0"/>
+										<topPen lineWidth="1.0"/>
+										<leftPen lineWidth="1.0"/>
+										<bottomPen lineWidth="1.0"/>
+										<rightPen lineWidth="1.0"/>
+									</box>
+									<staticText>
+										<reportElement x="0" y="0" width="103" height="30" uuid="0bb81494-27e8-4527-a9e6-ba138b2e0e62"/>
+										<textElement textAlignment="Center" verticalAlignment="Middle"/>
+										<text><![CDATA[LONGO]]></text>
+									</staticText>
+								</jr:columnHeader>
+								<jr:detailCell height="28" rowSpan="1">
+									<box>
+										<pen lineWidth="1.0"/>
+										<topPen lineWidth="1.0"/>
+										<leftPen lineWidth="1.0"/>
+										<bottomPen lineWidth="1.0"/>
+										<rightPen lineWidth="1.0"/>
+									</box>
+									<textField isBlankWhenNull="true">
+										<reportElement x="0" y="0" width="103" height="28" uuid="b27802d8-873b-443d-bb06-1b2a6309d55e"/>
+										<textElement verticalAlignment="Middle">
+											<paragraph leftIndent="3"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$P{width}]]></textFieldExpression>
+									</textField>
+								</jr:detailCell>
+							</jr:column>
+							<jr:column width="104" uuid="8c6943e9-5572-4cee-a69a-f015032907fd">
+								<jr:columnHeader height="30" rowSpan="1">
+									<box>
+										<pen lineWidth="1.0"/>
+										<topPen lineWidth="1.0"/>
+										<leftPen lineWidth="1.0"/>
+										<bottomPen lineWidth="1.0"/>
+										<rightPen lineWidth="1.0"/>
+									</box>
+									<staticText>
+										<reportElement x="0" y="0" width="104" height="30" uuid="2c382488-0d1b-4348-819f-657382e27636"/>
+										<textElement textAlignment="Center" verticalAlignment="Middle"/>
+										<text><![CDATA[ANCHO]]></text>
+									</staticText>
+								</jr:columnHeader>
+								<jr:detailCell height="28" rowSpan="1">
+									<box>
+										<pen lineWidth="1.0"/>
+										<topPen lineWidth="1.0"/>
+										<leftPen lineWidth="1.0"/>
+										<bottomPen lineWidth="1.0"/>
+										<rightPen lineWidth="1.0"/>
+									</box>
+									<textField isBlankWhenNull="true">
+										<reportElement x="0" y="0" width="104" height="28" uuid="0a92cc9d-37f9-4a5b-9177-13c552c264cd"/>
+										<textElement verticalAlignment="Middle">
+											<paragraph leftIndent="3"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$P{height}]]></textFieldExpression>
+									</textField>
+								</jr:detailCell>
+							</jr:column>
+							<jr:column width="98" uuid="9b9348ed-8c36-4d2e-8c2f-160ebb86d98b">
+								<jr:columnHeader height="30" rowSpan="1">
+									<box>
+										<pen lineWidth="1.0"/>
+										<topPen lineWidth="1.0"/>
+										<leftPen lineWidth="1.0"/>
+										<bottomPen lineWidth="1.0"/>
+										<rightPen lineWidth="1.0"/>
+									</box>
+									<staticText>
+										<reportElement x="0" y="0" width="97" height="30" uuid="429ff5cb-a7da-4cb1-b7cb-056eb8882b97"/>
+										<textElement textAlignment="Center" verticalAlignment="Middle"/>
+										<text><![CDATA[SUPERFICIE]]></text>
+									</staticText>
+								</jr:columnHeader>
+								<jr:detailCell height="28" rowSpan="1">
+									<box>
+										<pen lineWidth="1.0"/>
+										<topPen lineWidth="1.0"/>
+										<leftPen lineWidth="1.0"/>
+										<bottomPen lineWidth="1.0"/>
+										<rightPen lineWidth="1.0"/>
+									</box>
+									<textField isBlankWhenNull="true">
+										<reportElement x="0" y="0" width="97" height="28" uuid="7213d7ca-82fb-499d-964a-75c5b64ce18f"/>
+										<textElement verticalAlignment="Middle">
+											<paragraph leftIndent="3"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$P{area}]]></textFieldExpression>
+									</textField>
+								</jr:detailCell>
+							</jr:column>
+						</jr:columnGroup>
+					</jr:table>
+				</componentElement>
+			</frame>
+		</band>
+		<band height="60">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="20" uuid="fe4b6311-7035-45af-89b5-f9ed549a7ae4"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement x="0" y="0" width="555" height="20" uuid="62ace9ad-4401-4ee8-a138-d1e2d97fba25"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[SITUACIÓN XEOGRÁFICA DO CENTRO DA MANCHA]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="0" y="20" width="555" height="40" uuid="21ab8c96-a409-4962-b5dc-c3ee127c8c64"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<componentElement>
+					<reportElement key="table" x="0" y="0" width="555" height="40" uuid="847c97fe-3ba4-48f1-9cc3-fa94336da5d5"/>
+					<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+						<datasetRun subDataset="spilldata" uuid="5015edd9-9184-41f9-98d4-4c42cbc3bd71">
+							<datasetParameter name="latitude">
+								<datasetParameterExpression><![CDATA[$F{latitude}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="longitude">
+								<datasetParameterExpression><![CDATA[$F{longitude}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="demora">
+								<datasetParameterExpression><![CDATA[$F{demora}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="distance">
+								<datasetParameterExpression><![CDATA[$F{distance}]]></datasetParameterExpression>
+							</datasetParameter>
+							<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource(1)]]></dataSourceExpression>
+						</datasetRun>
+						<jr:column width="135" uuid="7765ee1d-76fd-4185-b7fc-cf3b94b10dd5">
+							<jr:columnHeader height="30" rowSpan="1">
+								<box>
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<staticText>
+									<reportElement x="0" y="0" width="135" height="30" uuid="02b5d516-f19f-4e02-b6c9-84b7bee57348"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font isBold="true"/>
+									</textElement>
+									<text><![CDATA[LATITUDE]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell height="20" rowSpan="1">
+								<box>
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textField isBlankWhenNull="true">
+									<reportElement x="0" y="0" width="135" height="20" uuid="14ee4dd9-a2f4-490c-8079-25df6ff82368"/>
+									<textElement verticalAlignment="Middle">
+										<paragraph leftIndent="3"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$P{latitude}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="138" uuid="057c4680-711e-4cae-9687-d7d99ae15899">
+							<jr:columnHeader height="30" rowSpan="1">
+								<box>
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<staticText>
+									<reportElement x="0" y="0" width="138" height="30" uuid="19fb37d0-91f4-46fa-aa33-2e1034876267"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font isBold="true"/>
+									</textElement>
+									<text><![CDATA[LONXITUDE]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell height="20" rowSpan="1">
+								<box>
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textField isBlankWhenNull="true">
+									<reportElement x="0" y="0" width="138" height="20" uuid="c2e060a9-3eae-4284-bc11-0327dfdf0088"/>
+									<textElement verticalAlignment="Middle">
+										<paragraph leftIndent="3"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$P{longitude}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="144" uuid="9c6785a5-2874-411c-8fd6-5992fed1f655">
+							<jr:columnHeader height="30" rowSpan="1">
+								<box>
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<staticText>
+									<reportElement x="0" y="0" width="144" height="30" uuid="d85f968d-09e6-400c-8ac8-930c4fe249f4"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font isBold="true"/>
+									</textElement>
+									<text><![CDATA[DEMORA]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell height="20" rowSpan="1">
+								<box>
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textField isBlankWhenNull="true">
+									<reportElement x="0" y="0" width="144" height="20" uuid="a882d103-de9b-4209-8c09-d7288ab4760d"/>
+									<textElement verticalAlignment="Middle">
+										<paragraph leftIndent="3"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$P{demora}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="138" uuid="184a7c2a-c992-48b0-9f31-648651414698">
+							<jr:columnHeader height="30" rowSpan="1">
+								<box>
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<staticText>
+									<reportElement x="0" y="0" width="138" height="30" uuid="b6ba2b00-7856-44d0-bf1c-cedf537a4e5a"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font isBold="true"/>
+									</textElement>
+									<text><![CDATA[DISTANCIA]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell height="20" rowSpan="1">
+								<box>
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textField isBlankWhenNull="true">
+									<reportElement x="0" y="0" width="138" height="20" uuid="0ef40316-556b-421c-bb27-409490f7836e"/>
+									<textElement verticalAlignment="Middle">
+										<paragraph leftIndent="3"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$P{distance}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+					</jr:table>
+				</componentElement>
+			</frame>
+		</band>
+		<band height="40">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="20" uuid="cdd3ba1d-0aef-4834-9f89-11796d5eb90f"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement x="0" y="0" width="555" height="20" uuid="90d5d177-981c-4192-a80a-44c66e46ce3c"/>
+					<box>
+						<pen lineWidth="0.0"/>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[APARIENCIA DA MANCHA]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="0" y="20" width="555" height="20" uuid="a7b7d41e-115a-4df9-ab51-364193155da3"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="555" height="20" uuid="f2ab3f45-96f8-495a-9442-e489ffc4dd18"/>
+					<textElement verticalAlignment="Middle">
+						<paragraph leftIndent="3"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{spillAparience}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="40">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="20" uuid="f87535bb-6a51-454b-862e-9ca7f026d17e"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement x="0" y="0" width="555" height="20" uuid="1a6ead3a-b0f4-4020-885c-9a9af6bdfc1c"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ASPECTO DA MANCHA]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="0" y="20" width="555" height="20" uuid="1dad32c5-3e96-41fd-abce-758fe16fecdf"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="555" height="20" uuid="06fb2834-fbc1-4c5f-927d-5baff7ff089c"/>
+					<textElement verticalAlignment="Middle">
+						<paragraph leftIndent="3"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{spillAspect}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>

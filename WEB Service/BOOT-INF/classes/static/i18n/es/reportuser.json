@@ -1,0 +1,63 @@
+{
+    "app":
+    {
+        "reportuser":
+        {
+            "cmd": {
+               
+            },
+            "title": "Usuarios (Informe)",
+            "home":
+            {
+                "title": "Usuarios",
+                "createLabel": "Crear nuevo Usuario-Informe",
+                "linkLabel": "Vincular Usuario al informe",
+                "unlinkLabel": "Desvincular Usuario del informe",
+                "search": "Buscar Cliente"
+            },
+            "createform":
+            {
+                "step1": "Comunicante",
+                "step2": "Observador",
+                "step3": "Condiciones Meteorológicas"
+            },
+            "copydialog":{ 
+                "title":"Copiar UserLogins/capas",
+                "message":"Se realizará una copia del UserLogin y capas actual. ¿Deseas continuar?",
+                "success":"UserLogin y capas copiados correctamente"
+            },
+            "created": "Nuevo USUARIO del informe creado correctamente", 
+            "updated": "USUARIO del informe actualizado correctamente",
+            "deleted": "USUARIO del informe eliminado correctamente",
+            "delete":
+            {
+                "question": "Estás seguro de que quieres eliminar el registro?"
+            },
+            "unlink":
+            {
+                "question": "Estás seguro de que quieres desvincular?"
+            },
+            "detail":
+            {
+                "title": "{{name}}",
+                "tab":
+                {
+                    "caller": "Comunicante",
+                    "observer": "Observador",
+                    "meteo": "Condiciones Meteorológicas",
+                    "spills": "Manchas",
+                    "pollutionsources": "Fuentes",
+                    "photos": "Fotos",
+                    "comments": "Comentarios"
+                }
+            },
+            "report": "Informe",
+            "userlogin": "Usuario (login)",
+            "userrole": "Rol",
+            "url": "URL pública",
+            "message": {
+                "usersSelected":"Usuarios seleccionados:",
+            }
+        }
+    }
+}

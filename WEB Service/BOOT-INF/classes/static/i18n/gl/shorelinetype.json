@@ -1,0 +1,53 @@
+{
+    "app":
+    {
+        "shorelinetype":
+        {
+            "title": "Tipos de costa",
+            "page":
+            {
+                "dashboard":
+                {
+                    "title": "Tipos de costa"
+                }
+            },
+
+            "home":
+            {
+                "title": "Tipos de costa",
+                "createLabel": "Novo tipo de costa",
+                "linkLabel": "Vincular tipo de costa",
+                "unlinkLabel": "Desvincular tipo de costa",
+                "createOrEditLabel": "Crear o editar tipo de costa",
+                "search": "uscar cliente"
+            },
+
+            "help":
+            {
+                "edit": "Introduce os datos solicitados no formulario e pinta sobre o mapa a superficie afectada polo hidrocarburo",
+                "create": "Introduce os datos solicitados no formulario e pinta sobre o mapa a superficie afectada polo hidrocarburo",
+                "segment": "Pinta o segmento directamente no mapa, insere os puntos manualmente ou marcando a posición actual",
+                "surveyteam": "Engade os datos dos membros do equipo de inspección"
+            },
+            "created": "Novo TIPO DE COSTA creado correctamente: {{ incident }} ",
+            "updated": "TIPO DE COSTA actualizado correctamente",
+            "deleted": "TIPO DE COSTA eliminado correctamente",
+            "delete":
+            {
+                "question": "¿Desexas eliminar o tipo de costa {{ id }}?"
+            },
+            "bedrockcliff": "Acantilado Rochoso",
+            "bedrockplatform": "Plataforma ou ladeira rochosa",
+            "manmadesolid": "Estructura artificial non permeable",
+            "manmadepermeable": "Estructura artificial permeable",
+            "mudsediments": "Sedimentos fangosos",
+            "saltmarsh": "Marisma de auga salobre",
+            "sandsediments": "Sedimentos areosos",
+            "mixedsediments": "Sedimentos mixtos",
+            "pebblecobbleshingle": "Guijarros/cantos/grava",
+            "boulder": "Rochas",
+            "wetlands": "Estuario",
+            "primary": "Primaria"
+        }
+    }
+}

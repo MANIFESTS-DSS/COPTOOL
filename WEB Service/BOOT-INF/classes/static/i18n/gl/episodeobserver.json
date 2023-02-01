@@ -1,0 +1,75 @@
+{
+    "app":
+    {
+        "episodeobserver":
+        {
+            "cmd": {
+                "layers.edit":"Configurar Capas"
+            },
+            "title": "Observador",
+            "home":
+            {
+                "title": "Observador",
+                "createLabel": "Crear novo observador",
+                "linkLabel": "Vincular observador",
+                "unlinkLabel": "Desvincular observador",
+                "createOrEditLabel": "Crear ou editar un Cliente",
+                "search": "Buscar Cliente"
+            },
+            "createform":
+            {
+                "step1": "Comunicante",
+                "step2": "Observador",
+                "step3": "Condicións Meteorolóxicas"
+            },
+            "copydialog":{
+                "title":"Copiar Observador/capas",
+                "message":"Realizarase unha copia do observador. ¿Desexas continuar?",
+                "success":"Observador copiado correctamente"
+            },
+            "assign": {
+                "logbookrecords": {
+                    "title": "¿Asociar observacións do usuario?",
+                    "message": "Asociarase o usuario a continxencia así como as observacións efectuadas polo mesmo. ¿Desexa continuar?",
+                    "success": "Usuario e observacións asociadas correctamente"
+                }
+            },
+            "created": "Novo observador do episodio creado correctamente",
+            "updated": "Observador do episodio actualizado correctamente",
+            "deleted": "Observador do episodio eliminado correctamente",
+            "delete":
+            {
+                "question": "Desexas eliminar o usuario observador {{ userLogin.fullName }}?"
+            },
+            "unlink":
+            {
+                "question": "Desexas desvincular o usuario observador {{ userLogin.fullName }}?"
+            },
+            "detail":
+            {
+                "title": "{{name}}",
+                "tab":
+                {
+                    "caller": "Comunicante",
+                    "observer": "Observador",
+                    "meteo": "Condicións meteorolóxicas",
+                    "spills": "Manchas",
+                    "pollutionsources": "Fontes",
+                    "photos": "Fotos",
+                    "comments": "Comentarios"
+                }
+            },
+            "episode": "Episodio",
+            "userlogin": "Usuario",
+            "userrole": "Rol",
+            "createdtime":"Data asignación",
+            "starttime":"Inicio",
+            "endtime":"Fin",
+
+            "url": "URL pública",
+            "message": {
+                "usersSelected":"Usuarios seleccionados:"
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "app":
+    {
+        "shorelinetype":
+        {
+            "title": "Shoreline type",
+            "page":
+            {
+                "dashboard":
+                {
+                    "title": "Shoreline type"
+                }
+            },
+
+            "home":
+            {
+                "title": "Shoreline type",
+                "createLabel": "New shoreline type",
+                "linkLabel": "Link  shoreline type",
+                "unlinkLabel": "Unlink horeline type",
+                "createOrEditLabel": "Create or edit shoreline type",
+                "search": "Search for Customer"
+            },
+
+            "help":
+            {
+                "edit": "Enter the data requested in the form and paint on the map the area affected by the oilspill",
+                "create": "Enter the data requested in the form and paint on the map the area affected by the oilspill",
+                "segment": "Paint the segment directly on the map, insert the points manually or by marking the current position",
+                "surveyteam": "Add the details of the inspection team members"
+            },
+            "created": "New  shoreline created: {{ incident }} ",
+            "updated": "Shoreline type updated successfully",
+            "deleted": "Shoreline type deleted",
+            "delete":
+            {
+                "question": "Do you want to delete the shoreline type {{ id }}?"
+            },
+            "bedrockcliff": "Bedrock cliff",
+            "bedrockplatform": "Bedrock platform",
+            "manmadesolid": "Manmade solid",
+            "manmadepermeable": "Manmade permeable",
+            "mudsediments": "Mud sediments",
+            "saltmarsh": "Salt marsh",
+            "sandsediments": "Sand sediments",
+            "mixedsediments": "Mixed sediments",
+            "pebblecobbleshingle": "Cobbles/pebbles/gravel",
+            "boulder": "Rocks",
+            "wetlands": "Estuary",
+            "primary": "Primary"
+        }
+    }
+}

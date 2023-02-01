@@ -1,0 +1,69 @@
+{
+    "app":
+    {
+        "episodelayer":
+        {
+            "title":"Capas",
+            "home":
+            {
+                "title": "Capas",
+                "createLabel": "Crear nueva capa",
+                "linkLabel": "Vincular capa",
+                "unlinkLabel": "Desvincular capa",
+                "createOrEditLabel": "Crear o editar una capa",
+                "search": "Buscar capa"
+            },
+            "createform":
+            {
+                "step1": "Comunicante",
+                "step2": "Observador",
+                "step3": "Condiciones Meteorológicas"
+            },
+            "copydialog":{
+                "title":"Copiar UserLogins/capas",
+                "message":"Se realizará una copia del UserLogin y capas actual. ¿Deseas continuar?",
+                "success":"UserLogin y capas copiados correctamente"
+            },
+            "created": "Nuevo POLREP creado correctamente",
+            "updated": "POLREP actualizado correctamente",
+            "deleted": "POLREP eliminado correctamente",
+            "delete":
+            {
+                "question": "Estás seguro de que quieres eliminar Contingencia {{ id }}?"
+            },
+            "unlink":
+            {
+                "question": "Estás seguro de que quieres desvincular Contingencia {{ id }}?"
+            },
+            "detail":
+            {
+                "title": "UserLogin Episodio",
+                "tab":
+                {
+                    "caller": "Comunicante",
+                    "observer": "Observador",
+                    "meteo": "Condiciones Meteorológicas",
+                    "spills": "Manchas",
+                    "pollutionsources": "Fuentes",
+                    "photos": "Fotos",
+                    "comments": "Comentarios"
+                }
+            },
+            "message": {
+                "info":"Capas en el episodio: ",
+                "selected": "Capas seleccionadas: ",
+                "link":"Capas vinculadas al episodio"
+            },
+            "cmd": {
+                "create":"Crear capa",
+                "edit":"Editar capa",
+                "delete":"Eliminar capa",
+                "link":"Capas vinculadas al episodio",
+                "new":"Nueva capa",
+                "remove":"Eliminar capa"
+            },
+            "episode": "Episodio",
+            "layer": "Capa"
+        }
+    }
+}

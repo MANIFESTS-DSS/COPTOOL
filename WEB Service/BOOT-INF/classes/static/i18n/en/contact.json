@@ -1,0 +1,31 @@
+{
+
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)=(.*)$":
+    {
+        "$1": "$2"
+    },
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)_([a-z]*)=(.*)$":
+    {
+        "$1":
+        {
+            "$2": "$3"
+        }
+    },
+
+    "app":
+    {
+        "contact":
+        {
+            "home":
+            {
+                "title": "Contact",
+                "createLabel": "Create new contact",
+                "linkLabel": "Associate contact",
+                "createOrEditLabel": "Create or edit contact",
+                "search": "Search contact"
+            },
+            "organisation": "Organization",
+            "phonenumber": "Phone number"
+        }
+    }
+}

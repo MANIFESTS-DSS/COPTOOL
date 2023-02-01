@@ -1,0 +1,66 @@
+{
+    "app":
+    {
+        "gisasset":
+        {
+            "title": "Elemento",
+            "home":
+            {
+                "title": "Elemento",
+                "createLabel": "Novo elemento",
+                "editLabel": "Editar elemento",
+                "linkLabel": "Vincular elemento",
+                "createOrEditLabel": "Editar elemento",
+                "search": "Buscar elemento"
+            },
+            "createform":
+            {
+                "step1": "Elemento"
+            },
+            "created": "Elemento '{{ name }}' creado correctamente",
+            "updated": "Elemento '{{ name }}' actualizado correctamente",
+            "deleted": "Elemento '{{name}}' eliminado correctamente",
+            "delete":
+            {
+                "question": "¿Desexas eliminar o elemento {{ name }}?"
+            },
+            "unlink":
+            {
+                "question": "¿Desexas desvincular o elemento {{ name }}?"
+            },
+            "detail":
+            {
+                "title": "Elemento"
+            },
+
+            "entityname": "Elemento",
+            "name": "Nome",
+            "episode":"Continxencia",
+            "description": "Descrición",
+            "createdBy": "Usuario",
+            "marker":"Icono",
+            "color":"Cor",
+            "beginTime":"Inicio",
+            "status":"Estado",
+            "PLANNED":"Planificado",
+            "ACTUAL":"Real",
+            "createdTime": "Data creación",
+            "dateTime":"Data/Hora",
+            "owner":"Propietario",
+            "model":"Modelo",
+            "visibility":"Visible",
+            "assetItem":"Catálogo de activos",
+            "map":
+            {
+                "draw":
+                {
+                    "point": "Punto",
+                    "linestring": "Liña",
+                    "polygon": "Polígono",
+                    "asset": "Elemento",
+                    "cancel": "Cancelar"
+                }
+            }
+        }
+    }
+}

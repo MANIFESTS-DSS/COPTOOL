@@ -1,0 +1,55 @@
+{
+
+    "app":
+    {
+        "gislayout":
+        {
+            "title": "Mapa estratégico",
+            "home":
+            {
+                "title": "Mapa estratégico",
+                "createLabel": "Nuevo mapa",
+                "linkLabel": "Vincular mapa",
+                "createOrEditLabel": "Editar mapa",
+                "search": "Buscar mapa"
+
+            },
+            "createform":
+            {
+                "step1": "Mapa estratégico"
+            },
+            "created": "Mapa estratégico '{{ name }}' creado correctamente",
+            "updated": "Mapa estratégico '{{ name }}' actualizado correctamente",
+            "deleted": "Mapa estratégico '{{name}}' eliminado correctamente",
+            "delete":
+            {
+                "question": "¿Deseas eliminar el mapa {{ name }}?"
+            },
+            "unlink":
+            {
+                "question": "¿Deseas desvincular el mapa {{ name }}?"
+            },
+            "detail":
+            {
+                "title": "Mapa estratégico"
+            },
+            "entityname": "Mapa estratégico",
+            "name": "Nombre",
+            "description": "Descripción",
+            "episode":"Contingencia",
+            "createdBy": "Usuario",
+            "createdTime": "Fecha creación",
+            "map":
+            {
+                "draw":
+                {
+                    "point": "Punto",
+                    "linestring": "Línea",
+                    "polygon": "Polígono",
+                    "asset": "Elemento",
+                    "cancel": "Cancelar"
+                }
+            }
+        }
+    }
+}

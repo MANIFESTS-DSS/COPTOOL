@@ -1,0 +1,138 @@
+{
+    "app/[folder(singular)]/[subfloders]": "Nome/traducir reglas",
+    "app":
+    {
+        "pollutionepisodemap":
+        {
+            "title": "Visor"
+        },
+        "pollutionepisode":
+        {
+            "title": "Continxencias",
+			"publicUser": "Usuario público",
+            "pollutionreports":
+            {
+                "title": "POLREP"
+            },
+            "scatreports":
+            {
+                "title": "POLREP Costa"
+            },
+            "map":
+            {
+                "title": "Mapa"
+            },
+            "photos":
+            {
+                "title": "Fotos"
+            },
+            "home":
+            {
+                "title": "Continxencias",
+                "createLabel": "Nova Continxencia",
+                "copyLabel": "Copiar Continxencia",
+
+                "linkLabel": "Asignar un novo cliente",
+                "createOrEditLabel": "Crear ou editar un Cliente",
+                "search": "Buscar Cliente"
+            },
+            "createform":
+            {
+                "step1": "Información",
+                "step2": "Área afectada",
+                "step3": "Capas",
+                "step4": "Usuarios"
+            },
+            "copydialog":
+            {
+                "title": "Copiar continxencia",
+                "message": "Realizarase unha copia da continxencia actual. ¿Desexas continuar?",
+                "success": "Continxencia copiada correctamente"
+            },
+
+            "created": "Nova continxencia creada. Identificador {{ id }}",
+            "updated": "Continxencia actualizada correctamente",
+            "deleted": "Continxencia eliminada",
+            "delete":
+            {
+                "question": "¿Desexas eliminar a continxencia?"
+            },
+
+            "unlink":
+            {
+                "question": "Estás seguro de que queres desvincular continxencia {{ id }}?"
+            },
+            "create":
+            {
+                "title": "Nova"
+            },
+            "detail":
+            {
+                "title": "{{pollutionepisode.name}}",
+                "tab":
+                {
+                    "info": "Información",
+                    "map": "Mapa",
+                    "pollutionreports": "POLREPs",
+                    "scatreports": "POLREPs Costa",
+                    "photos": "Fotos",
+                    "logbookrecords": "Bitácora",
+                    "users": "Usuarios",
+                    "layers": "Capas",
+                    "observers": "Observadores",
+                    "gislayouts":"Mapas"
+
+                },
+                "pub":
+                {
+                    "linkTitle": "Compartir enlace",
+                    "link": "Enlace para compartir",
+                    "linkCopy": "Copiar o enlace para compartir",
+                    "linkCopied": "Enlace copiado no portapapeis"
+                },
+                "fieldset":
+                {
+                    "inputPublish":
+                    {
+                        "title": "Permitir acceso público á continxencia?"
+                    }
+                }
+            },
+            "search":
+            {
+                "placeholder": "Búsqueda por nome..."
+            },
+            "code": "Code",
+            "name": "Nome",
+            "status": "Estado",
+            "description": "Descrición",
+            "begintime": "Data inicio",
+            "endtime": "Data Fin",
+            "pollutionreports": "POLREPs",
+            "publishclose":"Publicar e pechar",
+            "tags": "Etiquetas",
+            "rating": "Valoración",
+            "publish": "Publicar?",
+            "publicAccess": "Acceso público",
+            "requireAuthentification": "Require autentificación"
+        },
+        "episodestatus":
+        {
+            "NEW": "Novo",
+            "OPEN": "Aberto",
+            "CLOSE": "Finalizado",
+            "ARCHIVED":"Arquivado"
+        },
+        "map":
+        {
+            "draw":
+            {
+                "point": "Punto",
+                "linestring": "Liña",
+                "polygon": "Polígono",
+                "asset": "Elemento",
+                "cancel": "Cancelar"
+            }
+        }
+    }
+}

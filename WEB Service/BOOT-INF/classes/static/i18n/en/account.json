@@ -1,0 +1,117 @@
+{
+	"activate": {
+		"title": "Confirming your email",
+		"messages": {
+			"success": "<strong>Your email has been confirmed.</strong> As soon as the fishermen's association verifies your credentials, you will be able to access the platform.",
+			"error": "<strong>Your email could not be confirmed.</strong> Please sign up using the registration form"
+		}
+	},
+	"login": {
+		"title": "Log in",
+		"form": {
+			"userlogin":"User",
+			"password": "Password",
+			"password.placeholder": "Your password",
+			"rememberme": "Sign in automatically",
+			"button": "Log in"
+		},
+		"messages": {
+			"error": {
+				"authentication": "<strong>¡Login failed!</strong> Please check your credentials and try again.."
+			}
+		},
+		"password": {
+			"forgot": "¿Forgot your password??"
+		}
+	},
+	"password": {
+		"title": "Password [<b>{{username}}</b>]",
+		"form": {
+			"button": "Save"
+		},
+		"messages": {
+			"error": "<strong>¡An error has occurred!</strong> Password could not be changed.",
+			"success": "<strong>¡Password has been changed!</strong>"
+		}
+	},
+	"register": {
+		"title": "Registration Form",
+		"form": {
+			"button": "Create account"
+		},
+		"messages": {
+			"validate": {
+				"login": {
+					"required": "Your username is required.",
+					"minlength": "Your username must have at least 1 character.",
+					"maxlength": "Your username cannot be longer than 50 characters.",
+					"pattern": "Your username can only contain lowercase letters and digits."
+				}
+			},
+			"success": "<strong>Thank you for registering.</strong><br> You will receive an email shortly to confirm the email.<br>Once the email is confirmed, the fishermen's association has to verify the credentials before you can access.",
+			"error": {
+				"fail": "<strong>Registration failed!</strong> Please try again later.",
+				"userexists": "<strong>Userlogin name is already registered!</strong> Please choose another userlogin.",
+				"emailexists": "<strong>Email is already in use!</strong> Please choose another email."
+			}
+		}
+	},
+	"reset": {
+		"request": {
+			"title": "Reset your password",
+			"form": {
+				"button": "Restore password"
+			},
+			"messages": {
+				"info": "Enter the email associated with your account and we will send you a link to reset your password.",
+				"success": "You will receive in your email more information on how to reset your password shortly.",
+				"notfound": "<strong>Unregistered email address!</strong> Please check it and try again"
+			}
+		},
+		"finish": {
+			"title": "Reset your password",
+			"form": {
+				"button": "Validate the new password"
+			},
+			"messages": {
+				"info": "Choose a new password",
+				"success": "<strong>Your password has been reset.</strong> Please, <a class=\"alert-link\" ui-sref=\"account.auth\">log in</a>.",
+				"keymissing": "Missing reset key.",
+				"error": "Your password cannot be reset. Remember that a password reset request is only valid for 24 hours."
+			}
+		}
+	},
+	"settings": {
+		"title": "Userlogin settings [<b>{{username}}</b>]",
+		"form": {
+			"username": "Username", 
+			"password": "Password",
+			"changepassword": "Change password",
+			"firstname": "Name",
+			"firstname.placeholder": "Your name",
+			"lastname": "Lastname",
+			"lastname.placeholder": "Your lastname",
+			"language": "Language",
+			"button": "Save"
+		},
+		"messages": {
+			"error": {
+				"fail": "<strong>There was an error!</strong> Settings could not be saved.",
+				"emailexists": "<strong>The email address already exists!</strong> Please choose another one."
+			},
+			"success": "<strong>¡Saved Settings!</strong>",
+			"validate": {
+				"firstname": {
+					"required": "You need to enter your name.",
+					"minlength": "Your name must have at least 1 character.",
+					"maxlength": "Your name cannot be longer than 50 characters."
+				},
+				"lastname": {
+					"required": "You need to enter your last name.",
+					"minlength": "Your last name must have at least 1 character.",
+					"maxlength": "Your last name cannot be longer than 50 characters."
+				}
+			}
+		}
+	}
+}

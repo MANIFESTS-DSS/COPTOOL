@@ -1,0 +1,83 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "eu.arcopol.api.config.ArcopolProperties",
+      "name": "arcopol",
+      "type": "eu.arcopol.api.config.ArcopolProperties"
+    },
+    {
+      "sourceType": "eu.arcopol.api.config.ArcopolProperties",
+      "name": "arcopol.mail",
+      "type": "eu.arcopol.api.config.ArcopolProperties$Mail"
+    },
+    {
+      "sourceType": "eu.arcopol.api.controller.util.DiskMultipartFileManager",
+      "name": "diskfilemanager",
+      "type": "eu.arcopol.api.controller.util.DiskMultipartFileManager"
+    },
+    {
+      "sourceType": "eu.arcopol.api.auth.security.config.JwtSettings",
+      "name": "security.jwt",
+      "type": "eu.arcopol.api.auth.security.config.JwtSettings"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "eu.arcopol.api.config.ArcopolProperties$Mail",
+      "defaultValue": "",
+      "name": "arcopol.mail.base-url",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "eu.arcopol.api.config.ArcopolProperties$Mail",
+      "defaultValue": "",
+      "name": "arcopol.mail.from",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "eu.arcopol.api.config.ArcopolProperties",
+      "name": "arcopol.visor-url",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "eu.arcopol.api.controller.util.DiskMultipartFileManager",
+      "name": "diskfilemanager.file-name-separator",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "eu.arcopol.api.controller.util.DiskMultipartFileManager",
+      "name": "diskfilemanager.repository-path",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "eu.arcopol.api.controller.util.DiskMultipartFileManager",
+      "name": "diskfilemanager.webapp-path",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "eu.arcopol.api.auth.security.config.JwtSettings",
+      "name": "security.jwt.refresh-token-exp-time",
+      "description": "{@link JwtToken} can be refreshed during this timeframe.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "eu.arcopol.api.auth.security.config.JwtSettings",
+      "name": "security.jwt.token-expiration-time",
+      "description": "{@link JwtToken} will expire after this time.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "eu.arcopol.api.auth.security.config.JwtSettings",
+      "name": "security.jwt.token-issuer",
+      "description": "Token issuer.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "eu.arcopol.api.auth.security.config.JwtSettings",
+      "name": "security.jwt.token-signing-key",
+      "description": "Key is used to sign {@link JwtToken}.",
+      "type": "java.lang.String"
+    }
+  ]
+}

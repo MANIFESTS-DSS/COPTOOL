@@ -1,0 +1,90 @@
+{
+
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)=(.*)$":
+    {
+        "$1": "$2"
+    },
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)_([a-z]*)=(.*)$":
+    {
+        "$1":
+        {
+            "$2": "$3"
+        }
+    },
+
+    "app":
+    {
+        "logbookrecord":
+        {
+            "title": "Bitácora",
+            "type": "Message type",
+            "style": "Label color",
+            "home":
+            {
+                "title": "Report",
+                "createLabel": "Create new record",
+                "linkLabel": "Link record",
+                "createOrEditLabel": "Edit record",
+                "search": "Search record"
+            },
+            "created": "New record '{{ code }}' created successfully",
+            "updated": "Record '{{ code }}' updated successfully",
+            "deleted": "Record '{{code}}' deleted successfully",
+            "delete":
+            {
+                "question": "Do you want to delete record {{ code }}?"
+            },
+            "unlink":
+            {
+                "question": "Do you want to unlink record {{ code }}?"
+            },
+            "detail":
+            {
+                "title": "Observation",
+                "fieldset":
+                {
+                    "origin": "Contamination origin",
+                    "cause": "Cause"
+                },
+                "validate": {
+                    "maxfilesize": "File size max 10MB, file: {{name}}",
+                    "selectfile":"Please, select an image",
+                    "markphotoonmap":"Please, mark position on the map",
+                    "confirmdeletepoint": "Do you want to delete the selected item?"                     
+                }
+            },
+            "$name": "Logbook",
+            "$plural": "Logbook",
+            "title": "Title",
+            "message":"Message",
+            "file":"File",
+            "fileName":"File name",
+            "filePath": "Path",
+            "createdBy": "Source",
+            "createdTime":"Date/Time",
+            "geometry":"Position",
+            "tags":"Tags",
+            "comments":"Comments",
+            "episode":"Contingency",
+            "help": {
+                "create":"If the position differs from the current one, indicate it on the map, insert the comments and press Add.",
+                "noresults": "There are no photos. Create a new one pressing the button <i class='ion-plus-round'></i>"
+            },
+            "createform": {
+                "success": "Logbook record created",
+                "step1": "Details",
+                "step2": "Position",
+                "validate": {
+                    "fileEmpty":"No attachment",
+                    "geometryEmpty":"Unknown position"
+                }
+            },
+            "search": {
+                "placeholder": "Search by text..."
+            },
+            "messages": {
+                "geometry": "Add location throught map or manually"
+            }
+        }
+    }
+}

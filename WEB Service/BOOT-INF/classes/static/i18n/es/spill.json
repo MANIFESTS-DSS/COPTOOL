@@ -1,0 +1,171 @@
+{
+
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)=(.*)$":
+    {
+        "$1": "$2"
+    },
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)_([a-z]*)=(.*)$":
+    {
+        "$1":
+        {
+            "$2": "$3"
+        }
+    },
+
+    "app":
+    {
+        "spill":
+        {
+            "title": "Manchas",
+            "home":
+            {
+                "title": "Mancha",
+                "createLabel": "Crear mancha",
+                "linkLabel": "Asignar mancha",
+                "createOrEditLabel": "Crear o editar mancha",
+                "search": "Buscar mancha"
+            },
+            "createform":
+            {
+                "step1": "Características",
+                "step2": "Ubicación",
+                "step3": "Extensión del área afectada",
+                "step4":"Deriva",
+                "step5":"Aspecto"
+            },
+            "help":
+            {
+                "course": "Dirección del rumbo en grados geográficos: 0 -> N, 90-> E, 180 -> S y 270 -> W",
+                "geometry": "Añade la localización geográfica de la mancha pintando directamente en el mapa o estableciendo a mano  las coordenadas del centro.",
+                "affectedarea": "Establece la extensión del área afectada a mano o midiendo sobre el mapa"
+            },
+            "created": "Nueva mancha {{ code }} creada correctamente",
+            "updated": "Mancha {{ code }}: actualizada correctamente",
+            "deleted": "Mancha {{code}} eliminada correctamente",
+            "delete":
+            {
+                "question": "¿Deseas eliminar la mancha {{ code }}?"
+            },
+            "unlink":
+            {
+                "question": "¿Deseas eliminar la mancha {{ code }}?"
+            },
+            "messages":
+            {
+                "geometry": "Inserta la localización geográfica de la mancha pintando directamente en el mapa o estableciendo manualmente las coordenadas del centro.",
+                "affectedarea": "Establece la extensión del área afectada manualmente o mide sobre el mapa",
+                "validate":
+                {
+                    "height":
+                    {
+                        "required":"Debe indicar longitud",
+                        "invalid":"Valor de longitud no válido"
+                    },
+                    "course":
+                    {
+                        "required": "Debes indicar un valor para la deriva (graos)",
+                        "invalid":"El valor debe estar entre 0 y 360" 
+                    }
+                }
+            },
+            "detail":
+            {
+                "title": "Mancha",
+                "tab":
+                {
+                    "caller": "Comunicante",
+                    "observer": "Observador",
+                    "meteo": "Condiciones Meteorológicas",
+                    "spills": "Manchas",
+                    "pollutionsources": "Fuentes",
+                    "photos": "Fotos",
+                    "comments": "Comentarios"
+                },
+                "fieldset":
+                {
+                    "properties": "Características",
+                    "aspect": "Aspecto",
+                    "geometry": "Ubicación",
+                    "affectedarea": "Extensión del área afectada",
+                    "course": "Deriva"
+                },
+                "map":
+                {
+                    "deletepoints":"Eliminar puntos",
+                    "edit":"Editar mancha"
+                }
+            },
+            "entityname": "Mancha",
+            "area": "Superficie (m2)",
+            "course": "Rumbo (º)",
+            "createdtime": "Hora de creación",
+            "demora": "Demora",
+            "description": "Descripción",
+            "distance": "Distancia",
+            "distanceunit": "Unidad",
+            "drift": "Deriva",
+            "geometry": "Geometría",
+            "height": "Largo (m)",
+            "id": "UUID",
+            "image": "Imagen",
+            "imagepath": "Ruta de la imagen",
+            "latitude": "Latitud",
+            "longitude": "Longitud",
+            "observedtime": "Fecha/hora",
+            "plural": "Manchas",
+            "pollutant": "Contaminante",
+            "pollutantorigin": "Naturaleza de la contaminación",
+            "pollutionreport": "Informe POLREP",
+            "report": "Informe",
+            "code": "Código",
+            "shape": "Forma",
+            "speed": "Velocidad",
+            "speedunit": "Unidad",
+            "spillaparience": "Apariencia",
+            "spillaspect": "Aspecto",
+            "width": "Ancho (m)",
+            "help":
+            {
+                "coursedirection":"Dirección del rumbo de la mancha medido en grados geográficos. Desde 0º (excluido) hasta 360º (incluido). Valores próximos a 1º e 360º indican viento NORTE, 90º  ESTE, 180º do SUR e 270º do OESTE",
+                "create":"Si la posición difiere de la actual indíquela en el mapa, inserta los comentarios y pulsa Añadir",
+                "noresults": "No existen manchas. Crea una pulsando el botón <i class='ion-plus-round'></i>"
+            }
+        },
+        
+        "geometry":
+                    {
+                        "map": "Mapa",
+                        "manual": "Manual (Lat/Lon)"
+                    },
+        "spillaspect":
+        {
+            "continuous": "Superficie continua",
+            "bands": "Bandas longitudinais",
+            "patches": "Parches aillados"
+        },
+        "spillaparience":
+        {
+            "translucent": "Apenas visible en excelentes condiciones de luz",
+            "filmplatted": "Visible como una película plateada sobre el auga",
+            "darktraces": "Trazas de color más oscuro",
+            "lightbands": "Bandas brillantes de color naranja,azul o verde",
+            "colorbands": "Bandas más escuras de color naranja,azul o verde",
+            "darkbands": "Bandas de color muy oscuro"
+        },
+        "speedunit":
+        {
+            "km/h": "km/h",
+            "m/s": "m/s",
+            "knots": "nudos"
+        },
+        "pollutantorigin":
+        {
+            "crudeoil": "Petróleo crudo",
+            "fuel": "Combustible/Aceite",
+            "chemicals": "Productos químicos",
+            "solid": "Residuos sólidos",
+            "organic": "Materia orgánica",
+            "unknown": "Desconocida"
+        }
+    }
+}
