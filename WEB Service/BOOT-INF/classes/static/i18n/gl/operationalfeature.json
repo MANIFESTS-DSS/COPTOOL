@@ -1,0 +1,74 @@
+{
+    "app":
+    {
+        "operationalfeature":
+        {
+            "title": "Características operativas",
+            "page":
+            {
+                "dashboard":
+                {
+                    "title": "Características operativas"
+                }
+            },
+
+            "home":
+            {
+                "title": "Características operativas",
+                "createLabel": "Nova Caract. operativas",
+                "linkLabel": "Vincular Caract. operativa",
+                "unlinkLabel": "Desvincular caract. operativa",
+                "createOrEditLabel": "Crear ou editar caract. operativa",
+                "search": "Buscar cliente"
+            },
+
+            "help":
+            {
+                "edit": "Introduce os datos solicitados no formulario e pinta sobre o mapa a superficie afectada polo hidrocarburo",
+                "create": "Introduce os datos solicitados no formulario e pinta sobre o mapa a superficie afectada polo hidrocarburo",
+                "segment": "Pinta o segmento directamente no mapa, insere os puntos manualmente ou marcando a posición actual",
+                "surveyteam": "Engade os datos dos membros do equipo de inspección"
+            },
+            "created": "Novo TIPO DE COSTA creado correctamente: {{ incident }} ",
+            "updated": "TIPO DE COSTA actualizado correctamente",
+            "deleted": "TIPO DE COSTA eliminado correctamente",
+            "delete":
+            {
+                "question": "¿Desexas eliminar o tipo de costa {{ id }}?"
+            },
+            "bedrockcliff": "Acantilado Rocoso",
+            "bedrockplatform": "Plataforma ou ladeira rochosa",
+            "manmadesolid": "Estructura artificial non permeable",
+            "manmadepermeable": "Estructura artificial permeable",
+            "mudsediments": "Sedimentos fangosos",
+            "saltmarsh": "Marisma de auga salobre",
+            "sandsediments": "Sedimentos areosos",
+            "mixedsediments": "Sedimentos mixtos",
+            "pebblecobbleshingle": "Guijarros/cantos/grava",
+            "boulder": "Rochas",
+            "wetlands": "Estuario",
+            "primary": "Primaria",
+            "existdebris":"Restos?",
+            "oileddebris":"Contaminados?",
+            "numberdebris":"Cantidade",
+            "comments":"Notas",
+            "typedebris": {
+                "title":"Bolsas/Camións",
+                "bags":"Bolsas",
+                "trucks":"Camións"
+            },
+
+            "algae": {
+                "empty": "Todavía non se rexistraron algas"
+            },
+            "debris": {
+                "empty": "Todavía non se rexistraron escombros"
+            },
+            "oiledfauna": {
+                "empty": "Todavía non se rexistrou fauna petroleada"
+            }
+
+
+        }
+    }
+}

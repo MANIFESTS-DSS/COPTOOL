@@ -1,0 +1,98 @@
+{
+
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)=(.*)$":
+    {
+        "$1": "$2"
+    },
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)_([a-z]*)=(.*)$":
+    {
+        "$1":
+        {
+            "$2": "$3"
+        }
+    },
+
+    "app":
+    {
+        "photo":
+        {
+            "title": "Fotos",
+            "home":
+            {
+                "title": "Fotos",
+                "createLabel": "Crear nueva fotografía",
+                "linkLabel": "Vincular fotografia",
+                "createOrEditLabel": "Crear o editar fotografía",
+                "search": "Buscar fotografía"
+            },
+            "createform":
+            {
+                "step1": "Fotografía",
+                "step2": "Ubicación"
+            },
+            "help": {
+                "create":"Si la posición es diferente de la actual indícala en el mapa, pulsa el botón de la cámara para acercar la foto, inserta comentarios (máx 255 caracteres) y pulsa Añadir",
+                "show": "Pulsa el botón de la cámara para acercar la foto, inserta el comentario (máx 255 caracteres) y finalmente pulsa Añadir. ",
+                "label":"Pulsa el botón de la cámara para acercar la foto, inseta el comentario (máx 255 caracteres) y finalmente pulsa Añadir"
+
+            },
+            "map": {
+                    "activelayer": "Capa Activa",
+                    "centermap": "Centrar",
+                    "confirm": "Confirmar",
+                    "confirmdeletepoint": "Se eliminará el punto seleccionado. Deseas continuar?",
+                    "draw": "Pintar",
+                    "manual": "Manual(Lat/Lon)",
+                    "points": "Eliminar",
+                    "currentPoint":"Ubicación actual",
+                    "edit": "Editar",
+                    "info": {
+                        "draw":"Marca los puntos en el mapa",
+                        "deletePoint":"Indica los puntos a eliminar",
+                        "none":"Inserta las coordenadas manualmente o pulsa para recoger la posición actual de tu dispositivo"
+                    }
+            },
+            "created": "Nueva fotografía '{{ code }}' creada correctamente",
+            "updated": "Fotografía '{{ code }}' actualizada correctamente",
+            "deleted": "Fotografía '{{code}}' eliminada correctamente",
+            "delete":
+            {
+                "question": "¿Deseas eliminar la fotografía {{ code }}?"
+            },
+            "unlink":
+            {
+                "question": "¿Deseas eliminar la fotografía {{ code }}?"
+            },
+            "messages":
+            {
+                "geometry": "Inserta la localización geográfica de la fotografía pintando directamente en el mapa o estableciendo manualmente las coordenadas del centro."
+            },
+            "detail":
+            {
+                "title": "Fotografía",
+                "fieldset":
+                {
+                    "origin": "Origen de la contaminación",
+                    "cause": "Causa"
+                },
+                "validate": {
+                    "maxfilesize": "No se pueden subir ficheros de más de 10MB, fichero: {{name}}",
+                    "selectfile":"Por favor, selecciona una imagen",
+                    "markphotoonmap":"Por favor, marca la posición de la foto en el mapa",
+                    "drawsegmentonmap": "Introduce los datos solicitados en el formulario y pinta sobre el mapa el segmento afectado",
+                    "confirmdeletepoint": "Esta operación eliminará el punto seleccionado. ¿Estás seguro?"                     
+                }
+            },
+            "entityname": "Fotografía",
+            "comments": "Comentarios",
+            "file": "Fichero",
+            "filename": "Nombre del fichero",
+            "createdtime": "Creado en",
+            "help": {
+                "create":"Si la posición difiere de la actual indícala en el mapa, inserta los comentarios y pulsa Añadir.",
+                "noresults": "No existen fotografías. Crea una pulsando el botón <i class='ion-plus-round'></i>"
+            
+            }
+        }
+    }
+}

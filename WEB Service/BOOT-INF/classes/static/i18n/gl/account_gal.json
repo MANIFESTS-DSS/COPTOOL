@@ -1,0 +1,147 @@
+{
+    "activate":
+    {
+        "title": "Confirmando o teu correo",
+        "messages":
+        {
+            "success": "<strong>O teu correo foi confirmado.</strong> En canto a confraría verifique as túas credenciais, poderás acceder á plataforma.",
+            "error": "<strong>O teu correo non puido ser confirmado.</strong> Por favor, inscríbete mediante o formulario de rexistro"
+        }
+    },
+    "login":
+    {
+        "title": "Iniciar a sesión",
+        "form":
+        {
+            "userlogin": "Usuario",
+            "password": "Contrasinal",
+            "password.placeholder": "O teu contrasinal",
+            "rememberme": "Iniciar a sesión automáticamente",
+            "button": "Iniciar sesión"
+        },
+        "messages":
+        {
+            "error":
+            {
+                "authentication": "<strong>¡Fallou o inicio de sesión!</strong> Por favor, revisa as credenciais e volve a intentalo."
+            }
+        },
+        "password":
+        {
+            "forgot": "¿Esqueciches o teu contrasinal?"
+        }
+    },
+    "password":
+    {
+        "title": "Contrasinal de [<b>{{username}}</b>]",
+        "form":
+        {
+            "button": "Gardar"
+        },
+        "messages":
+        {
+            "error": "<strong>¡Ocorreu un erro!</strong> O contrasinal non se puido modificar.",
+            "success": "<strong>¡Mudouse o contrasinal!</strong>"
+        }
+    },
+    "register":
+    {
+        "title": "Formulario de rexistro",
+        "form":
+        {
+            "button": "Crear a conta"
+        },
+        "messages":
+        {
+            "validate":
+            {
+                "login":
+                {
+                    "required": "O teu nome de userlogin é obrigatorio.",
+                    "minlength": "O teu nome de userlogin debe ter polo menos 1 caracter.",
+                    "maxlength": "O teu nome de userlogin non pode ter máis de 50 caracteres.",
+                    "pattern": "O teu nome de userlogin só pode conter letras minúsculas e díxitos."
+                }
+            },
+            "success": "<strong>Gracias por rexistrarte.</strong><br> En breves recibirás un correo para confirmar o email.<br>Unha vez confirmado o email, a confraría ten que verificar as credenciais antes de que poidas acceder.",
+            "error":
+            {
+                "fail": "<strong>Fallou o rexistro!</strong> Por favor, volve a intentalo de novo máis tarde.",
+                "userexists": "<strong>O nome de userlogin xa está rexistrado!</strong> Por favor, escolle outro userlogin.",
+                "emailexists": "<strong>O correo electrónico xa está en uso!</strong> Por favor, escolle outro email."
+            }
+        }
+    },
+    "reset":
+    {
+        "request":
+        {
+            "title": "Restablecer o teu contrasinal",
+            "form":
+            {
+                "button": "Restablecer contrasinal"
+            },
+            "messages":
+            {
+                "info": "Introduce o e-mail asociado a túa conta e enviarémosche unha ligazón para restablecer o teu contrasinal.",
+                "success": "En breves recibirás no teu correo electrónico máis información sobre cómo restablecer o teu contrasinal.",
+                "notfound": "<strong>¡Dirección de correo non rexistrada!</strong> Por favor, compróbaa e volve a intentalo"
+            }
+        },
+        "finish":
+        {
+            "title": "Restablecer o teu contrasinal",
+            "form":
+            {
+                "button": "Validar o novo contrasinal"
+            },
+            "messages":
+            {
+                "info": "Escolle un contrasinal novo",
+                "success": "<strong>O teu contrasinal foi restablecido.</strong> Por favor, <a class=\"alert-link\" ui-sref=\"account.auth\">inicia sesión</a>.",
+                "keymissing": "Falta a clave de reinicio.",
+                "error": "O teu contrasinal non pode restablecerse. Lembra que unha solicitude de reinicio do contrasinal só é valida durante 24 horas."
+            }
+        }
+    },
+    "settings":
+    {
+        "title": "Axustes do userlogin [<b>{{username}}</b>]",
+        "form":
+        {
+            "username": "Nome de userlogin",
+            "password": "Contrasinal",
+            "changepassword": "Mudar o contrasinal",
+            "firstname": "Nome",
+            "firstname.placeholder": "O teu nome",
+            "lastname": "Apelidos",
+            "lastname.placeholder": "Os teus apelidos",
+            "language": "Idioma",
+            "button": "Gardar"
+        },
+        "messages":
+        {
+            "error":
+            {
+                "fail": "<strong>¡Houbo un erro!</strong> Os axustes non se puideron gardar.",
+                "emailexists": "<strong>¡A direción de correo xa existe!</strong> Por favor, escolle outra."
+            },
+            "success": "<strong>¡Axustes gardados!</strong>",
+            "validate":
+            {
+                "firstname":
+                {
+                    "required": "Precísase que introduzas o teu nome.",
+                    "minlength": "O teu nome debe ter polo menos 1 caracter.",
+                    "maxlength": "O teu nome non pode ter máis de 50 caracteres."
+                },
+                "lastname":
+                {
+                    "required": "Precísase que introduzas os teus apelidos.",
+                    "minlength": "Os teus apelidos deben ter polo menos 1 caracter.",
+                    "maxlength": "Os teus apelidos non poden ter máis de 50 caracteres."
+                }
+            }
+        }
+    }
+}

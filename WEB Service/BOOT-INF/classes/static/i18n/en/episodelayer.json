@@ -1,0 +1,69 @@
+{
+    "app":
+    {
+        "episodelayer":
+        {
+            "title":"Layers",
+            "home":
+            {
+                "title": "Layers",
+                "createLabel": "Create new layer",
+                "linkLabel": "Link layer",
+                "unlinkLabel": "Unlink layer",
+                "createOrEditLabel": "Create or edit layer",
+                "search": "Search layer"
+            },
+            "createform":
+            {
+                "step1": "Caller",
+                "step2": "Observer",
+                "step3": "Meteorological conditions"
+            },
+            "copydialog":{
+                "title":"Copy UserLogins/Layers",
+                "message":"A copy of the current UserLogin and layers will be made. Do you want to continue?",
+                "success":"UserLogin and layers copied correctly"
+            },
+            "created": "New POLREP created successfully",
+            "updated": "POLREP updated successfully ",
+            "deleted": "POLREP removed successfully",
+            "delete":
+            {
+                "question": "Are you sure you want to delete Contingency {{ id }}?"
+            },
+            "unlink":
+            {
+                "question": "Are you sure you want to unlink Contingency {{ id }}?"
+            },
+            "detail":
+            {
+                "title": "UserLogin Episode",
+                "tab":
+                {
+                    "caller": "Caller",
+                    "observer": "Observer",
+                    "meteo": "Meteorological conditions",
+                    "spills": "Spills",
+                    "pollutionsources": "Sources",
+                    "photos": "Photos",
+                    "comments": "Comments"
+                }
+            },
+            "message": {
+                "info":"Layers in the episode: ",
+                "selected": "Selected layers: ",
+                "link":"Layers linked to the episode"
+            },
+            "cmd": {
+                "create":"Create layer",
+                "edit":"Edit layer",
+                "delete":"Delete layer",
+                "link":"Layers linked to the episode",
+                "new":"New layer",
+                "remove":"Remove layer"
+            },
+            "episode": "Episode",
+            "layer": "Layer"
+        }
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "app":
+    {
+        "gisasset":
+        {
+            "title": "Asset",
+            "home":
+            {
+                "title": "Asset",
+                "createLabel": "New asset",
+                "editLabel": "Edit asset",
+                "linkLabel": "Show asset",
+                "createOrEditLabel": "Edit asset",
+                "search": "Search asset"
+            },
+            "createform":
+            {
+                "step1": "Asset"
+            },
+            "created": "Asset '{{ name }}' created",
+            "updated": "Asset '{{ name }}' updated",
+            "deleted": "Asset '{{name}}' deleted",
+            "delete":
+            {
+                "question": "Do you want to delete asset: {{ name }}?"
+            },
+            "unlink":
+            {
+                "question": "Do you want to delete asset: {{ name }}?"
+            },
+            "detail":
+            {
+                "title": "Asset"
+            },
+            "entityname": "Asset",
+            "name": "Name",
+            "marker":"Marker",
+            "color":"Color",
+            "dateTime":"Time",
+            "beginTime":"Begin time",
+            "status":"Status",
+            "PLANNED":"Planned",
+            "ACTUAL":"Actual",
+            "episode":"Contingency",
+            "description": "Description",
+            "createdBy": "User",
+            "createdTime": "Created time",
+            "owner":"Owner",
+            "model":"Model",
+            "visibility":"Visible",
+            "assetItem":"Asset catalog",
+            "asset":
+            {
+                "draw":
+                {
+                    "point": "Point",
+                    "linestring": "Line",
+                    "polygon": "Polygon",
+                    "asset": "Asset",
+                    "cancel": "Cancel"
+                }
+            }
+        }
+    }
+}

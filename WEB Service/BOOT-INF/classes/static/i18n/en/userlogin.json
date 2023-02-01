@@ -1,0 +1,115 @@
+{
+    "app":
+    {
+        "userlogin":
+        {
+           "$title": "Users",
+            "$name": "User",
+            "$plural": "Users",
+            
+            "code":"Code",
+            "geometry": "Geoposition",
+            "comments": "Comments",
+            "username": "Login",
+            "enabled": "Enabled",
+            "disabled": "Disabled",
+            "userEmail": "Email",
+            "userLogin": "Login",
+            "login": "Login",
+            "createdTime": "Created time",
+            "password":"Password",
+            "userRole":"Role",
+            "fullName":"Full name",
+            "level":"Level",
+            "enabled":"Enabled",
+            "disabled":"Disabled",
+            "userAuthorities":"User authorities",
+
+            "home":
+            {
+                "title": "Users",
+                "createLabel": "New user",
+                "linkLabel": "Link user",
+                "createOrEditLabel": "Edit user",
+                "search": "Search user"
+            },
+            "createform":
+            {
+                "step1": "User data",
+                "step2": "Position"
+            },
+            "created": "User '{{ username }}' created successfully",
+            "updated": "User '{{ username }}' updated successfully",
+            "deleted": "User '{{username}}' deleted",
+            "delete":
+            {
+                "question": "Do you want to delete user {{ username }}?"
+            },
+            "unlink":
+            {
+                "question": "Do you want to unlink {{ username }}?"
+            },
+            "messages":
+            {
+                "geometry": "Mark user position"
+            },
+            "detail":
+            {
+                "title": "User",
+                "fieldset":
+                {
+                   "inputEnabled": {
+                        "title":"Mark for enabled user"
+                   }
+                }
+            },
+            "search": {
+                "viewEnabled":"View enabled users"
+            },
+            "help": {
+                "create":"If the position differs from the current one, indicate it on the map, insert the comments and press Add.",
+                "noresults": "There are no comments. Create one by pressing the button <i class='ion-plus-round'></i>"
+            },
+            "cmd": {
+                "create": "Create user",
+                "update": "Edit user",
+                "delete": "Delete user",
+                "search": "Search users",
+                "link": "Link user",
+                "sort": "Sort",
+                "init": "Init",
+                "clear": "Clear"
+            },
+            "userAuthority": {
+                "ROLE_POLREP": "POLREP",
+                "ROLE_SCAT":"SCAT",
+                "ROLE_VISOR": "VISOR",
+                "ROLE_POLLUTION_EPISODE": "COP management",
+                "ROLE_POLLUTION_EPISODE_MAP": "Map",
+                "ROLE_PANEL":"Panel manager",
+                "ROLE_LAYERGROUP": "Layer group manager",
+                "ROLE_LAYER": "Layer manager",
+                "ROLE_LOGBOOKRECORD": "Observer",
+                "ROLE_USERLOGIN": "User manager",
+                "ROLE_SCAT_MANAGER":"Manager (SCAT)",
+                "ROLE_SCAT_INSPECTOR":"Inspector (SCAT)",
+                "ROLE_GISLAYOUT":"Tactical map",
+				"ROLE_BITACORE":"Logbook"
+           }
+        },
+        "userrole":
+        {
+            "ADMIN": "Administrator",
+            "SUPERVISOR": "Supervisor (deprecated)",
+            "OBSERVER": "Observer (deprecated)",
+            "VISOR": "Visor (deprecated)",
+            "MODELER": "Modeler (deprecated)",
+            "POLREP": "Polrep (deprecated)",
+            "POLREP Coast": "SCAT (deprecated)",
+            "USER":"User",
+            "PUBLIC":"Public"
+        }
+
+
+    }
+}

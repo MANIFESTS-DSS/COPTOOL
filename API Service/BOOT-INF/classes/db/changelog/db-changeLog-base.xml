@@ -1,0 +1,1937 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="pdorgambide (generated)" id="1498120769276-1">
+        <createTable tableName="basedescriptor">
+            <column name="dtype" type="VARCHAR(31)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="category" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="field_html" type="TEXT"/>
+            <column name="initialvalue" type="VARCHAR(255)"/>
+            <column name="readonly" type="BOOL"/>
+            <column name="required" type="BOOL"/>
+            <column name="type" type="VARCHAR(255)"/>
+            <column name="taskdescriptor" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-2">
+        <createTable tableName="basedescriptor_permissions">
+            <column name="basedescriptor" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="permissions" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-3">
+        <createTable tableName="comment">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="createdtime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="createdby" type="VARCHAR(255)"/>
+            <column name="comment" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-4">
+        <createTable tableName="event">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="createdtime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="endtime" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="starttime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="type" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="createdby" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-5">
+        <createTable tableName="extractionquota">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="value" type="numeric(19, 2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="extractiontask" type="VARCHAR(255)"/>
+            <column name="specie" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-6">
+        <createTable tableName="filerecord">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="filename" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="filepath" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="resource" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="resourceid" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="uploaddate" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="userlogin" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-7">
+        <createTable tableName="groupmember">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="usergroup" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="userlogin" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-8">
+        <createTable tableName="issue">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="createdtime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="markasreaded" type="BOOL"/>
+            <column name="message" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="title" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="type" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="createdby" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-9">
+        <createTable tableName="kpirecord">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="endtime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="starttime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="value" type="FLOAT8">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-10">
+        <createTable tableName="notification">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="about" type="VARCHAR(255)"/>
+            <column name="createdtime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="markasreaded" type="BOOL"/>
+            <column name="message" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="priority" type="VARCHAR(255)"/>
+            <column name="publishtime" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="sendto" type="VARCHAR(255)"/>
+            <column name="sendedtime" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="status" type="VARCHAR(255)"/>
+            <column name="title" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="topic" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="createdby" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sendtoperson" type="VARCHAR(255)"/>
+            <column name="sendtoteam" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-11">
+        <createTable tableName="operationalplan">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="category" type="VARCHAR(255)"/>
+            <column name="controlplaces" type="VARCHAR(255)"/>
+            <column name="endtime" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="extractionperiods" type="VARCHAR(255)"/>
+            <column name="maxextractiondays" type="INT"/>
+            <column name="organization" type="VARCHAR(255)"/>
+            <column name="starttime" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="workplaces" type="VARCHAR(255)"/>
+            <column name="active" type="BOOL"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-12">
+        <createTable tableName="operationalplanspecie">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="maxextrationdays" type="INT"/>
+            <column name="operationalplan" type="VARCHAR(255)"/>
+            <column name="specie" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-13">
+        <createTable tableName="organization">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="city" type="VARCHAR(255)"/>
+            <column name="country" type="VARCHAR(255)"/>
+            <column name="district" type="VARCHAR(255)"/>
+            <column name="postcode" type="VARCHAR(255)"/>
+            <column name="state" type="VARCHAR(255)"/>
+            <column name="street" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-14">
+        <createTable tableName="permex">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="number" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="validdate" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="seaworker" type="VARCHAR(255)"/>
+            <column name="zone" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-15">
+        <createTable tableName="permission">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-16">
+        <createTable tableName="permission_crud">
+            <column name="permission" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="crud" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-17">
+        <createTable tableName="person">
+            <column name="dtype" type="VARCHAR(31)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="city" type="VARCHAR(255)"/>
+            <column name="country" type="VARCHAR(255)"/>
+            <column name="district" type="VARCHAR(255)"/>
+            <column name="postcode" type="VARCHAR(255)"/>
+            <column name="state" type="VARCHAR(255)"/>
+            <column name="street" type="VARCHAR(255)"/>
+            <column name="age" type="INT"/>
+            <column name="email" type="VARCHAR(255)"/>
+            <column name="gender" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="notes" type="VARCHAR(255)"/>
+            <column name="surname" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="telephone" type="VARCHAR(255)"/>
+            <column name="telephone2" type="VARCHAR(255)"/>
+            <column name="organization" type="VARCHAR(255)"/>
+            <column name="permex" type="VARCHAR(255)"/>
+            <column name="workerstatus" type="VARCHAR(255)"/>
+            <column name="birthday" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="devicetoken" type="VARCHAR(255)"/>
+            <column name="code" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-18">
+        <createTable tableName="person_kpirecords">
+            <column name="person" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="kpirecords" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-19">
+        <createTable tableName="place">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="geometry" type="GEOMETRY(2147483647)"/>
+            <column name="dtype" type="VARCHAR(31)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="controlplace" type="BYTEA"/>
+            <column name="startplace" type="BYTEA"/>
+            <column name="category" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-20">
+        <createTable tableName="product">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-21">
+        <createTable tableName="salesrecord">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="amount" type="numeric(7, 2)"/>
+            <column name="avgprice" type="numeric(7, 2)"/>
+            <column name="datetime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="maxprice" type="numeric(7, 2)"/>
+            <column name="minprice" type="numeric(7, 2)"/>
+            <column name="nofworkers" type="INT"/>
+            <column name="price" type="numeric(7, 2)"/>
+            <column name="product" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-22">
+        <createTable tableName="spatial_ref_sys">
+            <column name="srid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="auth_name" type="VARCHAR(256)"/>
+            <column name="auth_srid" type="INT"/>
+            <column name="srtext" type="VARCHAR(2048)"/>
+            <column name="proj4text" type="VARCHAR(2048)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-23">
+        <createTable tableName="specie">
+            <column name="sortname" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="comercialname" type="VARCHAR(255)"/>
+            <column name="scientificname" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-24">
+        <createTable tableName="task">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="createdtime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="priority" type="VARCHAR(255)"/>
+            <column name="startplanningtime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="controlplace" type="VARCHAR(255)"/>
+            <column name="startplace" type="VARCHAR(255)"/>
+            <column name="workplace" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dtype" type="VARCHAR(31)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="endplanningtime" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="tideinfo" type="VARCHAR(255)"/>
+            <column name="taskstatus" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-25">
+        <createTable tableName="task_reminders">
+            <column name="task" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="method" type="VARCHAR(255)"/>
+            <column name="number" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="unit" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-26">
+        <createTable tableName="taskfield">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="category" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="value" type="VARCHAR(255)"/>
+            <column name="task" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-27">
+        <createTable tableName="taskmember">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="assignedtime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="executedtime" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="task" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="worker" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="role" type="VARCHAR(255)"/>
+            <column name="team" type="VARCHAR(255)"/>
+            <column name="dtype" type="VARCHAR(31)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="comments" type="VARCHAR(255)"/>
+            <column name="confirmed" type="VARCHAR(255)"/>
+            <column name="confirmedtime" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="replaceworker" type="VARCHAR(255)"/>
+            <column name="alternate" type="BOOL"/>
+            <column name="position" type="INT"/>
+            <column name="taskmemberstatus" type="VARCHAR(255)"/>
+            <column name="restoretaskmember" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-28">
+        <createTable tableName="taskmemberrecord">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="category" type="VARCHAR(255)"/>
+            <column name="comments" type="VARCHAR(255)"/>
+            <column name="createdtime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="createdby" type="VARCHAR(255)"/>
+            <column name="taskmember" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-29">
+        <createTable tableName="taskrecord">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="category" type="VARCHAR(255)"/>
+            <column name="comments" type="VARCHAR(255)"/>
+            <column name="createdtime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="createdby" type="VARCHAR(255)"/>
+            <column name="task" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-30">
+        <createTable tableName="taskteam">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="assignedtime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="task" type="VARCHAR(255)"/>
+            <column name="team" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-31">
+        <createTable tableName="team">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="category" type="VARCHAR(255)"/>
+            <column name="place" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-32">
+        <createTable tableName="teammember">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="assignedtime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="team" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="worker" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="role" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-33">
+        <createTable tableName="tideinfo">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="timeinstant" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="height" type="FLOAT8"/>
+            <column name="state" type="VARCHAR(255)"/>
+            <column name="comments" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-34">
+        <createTable tableName="usergroup">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-35">
+        <createTable tableName="usergroup_groupauthorities">
+            <column name="usergroup" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-36">
+        <createTable tableName="userlogin">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enabled" type="BOOL">
+                <constraints nullable="false"/>
+            </column>
+            <column name="locked" type="BOOL"/>
+            <column name="usercomments" type="VARCHAR(255)"/>
+            <column name="useremail" type="VARCHAR(255)"/>
+            <column name="username" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="userpassword" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="userrole" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="expiredtime" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="person" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-37">
+        <createTable tableName="userlogin_userauthorities">
+            <column name="userlogin" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-38">
+        <createTable tableName="userrole">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="role" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-39">
+        <createTable tableName="userrole_authorities">
+            <column name="userrole" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-40">
+        <createTable tableName="workerevent">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="worker" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dtype" type="VARCHAR(31)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="comments" type="VARCHAR(255)"/>
+            <column name="datetime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-41">
+        <addPrimaryKey columnNames="id" constraintName="basedescriptor_pkey" tableName="basedescriptor"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-42">
+        <addPrimaryKey columnNames="id" constraintName="comment_pkey" tableName="comment"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-43">
+        <addPrimaryKey columnNames="id" constraintName="event_pkey" tableName="event"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-44">
+        <addPrimaryKey columnNames="id" constraintName="extractionquota_pkey" tableName="extractionquota"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-45">
+        <addPrimaryKey columnNames="id" constraintName="filerecord_pkey" tableName="filerecord"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-46">
+        <addPrimaryKey columnNames="id" constraintName="groupmember_pkey" tableName="groupmember"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-47">
+        <addPrimaryKey columnNames="id" constraintName="id_pk" tableName="tideinfo"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-48">
+        <addPrimaryKey columnNames="id" constraintName="issue_pkey" tableName="issue"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-49">
+        <addPrimaryKey columnNames="id" constraintName="kpirecord_pkey" tableName="kpirecord"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-50">
+        <addPrimaryKey columnNames="id" constraintName="notification_pkey" tableName="notification"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-51">
+        <addPrimaryKey columnNames="id" constraintName="operationalplan_pkey" tableName="operationalplan"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-52">
+        <addPrimaryKey columnNames="id" constraintName="operationalplanspecie_pkey" tableName="operationalplanspecie"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-53">
+        <addPrimaryKey columnNames="id" constraintName="organization_pkey" tableName="organization"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-54">
+        <addPrimaryKey columnNames="id" constraintName="permex_pkey" tableName="permex"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-55">
+        <addPrimaryKey columnNames="id" constraintName="permission_pkey" tableName="permission"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-56">
+        <addPrimaryKey columnNames="id" constraintName="person_pkey" tableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-57">
+        <addPrimaryKey columnNames="id" constraintName="place_pkey" tableName="place"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-58">
+        <addPrimaryKey columnNames="id" constraintName="product_pkey" tableName="product"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-59">
+        <addPrimaryKey columnNames="id" constraintName="salesrecord_pkey" tableName="salesrecord"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-60">
+        <addPrimaryKey columnNames="srid" constraintName="spatial_ref_sys_pkey" tableName="spatial_ref_sys"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-61">
+        <addPrimaryKey columnNames="sortname" constraintName="specie_pkey" tableName="specie"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-62">
+        <addPrimaryKey columnNames="id" constraintName="task_pkey" tableName="task"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-63">
+        <addPrimaryKey columnNames="id" constraintName="taskfield_pkey" tableName="taskfield"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-64">
+        <addPrimaryKey columnNames="id" constraintName="taskmember_pkey" tableName="taskmember"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-65">
+        <addPrimaryKey columnNames="id" constraintName="taskmemberrecord_pkey" tableName="taskmemberrecord"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-66">
+        <addPrimaryKey columnNames="id" constraintName="taskrecord_pkey" tableName="taskrecord"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-67">
+        <addPrimaryKey columnNames="id" constraintName="taskteam_pkey" tableName="taskteam"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-68">
+        <addPrimaryKey columnNames="id" constraintName="team_pkey" tableName="team"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-69">
+        <addPrimaryKey columnNames="id" constraintName="teammember_pkey" tableName="teammember"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-70">
+        <addPrimaryKey columnNames="id" constraintName="usergroup_pkey" tableName="usergroup"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-71">
+        <addPrimaryKey columnNames="id" constraintName="userlogin_pkey" tableName="userlogin"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-72">
+        <addPrimaryKey columnNames="id" constraintName="userrole_pkey" tableName="userrole"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-73">
+        <addPrimaryKey columnNames="id" constraintName="workerevent_pkey" tableName="workerevent"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-74">
+        <addUniqueConstraint columnNames="username" constraintName="uk_9etrofpnpancqfj9sm7y9o67s" tableName="userlogin"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-75">
+        <addUniqueConstraint columnNames="kpirecords" constraintName="uk_cd6famc6pfy0s9u2dmfi2ui1a" tableName="person_kpirecords"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-76">
+        <addUniqueConstraint columnNames="permissions" constraintName="uk_gc2dxjrym2ar13xjf0nnxg0k5" tableName="basedescriptor_permissions"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-77">
+        <addForeignKeyConstraint baseColumnNames="task" baseTableName="taskfield" constraintName="fk_17dhhxcb26yxwf95aijo7q4xo" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="task"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-78">
+        <addForeignKeyConstraint baseColumnNames="controlplace" baseTableName="task" constraintName="fk_1caxwmxulmvywqj0yka5o7rj8" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="place"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-79">
+        <addForeignKeyConstraint baseColumnNames="createdby" baseTableName="taskrecord" constraintName="fk_1yqtapiucyyqqny1abfcop89r" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-80">
+        <addForeignKeyConstraint baseColumnNames="team" baseTableName="teammember" constraintName="fk_2mmnkutkte219xnfxt9qwl6j8" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="team"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-81">
+        <addForeignKeyConstraint baseColumnNames="operationalplan" baseTableName="operationalplanspecie" constraintName="fk_2nrlmvo6k40bck7y25o4186y3" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="operationalplan"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-82">
+        <addForeignKeyConstraint baseColumnNames="createdby" baseTableName="issue" constraintName="fk_2wpnakyblrucvg0ka6yvglosd" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-83">
+        <addForeignKeyConstraint baseColumnNames="basedescriptor" baseTableName="basedescriptor_permissions" constraintName="fk_4a3al9go9lfhdsyukeuntl43b" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="basedescriptor"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-84">
+        <addForeignKeyConstraint baseColumnNames="product" baseTableName="salesrecord" constraintName="fk_4cwc1xyupdwanxdxfrgsotxi6" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="product"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-85">
+        <addForeignKeyConstraint baseColumnNames="person" baseTableName="userlogin" constraintName="fk_4eruy6xhb6eaf4p3sa1asj5k2" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-86">
+        <addForeignKeyConstraint baseColumnNames="usergroup" baseTableName="groupmember" constraintName="fk_4hc1rerjj1nd6oqa39n2vqqjc" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="usergroup"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-87">
+        <addForeignKeyConstraint baseColumnNames="zone" baseTableName="permex" constraintName="fk_663gxyvg624hquw7fmiceh4r8" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="place"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-88">
+        <addForeignKeyConstraint baseColumnNames="specie" baseTableName="extractionquota" constraintName="fk_7vptrhpx70tlgsch9eh6c5tmd" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="sortname" referencedTableName="specie"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-89">
+        <addForeignKeyConstraint baseColumnNames="organization" baseTableName="person" constraintName="fk_8yemqhhvqh38pv1h5qq5e4gql" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="organization"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-90">
+        <addForeignKeyConstraint baseColumnNames="permex" baseTableName="person" constraintName="fk_8yq08vubco7uvrdyr4deg787u" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="permex"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-91">
+        <addForeignKeyConstraint baseColumnNames="createdby" baseTableName="notification" constraintName="fk_910geggiqg9ofllspcfo1kpoq" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-92">
+        <addForeignKeyConstraint baseColumnNames="specie" baseTableName="operationalplanspecie" constraintName="fk_9dtcyiyfvhkbo75rqmeoe7tna" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="sortname" referencedTableName="specie"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-93">
+        <addForeignKeyConstraint baseColumnNames="userlogin" baseTableName="groupmember" constraintName="fk_au1xd2r4t1lf520ut1epul6mp" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="userlogin"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-94">
+        <addForeignKeyConstraint baseColumnNames="kpirecords" baseTableName="person_kpirecords" constraintName="fk_cd6famc6pfy0s9u2dmfi2ui1a" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="kpirecord"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-95">
+        <addForeignKeyConstraint baseColumnNames="task" baseTableName="taskmember" constraintName="fk_cgq5v6wkf87dyfrvkbe9d06y5" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="task"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-96">
+        <addForeignKeyConstraint baseColumnNames="team" baseTableName="taskmember" constraintName="fk_cgq5v6wkf87dyfrvkbe9dd6y5" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="team"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-97">
+        <addForeignKeyConstraint baseColumnNames="userrole" baseTableName="userlogin" constraintName="fk_comir6btgbflud2svk34fkma8" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="userrole"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-98">
+        <addForeignKeyConstraint baseColumnNames="userlogin" baseTableName="filerecord" constraintName="fk_cw1q9xao1qq5lre9llvqmc98f" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="userlogin"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-99">
+        <addForeignKeyConstraint baseColumnNames="startplace" baseTableName="task" constraintName="fk_d375kdo404kxms6m92njyyn0a" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="place"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-100">
+        <addForeignKeyConstraint baseColumnNames="team" baseTableName="taskteam" constraintName="fk_ddfvo1r4ii2p5qj08dryidfff" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="team"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-101">
+        <addForeignKeyConstraint baseColumnNames="taskmember" baseTableName="taskmemberrecord" constraintName="fk_f4la1xt3dvuhfsd0r68d4qpdg" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="taskmember"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-102">
+        <addForeignKeyConstraint baseColumnNames="sendtoteam" baseTableName="notification" constraintName="fk_g78ahtgyyrvmm41hke1utkd1r" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="team"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-103">
+        <addForeignKeyConstraint baseColumnNames="permissions" baseTableName="basedescriptor_permissions" constraintName="fk_gc2dxjrym2ar13xjf0nnxg0k5" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="permission"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-104">
+        <addForeignKeyConstraint baseColumnNames="userrole" baseTableName="userrole_authorities" constraintName="fk_gm8c49dlff2edo9xvhaqgdmuu" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="userrole"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-105">
+        <addForeignKeyConstraint baseColumnNames="extractiontask" baseTableName="extractionquota" constraintName="fk_h9hep5vk99n3730p7ht6pat1w" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="task"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-106">
+        <addForeignKeyConstraint baseColumnNames="task" baseTableName="task_reminders" constraintName="fk_hwyrun6favjxheajbvjk64a56" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="task"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-107">
+        <addForeignKeyConstraint baseColumnNames="taskdescriptor" baseTableName="basedescriptor" constraintName="fk_i8s4hkv5lhji2mvhbu19qv5rq" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="basedescriptor"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-108">
+        <addForeignKeyConstraint baseColumnNames="tideinfo" baseTableName="task" constraintName="fk_iny3v3rwtgwl0bsx9fino0jln" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="tideinfo"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-109">
+        <addForeignKeyConstraint baseColumnNames="createdby" baseTableName="event" constraintName="fk_iqmivvgug1s4eg3hsspg8c4n7" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="userlogin"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-110">
+        <addForeignKeyConstraint baseColumnNames="createdby" baseTableName="comment" constraintName="fk_iucud69niup1ixrfgtyqtu726" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="userlogin"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-111">
+        <addForeignKeyConstraint baseColumnNames="worker" baseTableName="teammember" constraintName="fk_j63vcguv97j1hleb2nms4ih48" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-112">
+        <addForeignKeyConstraint baseColumnNames="replaceworker" baseTableName="taskmember" constraintName="fk_jic8p8rl8e8tvbenjr0qjf228" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-113">
+        <addForeignKeyConstraint baseColumnNames="seaworker" baseTableName="permex" constraintName="fk_jrt5nldpmc7cuuk9srtuu68iv" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-114">
+        <addForeignKeyConstraint baseColumnNames="worker" baseTableName="workerevent" constraintName="fk_npyk8xhie8c9y1pwqtn4t2kw5" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-115">
+        <addForeignKeyConstraint baseColumnNames="task" baseTableName="taskteam" constraintName="fk_nqt8mcxogd3am7lnsr6cf4va9" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="task"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-116">
+        <addForeignKeyConstraint baseColumnNames="userlogin" baseTableName="userlogin_userauthorities" constraintName="fk_nv4p79woman2cbdqxbhtbbj2i" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="userlogin"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-117">
+        <addForeignKeyConstraint baseColumnNames="sendtoperson" baseTableName="notification" constraintName="fk_oe88b91vjteitdvl8u6e6u8ah" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-118">
+        <addForeignKeyConstraint baseColumnNames="permission" baseTableName="permission_crud" constraintName="fk_pd6fl1s9rbpe1olhe0mecwwd3" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="permission"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-119">
+        <addForeignKeyConstraint baseColumnNames="task" baseTableName="taskrecord" constraintName="fk_phfjpu5fpgwx13r2fwy6nukfa" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="task"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-120">
+        <addForeignKeyConstraint baseColumnNames="usergroup" baseTableName="usergroup_groupauthorities" constraintName="fk_pi9sq8r98cpu3rwt85pqrdxys" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="usergroup"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-121">
+        <addForeignKeyConstraint baseColumnNames="workplace" baseTableName="task" constraintName="fk_q18mc2u9bk3gr79bxw2crk9b4" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="place"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-122">
+        <addForeignKeyConstraint baseColumnNames="person" baseTableName="person_kpirecords" constraintName="fk_qhr0em8d4mkdvkbnmj8aqo1wu" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-123">
+        <addForeignKeyConstraint baseColumnNames="createdby" baseTableName="taskmemberrecord" constraintName="fk_ryapfir0eweyqwp7qtmjo1lju" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-124">
+        <addForeignKeyConstraint baseColumnNames="worker" baseTableName="taskmember" constraintName="fk_tp7wsgitx5nfi4jyqtoeoobtc" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-125">
+        <createView fullDefinition="false" viewName="geography_columns"> SELECT current_database() AS f_table_catalog,
+    n.nspname AS f_table_schema,
+    c.relname AS f_table_name,
+    a.attname AS f_geography_column,
+    postgis_typmod_dims(a.atttypmod) AS coord_dimension,
+    postgis_typmod_srid(a.atttypmod) AS srid,
+    postgis_typmod_type(a.atttypmod) AS type
+   FROM pg_class c,
+    pg_attribute a,
+    pg_type t,
+    pg_namespace n
+  WHERE ((t.typname = 'geography'::name) AND (a.attisdropped = false) AND (a.atttypid = t.oid) AND (a.attrelid = c.oid) AND (c.relnamespace = n.oid) AND (NOT pg_is_other_temp_schema(c.relnamespace)) AND has_table_privilege(c.oid, 'SELECT'::text));</createView>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-126">
+        <createView fullDefinition="false" viewName="geometry_columns"> SELECT (current_database())::character varying(256) AS f_table_catalog,
+    n.nspname AS f_table_schema,
+    c.relname AS f_table_name,
+    a.attname AS f_geometry_column,
+    COALESCE(postgis_typmod_dims(a.atttypmod), sn.ndims, 2) AS coord_dimension,
+    COALESCE(NULLIF(postgis_typmod_srid(a.atttypmod), 0), sr.srid, 0) AS srid,
+    (replace(replace(COALESCE(NULLIF(upper(postgis_typmod_type(a.atttypmod)), 'GEOMETRY'::text), st.type, 'GEOMETRY'::text), 'ZM'::text, ''::text), 'Z'::text, ''::text))::character varying(30) AS type
+   FROM ((((((pg_class c
+     JOIN pg_attribute a ON (((a.attrelid = c.oid) AND (NOT a.attisdropped))))
+     JOIN pg_namespace n ON ((c.relnamespace = n.oid)))
+     JOIN pg_type t ON ((a.atttypid = t.oid)))
+     LEFT JOIN ( SELECT s.connamespace,
+            s.conrelid,
+            s.conkey,
+            replace(split_part(s.consrc, ''''::text, 2), ')'::text, ''::text) AS type
+           FROM pg_constraint s
+          WHERE (s.consrc ~~* '%geometrytype(% = %'::text)) st ON (((st.connamespace = n.oid) AND (st.conrelid = c.oid) AND (a.attnum = ANY (st.conkey)))))
+     LEFT JOIN ( SELECT s.connamespace,
+            s.conrelid,
+            s.conkey,
+            (replace(split_part(s.consrc, ' = '::text, 2), ')'::text, ''::text))::integer AS ndims
+           FROM pg_constraint s
+          WHERE (s.consrc ~~* '%ndims(% = %'::text)) sn ON (((sn.connamespace = n.oid) AND (sn.conrelid = c.oid) AND (a.attnum = ANY (sn.conkey)))))
+     LEFT JOIN ( SELECT s.connamespace,
+            s.conrelid,
+            s.conkey,
+            (replace(replace(split_part(s.consrc, ' = '::text, 2), ')'::text, ''::text), '('::text, ''::text))::integer AS srid
+           FROM pg_constraint s
+          WHERE (s.consrc ~~* '%srid(% = %'::text)) sr ON (((sr.connamespace = n.oid) AND (sr.conrelid = c.oid) AND (a.attnum = ANY (sr.conkey)))))
+  WHERE ((c.relkind = ANY (ARRAY['r'::"char", 'v'::"char", 'm'::"char", 'f'::"char"])) AND (NOT (c.relname = 'raster_columns'::name)) AND (t.typname = 'geometry'::name) AND (NOT pg_is_other_temp_schema(c.relnamespace)) AND has_table_privilege(c.oid, 'SELECT'::text));</createView>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-127">
+        <createView fullDefinition="false" viewName="raster_columns"> SELECT current_database() AS r_table_catalog,
+    n.nspname AS r_table_schema,
+    c.relname AS r_table_name,
+    a.attname AS r_raster_column,
+    COALESCE(_raster_constraint_info_srid(n.nspname, c.relname, a.attname), ( SELECT st_srid('010100000000000000000000000000000000000000'::geometry) AS st_srid)) AS srid,
+    _raster_constraint_info_scale(n.nspname, c.relname, a.attname, 'x'::bpchar) AS scale_x,
+    _raster_constraint_info_scale(n.nspname, c.relname, a.attname, 'y'::bpchar) AS scale_y,
+    _raster_constraint_info_blocksize(n.nspname, c.relname, a.attname, 'width'::text) AS blocksize_x,
+    _raster_constraint_info_blocksize(n.nspname, c.relname, a.attname, 'height'::text) AS blocksize_y,
+    COALESCE(_raster_constraint_info_alignment(n.nspname, c.relname, a.attname), false) AS same_alignment,
+    COALESCE(_raster_constraint_info_regular_blocking(n.nspname, c.relname, a.attname), false) AS regular_blocking,
+    _raster_constraint_info_num_bands(n.nspname, c.relname, a.attname) AS num_bands,
+    _raster_constraint_info_pixel_types(n.nspname, c.relname, a.attname) AS pixel_types,
+    _raster_constraint_info_nodata_values(n.nspname, c.relname, a.attname) AS nodata_values,
+    _raster_constraint_info_out_db(n.nspname, c.relname, a.attname) AS out_db,
+    _raster_constraint_info_extent(n.nspname, c.relname, a.attname) AS extent,
+    COALESCE(_raster_constraint_info_index(n.nspname, c.relname, a.attname), false) AS spatial_index
+   FROM pg_class c,
+    pg_attribute a,
+    pg_type t,
+    pg_namespace n
+  WHERE ((t.typname = 'raster'::name) AND (a.attisdropped = false) AND (a.atttypid = t.oid) AND (a.attrelid = c.oid) AND (c.relnamespace = n.oid) AND ((c.relkind)::text = ANY ((ARRAY['r'::character(1), 'v'::character(1), 'm'::character(1), 'f'::character(1)])::text[])) AND (NOT pg_is_other_temp_schema(c.relnamespace)) AND has_table_privilege(c.oid, 'SELECT'::text));</createView>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120769276-128">
+        <createView fullDefinition="false" viewName="raster_overviews"> SELECT current_database() AS o_table_catalog,
+    n.nspname AS o_table_schema,
+    c.relname AS o_table_name,
+    a.attname AS o_raster_column,
+    current_database() AS r_table_catalog,
+    (split_part(split_part(s.consrc, '''::name'::text, 1), ''''::text, 2))::name AS r_table_schema,
+    (split_part(split_part(s.consrc, '''::name'::text, 2), ''''::text, 2))::name AS r_table_name,
+    (split_part(split_part(s.consrc, '''::name'::text, 3), ''''::text, 2))::name AS r_raster_column,
+    (btrim(split_part(s.consrc, ','::text, 2)))::integer AS overview_factor
+   FROM pg_class c,
+    pg_attribute a,
+    pg_type t,
+    pg_namespace n,
+    pg_constraint s
+  WHERE ((t.typname = 'raster'::name) AND (a.attisdropped = false) AND (a.atttypid = t.oid) AND (a.attrelid = c.oid) AND (c.relnamespace = n.oid) AND ((c.relkind)::text = ANY ((ARRAY['r'::character(1), 'v'::character(1), 'm'::character(1), 'f'::character(1)])::text[])) AND (s.connamespace = n.oid) AND (s.conrelid = c.oid) AND (s.consrc ~~ '%_overview_constraint(%'::text) AND (NOT pg_is_other_temp_schema(c.relnamespace)) AND has_table_privilege(c.oid, 'SELECT'::text));</createView>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-1">
+        <createTable tableName="basedescriptor">
+            <column name="dtype" type="VARCHAR(31)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="category" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="field_html" type="TEXT"/>
+            <column name="initialvalue" type="VARCHAR(255)"/>
+            <column name="readonly" type="BOOL"/>
+            <column name="required" type="BOOL"/>
+            <column name="type" type="VARCHAR(255)"/>
+            <column name="taskdescriptor" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-2">
+        <createTable tableName="basedescriptor_permissions">
+            <column name="basedescriptor" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="permissions" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-3">
+        <createTable tableName="comment">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="createdtime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="createdby" type="VARCHAR(255)"/>
+            <column name="comment" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-4">
+        <createTable tableName="event">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="createdtime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="endtime" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="starttime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="type" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="createdby" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-5">
+        <createTable tableName="extractionquota">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="value" type="numeric(19, 2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="extractiontask" type="VARCHAR(255)"/>
+            <column name="specie" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-6">
+        <createTable tableName="filerecord">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="filename" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="filepath" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="resource" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="resourceid" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="uploaddate" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="userlogin" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-7">
+        <createTable tableName="groupmember">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="usergroup" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="userlogin" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-8">
+        <createTable tableName="issue">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="createdtime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="markasreaded" type="BOOL"/>
+            <column name="message" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="title" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="type" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="createdby" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-9">
+        <createTable tableName="kpirecord">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="endtime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="starttime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="value" type="FLOAT8">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-10">
+        <createTable tableName="notification">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="about" type="VARCHAR(255)"/>
+            <column name="createdtime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="markasreaded" type="BOOL"/>
+            <column name="message" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="priority" type="VARCHAR(255)"/>
+            <column name="publishtime" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="sendto" type="VARCHAR(255)"/>
+            <column name="sendedtime" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="status" type="VARCHAR(255)"/>
+            <column name="title" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="topic" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="createdby" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sendtoperson" type="VARCHAR(255)"/>
+            <column name="sendtoteam" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-11">
+        <createTable tableName="operationalplan">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="category" type="VARCHAR(255)"/>
+            <column name="controlplaces" type="VARCHAR(255)"/>
+            <column name="endtime" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="extractionperiods" type="VARCHAR(255)"/>
+            <column name="maxextractiondays" type="INT"/>
+            <column name="organization" type="VARCHAR(255)"/>
+            <column name="starttime" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="workplaces" type="VARCHAR(255)"/>
+            <column name="active" type="BOOL"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-12">
+        <createTable tableName="operationalplanspecie">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="maxextrationdays" type="INT"/>
+            <column name="operationalplan" type="VARCHAR(255)"/>
+            <column name="specie" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-13">
+        <createTable tableName="organization">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="city" type="VARCHAR(255)"/>
+            <column name="country" type="VARCHAR(255)"/>
+            <column name="district" type="VARCHAR(255)"/>
+            <column name="postcode" type="VARCHAR(255)"/>
+            <column name="state" type="VARCHAR(255)"/>
+            <column name="street" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-14">
+        <createTable tableName="permex">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="number" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="validdate" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="seaworker" type="VARCHAR(255)"/>
+            <column name="zone" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-15">
+        <createTable tableName="permission">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-16">
+        <createTable tableName="permission_crud">
+            <column name="permission" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="crud" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-17">
+        <createTable tableName="person">
+            <column name="dtype" type="VARCHAR(31)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="city" type="VARCHAR(255)"/>
+            <column name="country" type="VARCHAR(255)"/>
+            <column name="district" type="VARCHAR(255)"/>
+            <column name="postcode" type="VARCHAR(255)"/>
+            <column name="state" type="VARCHAR(255)"/>
+            <column name="street" type="VARCHAR(255)"/>
+            <column name="age" type="INT"/>
+            <column name="email" type="VARCHAR(255)"/>
+            <column name="gender" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="notes" type="VARCHAR(255)"/>
+            <column name="surname" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="telephone" type="VARCHAR(255)"/>
+            <column name="telephone2" type="VARCHAR(255)"/>
+            <column name="organization" type="VARCHAR(255)"/>
+            <column name="permex" type="VARCHAR(255)"/>
+            <column name="workerstatus" type="VARCHAR(255)"/>
+            <column name="birthday" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="devicetoken" type="VARCHAR(255)"/>
+            <column name="code" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-18">
+        <createTable tableName="person_kpirecords">
+            <column name="person" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="kpirecords" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-19">
+        <createTable tableName="place">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="geometry" type="GEOMETRY(2147483647)"/>
+            <column name="dtype" type="VARCHAR(31)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="controlplace" type="BYTEA"/>
+            <column name="startplace" type="BYTEA"/>
+            <column name="category" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-20">
+        <createTable tableName="product">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-21">
+        <createTable tableName="salesrecord">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="amount" type="numeric(7, 2)"/>
+            <column name="avgprice" type="numeric(7, 2)"/>
+            <column name="datetime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="maxprice" type="numeric(7, 2)"/>
+            <column name="minprice" type="numeric(7, 2)"/>
+            <column name="nofworkers" type="INT"/>
+            <column name="price" type="numeric(7, 2)"/>
+            <column name="product" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-22">
+        <createTable tableName="spatial_ref_sys">
+            <column name="srid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="auth_name" type="VARCHAR(256)"/>
+            <column name="auth_srid" type="INT"/>
+            <column name="srtext" type="VARCHAR(2048)"/>
+            <column name="proj4text" type="VARCHAR(2048)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-23">
+        <createTable tableName="specie">
+            <column name="sortname" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="comercialname" type="VARCHAR(255)"/>
+            <column name="scientificname" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-24">
+        <createTable tableName="task">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="createdtime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="priority" type="VARCHAR(255)"/>
+            <column name="startplanningtime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="controlplace" type="VARCHAR(255)"/>
+            <column name="startplace" type="VARCHAR(255)"/>
+            <column name="workplace" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dtype" type="VARCHAR(31)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="endplanningtime" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="tideinfo" type="VARCHAR(255)"/>
+            <column name="taskstatus" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-25">
+        <createTable tableName="task_reminders">
+            <column name="task" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="method" type="VARCHAR(255)"/>
+            <column name="number" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="unit" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-26">
+        <createTable tableName="taskfield">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="category" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="value" type="VARCHAR(255)"/>
+            <column name="task" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-27">
+        <createTable tableName="taskmember">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="assignedtime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="executedtime" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="task" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="worker" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="role" type="VARCHAR(255)"/>
+            <column name="team" type="VARCHAR(255)"/>
+            <column name="dtype" type="VARCHAR(31)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="comments" type="VARCHAR(255)"/>
+            <column name="confirmed" type="VARCHAR(255)"/>
+            <column name="confirmedtime" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="replaceworker" type="VARCHAR(255)"/>
+            <column name="alternate" type="BOOL"/>
+            <column name="position" type="INT"/>
+            <column name="taskmemberstatus" type="VARCHAR(255)"/>
+            <column name="restoretaskmember" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-28">
+        <createTable tableName="taskmemberrecord">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="category" type="VARCHAR(255)"/>
+            <column name="comments" type="VARCHAR(255)"/>
+            <column name="createdtime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="createdby" type="VARCHAR(255)"/>
+            <column name="taskmember" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-29">
+        <createTable tableName="taskrecord">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="category" type="VARCHAR(255)"/>
+            <column name="comments" type="VARCHAR(255)"/>
+            <column name="createdtime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="createdby" type="VARCHAR(255)"/>
+            <column name="task" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-30">
+        <createTable tableName="taskteam">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="assignedtime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="task" type="VARCHAR(255)"/>
+            <column name="team" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-31">
+        <createTable tableName="team">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="category" type="VARCHAR(255)"/>
+            <column name="place" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-32">
+        <createTable tableName="teammember">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="assignedtime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="team" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="worker" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="role" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-33">
+        <createTable tableName="tideinfo">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="timeinstant" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="height" type="FLOAT8"/>
+            <column name="state" type="VARCHAR(255)"/>
+            <column name="comments" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-34">
+        <createTable tableName="usergroup">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-35">
+        <createTable tableName="usergroup_groupauthorities">
+            <column name="usergroup" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-36">
+        <createTable tableName="userlogin">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enabled" type="BOOL">
+                <constraints nullable="false"/>
+            </column>
+            <column name="locked" type="BOOL"/>
+            <column name="usercomments" type="VARCHAR(255)"/>
+            <column name="useremail" type="VARCHAR(255)"/>
+            <column name="username" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="userpassword" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="userrole" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="expiredtime" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="person" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-37">
+        <createTable tableName="userlogin_userauthorities">
+            <column name="userlogin" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-38">
+        <createTable tableName="userrole">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="role" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-39">
+        <createTable tableName="userrole_authorities">
+            <column name="userrole" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-40">
+        <createTable tableName="workerevent">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="worker" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dtype" type="VARCHAR(31)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="comments" type="VARCHAR(255)"/>
+            <column name="datetime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-41">
+        <addPrimaryKey columnNames="id" constraintName="basedescriptor_pkey" tableName="basedescriptor"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-42">
+        <addPrimaryKey columnNames="id" constraintName="comment_pkey" tableName="comment"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-43">
+        <addPrimaryKey columnNames="id" constraintName="event_pkey" tableName="event"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-44">
+        <addPrimaryKey columnNames="id" constraintName="extractionquota_pkey" tableName="extractionquota"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-45">
+        <addPrimaryKey columnNames="id" constraintName="filerecord_pkey" tableName="filerecord"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-46">
+        <addPrimaryKey columnNames="id" constraintName="groupmember_pkey" tableName="groupmember"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-47">
+        <addPrimaryKey columnNames="id" constraintName="id_pk" tableName="tideinfo"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-48">
+        <addPrimaryKey columnNames="id" constraintName="issue_pkey" tableName="issue"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-49">
+        <addPrimaryKey columnNames="id" constraintName="kpirecord_pkey" tableName="kpirecord"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-50">
+        <addPrimaryKey columnNames="id" constraintName="notification_pkey" tableName="notification"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-51">
+        <addPrimaryKey columnNames="id" constraintName="operationalplan_pkey" tableName="operationalplan"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-52">
+        <addPrimaryKey columnNames="id" constraintName="operationalplanspecie_pkey" tableName="operationalplanspecie"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-53">
+        <addPrimaryKey columnNames="id" constraintName="organization_pkey" tableName="organization"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-54">
+        <addPrimaryKey columnNames="id" constraintName="permex_pkey" tableName="permex"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-55">
+        <addPrimaryKey columnNames="id" constraintName="permission_pkey" tableName="permission"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-56">
+        <addPrimaryKey columnNames="id" constraintName="person_pkey" tableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-57">
+        <addPrimaryKey columnNames="id" constraintName="place_pkey" tableName="place"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-58">
+        <addPrimaryKey columnNames="id" constraintName="product_pkey" tableName="product"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-59">
+        <addPrimaryKey columnNames="id" constraintName="salesrecord_pkey" tableName="salesrecord"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-60">
+        <addPrimaryKey columnNames="srid" constraintName="spatial_ref_sys_pkey" tableName="spatial_ref_sys"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-61">
+        <addPrimaryKey columnNames="sortname" constraintName="specie_pkey" tableName="specie"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-62">
+        <addPrimaryKey columnNames="id" constraintName="task_pkey" tableName="task"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-63">
+        <addPrimaryKey columnNames="id" constraintName="taskfield_pkey" tableName="taskfield"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-64">
+        <addPrimaryKey columnNames="id" constraintName="taskmember_pkey" tableName="taskmember"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-65">
+        <addPrimaryKey columnNames="id" constraintName="taskmemberrecord_pkey" tableName="taskmemberrecord"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-66">
+        <addPrimaryKey columnNames="id" constraintName="taskrecord_pkey" tableName="taskrecord"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-67">
+        <addPrimaryKey columnNames="id" constraintName="taskteam_pkey" tableName="taskteam"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-68">
+        <addPrimaryKey columnNames="id" constraintName="team_pkey" tableName="team"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-69">
+        <addPrimaryKey columnNames="id" constraintName="teammember_pkey" tableName="teammember"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-70">
+        <addPrimaryKey columnNames="id" constraintName="usergroup_pkey" tableName="usergroup"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-71">
+        <addPrimaryKey columnNames="id" constraintName="userlogin_pkey" tableName="userlogin"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-72">
+        <addPrimaryKey columnNames="id" constraintName="userrole_pkey" tableName="userrole"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-73">
+        <addPrimaryKey columnNames="id" constraintName="workerevent_pkey" tableName="workerevent"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-74">
+        <addUniqueConstraint columnNames="username" constraintName="uk_9etrofpnpancqfj9sm7y9o67s" tableName="userlogin"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-75">
+        <addUniqueConstraint columnNames="kpirecords" constraintName="uk_cd6famc6pfy0s9u2dmfi2ui1a" tableName="person_kpirecords"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-76">
+        <addUniqueConstraint columnNames="permissions" constraintName="uk_gc2dxjrym2ar13xjf0nnxg0k5" tableName="basedescriptor_permissions"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-77">
+        <addForeignKeyConstraint baseColumnNames="task" baseTableName="taskfield" constraintName="fk_17dhhxcb26yxwf95aijo7q4xo" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="task"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-78">
+        <addForeignKeyConstraint baseColumnNames="controlplace" baseTableName="task" constraintName="fk_1caxwmxulmvywqj0yka5o7rj8" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="place"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-79">
+        <addForeignKeyConstraint baseColumnNames="createdby" baseTableName="taskrecord" constraintName="fk_1yqtapiucyyqqny1abfcop89r" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-80">
+        <addForeignKeyConstraint baseColumnNames="team" baseTableName="teammember" constraintName="fk_2mmnkutkte219xnfxt9qwl6j8" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="team"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-81">
+        <addForeignKeyConstraint baseColumnNames="operationalplan" baseTableName="operationalplanspecie" constraintName="fk_2nrlmvo6k40bck7y25o4186y3" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="operationalplan"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-82">
+        <addForeignKeyConstraint baseColumnNames="createdby" baseTableName="issue" constraintName="fk_2wpnakyblrucvg0ka6yvglosd" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-83">
+        <addForeignKeyConstraint baseColumnNames="basedescriptor" baseTableName="basedescriptor_permissions" constraintName="fk_4a3al9go9lfhdsyukeuntl43b" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="basedescriptor"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-84">
+        <addForeignKeyConstraint baseColumnNames="product" baseTableName="salesrecord" constraintName="fk_4cwc1xyupdwanxdxfrgsotxi6" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="product"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-85">
+        <addForeignKeyConstraint baseColumnNames="person" baseTableName="userlogin" constraintName="fk_4eruy6xhb6eaf4p3sa1asj5k2" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-86">
+        <addForeignKeyConstraint baseColumnNames="usergroup" baseTableName="groupmember" constraintName="fk_4hc1rerjj1nd6oqa39n2vqqjc" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="usergroup"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-87">
+        <addForeignKeyConstraint baseColumnNames="zone" baseTableName="permex" constraintName="fk_663gxyvg624hquw7fmiceh4r8" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="place"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-88">
+        <addForeignKeyConstraint baseColumnNames="specie" baseTableName="extractionquota" constraintName="fk_7vptrhpx70tlgsch9eh6c5tmd" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="sortname" referencedTableName="specie"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-89">
+        <addForeignKeyConstraint baseColumnNames="organization" baseTableName="person" constraintName="fk_8yemqhhvqh38pv1h5qq5e4gql" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="organization"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-90">
+        <addForeignKeyConstraint baseColumnNames="permex" baseTableName="person" constraintName="fk_8yq08vubco7uvrdyr4deg787u" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="permex"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-91">
+        <addForeignKeyConstraint baseColumnNames="createdby" baseTableName="notification" constraintName="fk_910geggiqg9ofllspcfo1kpoq" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-92">
+        <addForeignKeyConstraint baseColumnNames="specie" baseTableName="operationalplanspecie" constraintName="fk_9dtcyiyfvhkbo75rqmeoe7tna" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="sortname" referencedTableName="specie"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-93">
+        <addForeignKeyConstraint baseColumnNames="userlogin" baseTableName="groupmember" constraintName="fk_au1xd2r4t1lf520ut1epul6mp" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="userlogin"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-94">
+        <addForeignKeyConstraint baseColumnNames="kpirecords" baseTableName="person_kpirecords" constraintName="fk_cd6famc6pfy0s9u2dmfi2ui1a" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="kpirecord"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-95">
+        <addForeignKeyConstraint baseColumnNames="task" baseTableName="taskmember" constraintName="fk_cgq5v6wkf87dyfrvkbe9d06y5" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="task"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-96">
+        <addForeignKeyConstraint baseColumnNames="team" baseTableName="taskmember" constraintName="fk_cgq5v6wkf87dyfrvkbe9dd6y5" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="team"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-97">
+        <addForeignKeyConstraint baseColumnNames="userrole" baseTableName="userlogin" constraintName="fk_comir6btgbflud2svk34fkma8" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="userrole"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-98">
+        <addForeignKeyConstraint baseColumnNames="userlogin" baseTableName="filerecord" constraintName="fk_cw1q9xao1qq5lre9llvqmc98f" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="userlogin"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-99">
+        <addForeignKeyConstraint baseColumnNames="startplace" baseTableName="task" constraintName="fk_d375kdo404kxms6m92njyyn0a" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="place"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-100">
+        <addForeignKeyConstraint baseColumnNames="team" baseTableName="taskteam" constraintName="fk_ddfvo1r4ii2p5qj08dryidfff" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="team"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-101">
+        <addForeignKeyConstraint baseColumnNames="taskmember" baseTableName="taskmemberrecord" constraintName="fk_f4la1xt3dvuhfsd0r68d4qpdg" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="taskmember"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-102">
+        <addForeignKeyConstraint baseColumnNames="sendtoteam" baseTableName="notification" constraintName="fk_g78ahtgyyrvmm41hke1utkd1r" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="team"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-103">
+        <addForeignKeyConstraint baseColumnNames="permissions" baseTableName="basedescriptor_permissions" constraintName="fk_gc2dxjrym2ar13xjf0nnxg0k5" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="permission"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-104">
+        <addForeignKeyConstraint baseColumnNames="userrole" baseTableName="userrole_authorities" constraintName="fk_gm8c49dlff2edo9xvhaqgdmuu" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="userrole"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-105">
+        <addForeignKeyConstraint baseColumnNames="extractiontask" baseTableName="extractionquota" constraintName="fk_h9hep5vk99n3730p7ht6pat1w" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="task"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-106">
+        <addForeignKeyConstraint baseColumnNames="task" baseTableName="task_reminders" constraintName="fk_hwyrun6favjxheajbvjk64a56" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="task"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-107">
+        <addForeignKeyConstraint baseColumnNames="taskdescriptor" baseTableName="basedescriptor" constraintName="fk_i8s4hkv5lhji2mvhbu19qv5rq" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="basedescriptor"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-108">
+        <addForeignKeyConstraint baseColumnNames="tideinfo" baseTableName="task" constraintName="fk_iny3v3rwtgwl0bsx9fino0jln" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="tideinfo"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-109">
+        <addForeignKeyConstraint baseColumnNames="createdby" baseTableName="event" constraintName="fk_iqmivvgug1s4eg3hsspg8c4n7" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="userlogin"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-110">
+        <addForeignKeyConstraint baseColumnNames="createdby" baseTableName="comment" constraintName="fk_iucud69niup1ixrfgtyqtu726" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="userlogin"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-111">
+        <addForeignKeyConstraint baseColumnNames="worker" baseTableName="teammember" constraintName="fk_j63vcguv97j1hleb2nms4ih48" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-112">
+        <addForeignKeyConstraint baseColumnNames="replaceworker" baseTableName="taskmember" constraintName="fk_jic8p8rl8e8tvbenjr0qjf228" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-113">
+        <addForeignKeyConstraint baseColumnNames="seaworker" baseTableName="permex" constraintName="fk_jrt5nldpmc7cuuk9srtuu68iv" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-114">
+        <addForeignKeyConstraint baseColumnNames="worker" baseTableName="workerevent" constraintName="fk_npyk8xhie8c9y1pwqtn4t2kw5" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-115">
+        <addForeignKeyConstraint baseColumnNames="task" baseTableName="taskteam" constraintName="fk_nqt8mcxogd3am7lnsr6cf4va9" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="task"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-116">
+        <addForeignKeyConstraint baseColumnNames="userlogin" baseTableName="userlogin_userauthorities" constraintName="fk_nv4p79woman2cbdqxbhtbbj2i" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="userlogin"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-117">
+        <addForeignKeyConstraint baseColumnNames="sendtoperson" baseTableName="notification" constraintName="fk_oe88b91vjteitdvl8u6e6u8ah" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-118">
+        <addForeignKeyConstraint baseColumnNames="permission" baseTableName="permission_crud" constraintName="fk_pd6fl1s9rbpe1olhe0mecwwd3" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="permission"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-119">
+        <addForeignKeyConstraint baseColumnNames="task" baseTableName="taskrecord" constraintName="fk_phfjpu5fpgwx13r2fwy6nukfa" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="task"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-120">
+        <addForeignKeyConstraint baseColumnNames="usergroup" baseTableName="usergroup_groupauthorities" constraintName="fk_pi9sq8r98cpu3rwt85pqrdxys" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="usergroup"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-121">
+        <addForeignKeyConstraint baseColumnNames="workplace" baseTableName="task" constraintName="fk_q18mc2u9bk3gr79bxw2crk9b4" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="place"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-122">
+        <addForeignKeyConstraint baseColumnNames="person" baseTableName="person_kpirecords" constraintName="fk_qhr0em8d4mkdvkbnmj8aqo1wu" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-123">
+        <addForeignKeyConstraint baseColumnNames="createdby" baseTableName="taskmemberrecord" constraintName="fk_ryapfir0eweyqwp7qtmjo1lju" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-124">
+        <addForeignKeyConstraint baseColumnNames="worker" baseTableName="taskmember" constraintName="fk_tp7wsgitx5nfi4jyqtoeoobtc" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-125">
+        <createView fullDefinition="false" viewName="geography_columns"> SELECT current_database() AS f_table_catalog,
+    n.nspname AS f_table_schema,
+    c.relname AS f_table_name,
+    a.attname AS f_geography_column,
+    postgis_typmod_dims(a.atttypmod) AS coord_dimension,
+    postgis_typmod_srid(a.atttypmod) AS srid,
+    postgis_typmod_type(a.atttypmod) AS type
+   FROM pg_class c,
+    pg_attribute a,
+    pg_type t,
+    pg_namespace n
+  WHERE ((t.typname = 'geography'::name) AND (a.attisdropped = false) AND (a.atttypid = t.oid) AND (a.attrelid = c.oid) AND (c.relnamespace = n.oid) AND (NOT pg_is_other_temp_schema(c.relnamespace)) AND has_table_privilege(c.oid, 'SELECT'::text));</createView>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-126">
+        <createView fullDefinition="false" viewName="geometry_columns"> SELECT (current_database())::character varying(256) AS f_table_catalog,
+    n.nspname AS f_table_schema,
+    c.relname AS f_table_name,
+    a.attname AS f_geometry_column,
+    COALESCE(postgis_typmod_dims(a.atttypmod), sn.ndims, 2) AS coord_dimension,
+    COALESCE(NULLIF(postgis_typmod_srid(a.atttypmod), 0), sr.srid, 0) AS srid,
+    (replace(replace(COALESCE(NULLIF(upper(postgis_typmod_type(a.atttypmod)), 'GEOMETRY'::text), st.type, 'GEOMETRY'::text), 'ZM'::text, ''::text), 'Z'::text, ''::text))::character varying(30) AS type
+   FROM ((((((pg_class c
+     JOIN pg_attribute a ON (((a.attrelid = c.oid) AND (NOT a.attisdropped))))
+     JOIN pg_namespace n ON ((c.relnamespace = n.oid)))
+     JOIN pg_type t ON ((a.atttypid = t.oid)))
+     LEFT JOIN ( SELECT s.connamespace,
+            s.conrelid,
+            s.conkey,
+            replace(split_part(s.consrc, ''''::text, 2), ')'::text, ''::text) AS type
+           FROM pg_constraint s
+          WHERE (s.consrc ~~* '%geometrytype(% = %'::text)) st ON (((st.connamespace = n.oid) AND (st.conrelid = c.oid) AND (a.attnum = ANY (st.conkey)))))
+     LEFT JOIN ( SELECT s.connamespace,
+            s.conrelid,
+            s.conkey,
+            (replace(split_part(s.consrc, ' = '::text, 2), ')'::text, ''::text))::integer AS ndims
+           FROM pg_constraint s
+          WHERE (s.consrc ~~* '%ndims(% = %'::text)) sn ON (((sn.connamespace = n.oid) AND (sn.conrelid = c.oid) AND (a.attnum = ANY (sn.conkey)))))
+     LEFT JOIN ( SELECT s.connamespace,
+            s.conrelid,
+            s.conkey,
+            (replace(replace(split_part(s.consrc, ' = '::text, 2), ')'::text, ''::text), '('::text, ''::text))::integer AS srid
+           FROM pg_constraint s
+          WHERE (s.consrc ~~* '%srid(% = %'::text)) sr ON (((sr.connamespace = n.oid) AND (sr.conrelid = c.oid) AND (a.attnum = ANY (sr.conkey)))))
+  WHERE ((c.relkind = ANY (ARRAY['r'::"char", 'v'::"char", 'm'::"char", 'f'::"char"])) AND (NOT (c.relname = 'raster_columns'::name)) AND (t.typname = 'geometry'::name) AND (NOT pg_is_other_temp_schema(c.relnamespace)) AND has_table_privilege(c.oid, 'SELECT'::text));</createView>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-127">
+        <createView fullDefinition="false" viewName="raster_columns"> SELECT current_database() AS r_table_catalog,
+    n.nspname AS r_table_schema,
+    c.relname AS r_table_name,
+    a.attname AS r_raster_column,
+    COALESCE(_raster_constraint_info_srid(n.nspname, c.relname, a.attname), ( SELECT st_srid('010100000000000000000000000000000000000000'::geometry) AS st_srid)) AS srid,
+    _raster_constraint_info_scale(n.nspname, c.relname, a.attname, 'x'::bpchar) AS scale_x,
+    _raster_constraint_info_scale(n.nspname, c.relname, a.attname, 'y'::bpchar) AS scale_y,
+    _raster_constraint_info_blocksize(n.nspname, c.relname, a.attname, 'width'::text) AS blocksize_x,
+    _raster_constraint_info_blocksize(n.nspname, c.relname, a.attname, 'height'::text) AS blocksize_y,
+    COALESCE(_raster_constraint_info_alignment(n.nspname, c.relname, a.attname), false) AS same_alignment,
+    COALESCE(_raster_constraint_info_regular_blocking(n.nspname, c.relname, a.attname), false) AS regular_blocking,
+    _raster_constraint_info_num_bands(n.nspname, c.relname, a.attname) AS num_bands,
+    _raster_constraint_info_pixel_types(n.nspname, c.relname, a.attname) AS pixel_types,
+    _raster_constraint_info_nodata_values(n.nspname, c.relname, a.attname) AS nodata_values,
+    _raster_constraint_info_out_db(n.nspname, c.relname, a.attname) AS out_db,
+    _raster_constraint_info_extent(n.nspname, c.relname, a.attname) AS extent,
+    COALESCE(_raster_constraint_info_index(n.nspname, c.relname, a.attname), false) AS spatial_index
+   FROM pg_class c,
+    pg_attribute a,
+    pg_type t,
+    pg_namespace n
+  WHERE ((t.typname = 'raster'::name) AND (a.attisdropped = false) AND (a.atttypid = t.oid) AND (a.attrelid = c.oid) AND (c.relnamespace = n.oid) AND ((c.relkind)::text = ANY ((ARRAY['r'::character(1), 'v'::character(1), 'm'::character(1), 'f'::character(1)])::text[])) AND (NOT pg_is_other_temp_schema(c.relnamespace)) AND has_table_privilege(c.oid, 'SELECT'::text));</createView>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498120818775-128">
+        <createView fullDefinition="false" viewName="raster_overviews"> SELECT current_database() AS o_table_catalog,
+    n.nspname AS o_table_schema,
+    c.relname AS o_table_name,
+    a.attname AS o_raster_column,
+    current_database() AS r_table_catalog,
+    (split_part(split_part(s.consrc, '''::name'::text, 1), ''''::text, 2))::name AS r_table_schema,
+    (split_part(split_part(s.consrc, '''::name'::text, 2), ''''::text, 2))::name AS r_table_name,
+    (split_part(split_part(s.consrc, '''::name'::text, 3), ''''::text, 2))::name AS r_raster_column,
+    (btrim(split_part(s.consrc, ','::text, 2)))::integer AS overview_factor
+   FROM pg_class c,
+    pg_attribute a,
+    pg_type t,
+    pg_namespace n,
+    pg_constraint s
+  WHERE ((t.typname = 'raster'::name) AND (a.attisdropped = false) AND (a.atttypid = t.oid) AND (a.attrelid = c.oid) AND (c.relnamespace = n.oid) AND ((c.relkind)::text = ANY ((ARRAY['r'::character(1), 'v'::character(1), 'm'::character(1), 'f'::character(1)])::text[])) AND (s.connamespace = n.oid) AND (s.conrelid = c.oid) AND (s.consrc ~~ '%_overview_constraint(%'::text) AND (NOT pg_is_other_temp_schema(c.relnamespace)) AND has_table_privilege(c.oid, 'SELECT'::text));</createView>
+    </changeSet>
+</databaseChangeLog>

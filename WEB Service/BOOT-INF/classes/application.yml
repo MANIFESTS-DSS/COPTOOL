@@ -1,0 +1,136 @@
+debug: false
+
+banner:
+  location: classpath:/logoQualigy.txt
+  
+server:
+  port: 8088
+  compression:
+    enabled: true
+    mime-types:
+    - application/json
+    - text/html
+    - image/jpg
+    - application/xml
+    - text/xml 
+    - text/plain
+    
+    min-response-size: 0
+  use-forward-headers: true
+  connection-timeout: 18000
+
+spring:
+  application:
+    name: localhost
+  http:
+    multipart:
+      enabled: true
+#      location: D:/Temp/arcopol_multipart
+      max-file-size: 10MB 
+      max-request-size: 10MB
+#  main:
+#    banner-mode: off
+  aop:
+    proxy-target-class: true
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
+
+tomcat:
+#DEPLOY  ON SERVER: Para despliegue activar el ajpEnabled: true
+  ajpEnabled: true
+  ajpPort: 8019
+  
+#  datasource:
+#    platform: postgres
+#    driverClassName: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5432/arcopol
+#    username: arcopol
+#    password: arcopoldb
+
+#proxy:
+#  auth:
+#    routes:
+#      api: passthru
+#      auth: passthru
+      
+#endpoints:
+#  cors:
+#    allowed-origins: '*'
+#    allowed-methods: GET, PUT, POST, DELETE, OPTIONS
+#    allowed-headers: '*'
+#    exposed-headers: null
+#    allow-credentials: true
+#    max-age: 1800
+
+#Actuator    
+management:
+  port: -1
+  address: 127.0.0.1
+  context-path: /actuator
+  security:
+    enabled: false
+    
+security:
+  user:
+    password: none
+
+#  oauth2:
+#    client:
+#      accessTokenUri: /auth/oauth/token
+#      userAuthorizationUri: /auth/oauth/authorize
+#      clientId: arcopol
+#      clientSecret: arcopolsecret
+     # pre-established-redirect-uri: /app/pages/auth/auth.html
+  enable-csrf: false
+  
+  basic:
+    enabled: false
+
+zuul:
+  host:
+    connect-timeout-millis: 60000 # starting the connection 
+    socket-timeout-millis: 60000  # monitor the continuous incoming data flow
+  routes:
+    api:
+      service-id: api
+      path: /api/**
+#      strip-prefix: false
+      custom-sensitive-headers: true
+      #Debe mantener el Authorization token
+      sensitive-headers: Cookie,Set-Cookie
+      url: http://localhost:9000
+    pub:
+      service-id: pub
+      path: /pub/**
+      custom-sensitive-headers: true
+      sensitive-headers: Cookie,Set-Cookie
+      url: http://localhost:9000/pub
+    auth:
+      service-id: auth
+      path: /auth/**
+#      strip-prefix: false
+      custom-sensitive-headers: true
+      sensitive-headers: Cookie,Set-Cookie
+      url: http://localhost:9000/auth
+    meteo:
+      service-id: meteo
+      path: /meteo/**
+#      strip-prefix: false
+      custom-sensitive-headers: true
+      sensitive-headers: Cookie,Set-Cookie
+      url: http://servizos.meteogalicia.es/apiv3
+#Parametros de instalación en infraestrucutra del intecmar (PROXY).
+intecmar:
+  proxy:
+    enabled: false
+    forwarded-port: 80
+    forwarded-host: www.plancamgal.gal/coptool
+
+logging:
+  level:
+    root: WARN 
+    #eu.arcopol.web: DEBUG
+    #org.apache.http: DEBUG
+    #org.springframework.security.web: DEBUG
+    #com.netflix.zuul: DEBUG      

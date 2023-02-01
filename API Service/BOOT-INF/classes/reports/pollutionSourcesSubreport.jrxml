@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pollutionSourcesSubreport" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c17f6032-ca8f-44a2-aacc-c617c0dc6cce">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Heading 3" fontSize="14" isBold="true"/>
+	<field name="id" class="java.lang.String"/>
+	<field name="description" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="pollutionCause" class="java.lang.String"/>
+	<field name="causeDescription" class="java.lang.String"/>
+	<field name="sourceType" class="java.lang.String"/>
+	<detail>
+		<band height="80" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="20" uuid="a071c554-218b-4bfe-8566-603d0b324a41"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement x="0" y="0" width="555" height="20" uuid="1b96c66a-4442-4ee7-a52f-995f8d194ce2"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ORIXE DA CONTAMINACIÓN]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="0" y="20" width="555" height="20" uuid="f4300a15-73d3-488f-80be-f858f99a4966"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textField>
+					<reportElement x="0" y="0" width="555" height="20" uuid="a9bceb65-2132-4f38-a90f-cc0335b43091"/>
+					<textElement verticalAlignment="Middle">
+						<paragraph leftIndent="3"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{sourceType}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="0" y="40" width="555" height="20" uuid="9fdff1ab-679b-4307-94dc-816d95af2006"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement x="0" y="0" width="555" height="20" uuid="5520aeba-7a48-4933-a610-f6f935a85c6b"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[IDENTIFICACIÓN DA FONTE DE CONTAMINACIÓN]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="0" y="60" width="555" height="20" uuid="9b4f0772-818d-4243-8b1e-310e527ed28b"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textField>
+					<reportElement x="0" y="0" width="555" height="20" uuid="59500b66-f16f-4ed7-a78d-2f408c033450"/>
+					<textElement verticalAlignment="Middle">
+						<paragraph leftIndent="3"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="40">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="20" uuid="0982b2ae-c4be-475b-9e32-cd6033086d88"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement x="0" y="0" width="555" height="20" uuid="680ee1cf-0c2f-4437-81f4-e484be63a3f9"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CAUSA DA CONTAMINACIÓN]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="0" y="20" width="555" height="20" uuid="c1baf16b-bb7c-4bbf-824e-239fd7c2b0e9"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textField>
+					<reportElement x="0" y="0" width="555" height="20" uuid="a51ae4c0-3e75-4e27-9070-5fec77a0f660"/>
+					<textElement verticalAlignment="Middle">
+						<paragraph leftIndent="3"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pollutionCause}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>

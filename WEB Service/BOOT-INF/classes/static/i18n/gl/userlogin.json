@@ -1,0 +1,121 @@
+{
+    "app":
+    {
+        "userlogin":
+        {
+            "$title": "Usuarios",
+            "$name": "Usuario",
+            "$plural": "Usuarios",
+            
+            "code":"Código",
+            "geometry": "Ubicación xeográfica",
+            "comments": "Comentarios",
+            "username": "Login",
+            "enabled": "Activo",
+            "disabled": "Desactivado",
+            "userEmail": "Correo electrónico",
+            "userLogin": "Login",
+            "login": "Login",
+            "createdTime": "Creado en",
+            "password":"Contrasinal",
+            "userRole":"Perfil",
+            "fullName":"Nome e apelidos",
+            "level":"Nivel",
+            "enabled":"Activo",
+            "disabled":"Desactivado",
+            "userAuthorities":"Permisos do usuario",
+            "organization":"Organización",
+            "phone":"Teléfono",
+            "home":
+            {
+                "title": "Usuarios",
+                "createLabel": "Novo usuario",
+                "linkLabel": "Vincular usuario",
+                "createOrEditLabel": "Crear ou editar usuario",
+                "search": "Buscar usuario"
+            },
+            "createform":
+            {
+                "step1": "Datos do usuario",
+                "step2": "Ubicación"
+            },
+            "created": "Usuario '{{ username }}' creado correctamente",
+            "updated": "Usuario '{{ username }}' actualizado correctamente",
+            "deleted": "Usuario '{{username}}' eliminado",
+            "delete":
+            {
+                "question": "¿Desexas eliminar o usuario {{ username }}?"
+            },
+            "unlink":
+            {
+                "question": "¿Desexas desvincular o usuario {{ username }}?"
+            },
+            "messages":
+            {
+                "geometry": "Insere a localización xeográfica do usuario pintando directamente no mapa ou establecendo manualmente as coordenadas do centro."
+            },
+            "detail":
+            {
+                "title": "Comentario",
+                "fieldset":
+                {
+                   "inputEnabled": {
+                        "title":"Marcar para activar o usuario"
+                   }
+                },
+                "validate": {
+                    "maxfilesize": "Non se poden subir ficheiros de mais de 10MB, ficheiro: {{name}}",
+                    "selectfile":"Por favor, selecciona unha imaxe",
+                    "markphotoonmap":"Por favor, marca a posición do usuario no mapa",
+                    "drawsegmentonmap": "Introduce os datos solicitados no formulario e pinta sobre o mapa o segmento afectado",
+                    "confirmdeletepoint": "Esta operación eliminará o punto seleccionado. ¿Estás seguro?"                     
+                }
+            },
+            "search": {
+                "viewEnabled":"Ver usuarios activos"
+            },
+            "help": {
+                "create":"Se a posición difire da actual indícaa no mapa, insere os comentarios e preme Engadir.",
+                "noresults": "Non existen comentarios. Crea un premendo o botón <i class='ion-plus-round'></i>"
+            },
+            "cmd": {
+                "create": "Crear usuario",
+                "update": "Editar usuario",
+                "delete": "Eliminar usuario",
+                "search": "Buscar usuarios",
+                "link": "Vincular usuario",
+                "sort": "Ordenar",
+                "init": "Inicializar",
+                "clear": "Limpar"
+            },
+            "userAuthority": {
+                "ROLE_POLREP": "Informes POLREP",
+                "ROLE_SCAT":"Informes POLREP Costa",
+                "ROLE_VISOR": "VISOR",
+                "ROLE_POLLUTION_EPISODE": "Xestión COP",
+                "ROLE_POLLUTION_EPISODE_MAP": "Visor",
+                "ROLE_PANEL":"Xestión paneis",
+                "ROLE_LAYERGROUP": "Xestión grupos",
+                "ROLE_LAYER": "Xestión capas",
+                "ROLE_LOGBOOKRECORD": "Observador",
+                "ROLE_USERLOGIN": "Xestión usuarios",
+                "ROLE_SCAT_MANAGER":"Xestor (POLREP Costa)",
+                "ROLE_SCAT_INSPECTOR":"Eq. inspección (POLREP Costa)",
+                "ROLE_GISLAYOUT":"Mapa estratéxico",
+				"ROLE_BITACORE":"Bitácora"
+            }
+        },
+                "userrole":
+        {
+            "ADMIN": "Administrador",
+            "SUPERVISOR": "Supervisor (deprecated)",
+            "OBSERVER": "Observador (deprecated)",
+            "VISOR": "Visor (deprecated)",
+            "MODELER": "Modelado (deprecated)",
+            "POLREP": "Polrep (deprecated)",
+            "POLREP Costa": "POLREP Costa (deprecated)",
+            "USER":"Usuario",
+            "PUBLIC":"Público"
+        }
+    }
+}

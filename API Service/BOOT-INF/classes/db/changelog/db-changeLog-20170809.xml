@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="pdorgambide (generated)" id="1502278545722-1">
+        <addColumn tableName="additionaltaskmember">
+            <column name="dtype" type="varchar(31)">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1502278545722-2">
+        <addColumn tableName="additionaltaskmember">
+            <column name="restoretaskmember" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1502278545722-3">
+        <addColumn tableName="additionaltaskmember">
+            <column name="taskmember" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1502278545722-4">
+        <addForeignKeyConstraint baseColumnNames="controlplace" baseTableName="place" constraintName="fk_2wc2v2x5fvw37dhlvijgsibsm" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="place"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1502278545722-5">
+        <addForeignKeyConstraint baseColumnNames="startplace" baseTableName="place" constraintName="fk_8p53ha2yv4su0c45gmoj4b3l" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="place"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1502278545722-6">
+        <addForeignKeyConstraint baseColumnNames="restoretaskmember" baseTableName="additionaltaskmember" constraintName="fk_8pwgomdaagwk4wcswj6sx1j69" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="taskmember"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1502278545722-7">
+        <addForeignKeyConstraint baseColumnNames="place" baseTableName="team" constraintName="fk_90udpp9cpo130pqjg42vqbjc3" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="place"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1502278545722-8">
+        <addForeignKeyConstraint baseColumnNames="taskmember" baseTableName="additionaltaskmember" constraintName="fk_ck8i2733892k0r895tbn5a623" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="taskmember"/>
+    </changeSet>
+</databaseChangeLog>

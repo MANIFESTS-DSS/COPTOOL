@@ -1,0 +1,328 @@
+{
+    "global":
+    {
+        "language": "Español",
+        "languages": {
+            "gl":"Gallego",
+            "es":"Español",
+            "en":"Inglés"
+        },
+
+        "title": "app",
+        "browsehappy": "Estás usando un navegador <strong>no actualizado</strong>. Por favor, <a href=\"http://browsehappy.com/?locale=en\">actualiza tu navegador</a> para mejorar la experiencia.",
+        "theme":
+        {
+            "component":
+            {
+                "hola":"Hello",
+                "bookmark":
+                {
+                    "created": "Marcador {{title}} creado",
+                    "removed": "Marcador {{title}} eliminado",
+                    "empty":"No se encontraron marcadores!"
+                }
+            }
+        },
+        "menu":
+        {
+            "home": "Inicio",
+            "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
+            "entities":
+            {
+                "main": "Entidades",
+                "countryGbi": "País",
+                "unitGbi": "Unidad",
+                "lineGbi": "Línea",
+                "lineVersionGbi": "Versión de Línea",
+                "country": "País",
+                "unit": "Unidad",
+                "lineVersion": "Versión de Línea",
+                "line": "Línea",
+                "territory": "Territorio",
+                "employeeTerritoryOcupation": "Ocupación de Territorio de Empleados",
+                "employee": "Empleado",
+                "customerGroupTypeHierarchy": "Jerarquía de tipos de grupos de clientes",
+                "customerGroupType": "Tipo de grupos de clientes",
+                "customerGroup": "Grupo de clientes",
+                "customer": "Cliente",
+                "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
+            },
+            "account":
+            {
+                "main": "Cuenta",
+                "settings": "Ajustes",
+                "password": "Contraseña",
+                "sessions": "Sesiones",
+                "login": "Iniciar sesión",
+                "logout": "Cerrar la sesión",
+                "register": "Crear una cuenta"
+            },
+            "admin":
+            {
+                "main": "Administración",
+                "userManagement": "Gestión de userlogins",
+                "tracker": "Registro de los userlogins",
+                "metrics": "Métricas",
+                "health": "Salud",
+                "configuration": "Configuración",
+                "logs": "Logs",
+                "audits": "Auditorías",
+                "apidocs": "API",
+                "database": "Base de datos",
+                "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
+            },
+            "language": "Idioma"
+        },
+        "form":
+        {
+            "username": "UserLogin",
+            "username.placeholder": "Nombre de userlogin",
+            "newpassword": "Nueva contraseña",
+            "newpassword.placeholder": "Nueva contraseña",
+            "confirmpassword": "Confirmación de nueva contraseña",
+            "confirmpassword.placeholder": "Confirmación de nueva contraseña",
+            "email": "Correo electrónico",
+            "email.placeholder": "Tu correo electrónico"
+        },
+        "modal":{
+            "wait": {
+                "title":"Operación en curso",
+                "message":"Estamos procesando tu solicitud, esta operación puede tardar unos minutos. Por favor espera..."
+            }
+        },
+        "messages":
+        {
+            "info":
+            {
+                "authenticated": "Si ya tienes una cuenta puedes <a class=\"alert-link\" ui-sref=\"account.auth\">iniciar una sesión</a>.",
+                "register": "¿Aún no estás registrado? <a class=\"alert-link\" ui-sref=\"account.register\">Crea una cuenta</a>",
+                "opennewtab": "Pulsa Ctrl para abrir una nueva pestaña"
+            },
+            "error":
+            {
+                "dontmatch": "¡Las contraseñas no coinciden!"
+            },
+            "search":
+            {
+                "inforesults":"{{length}} resultados",
+                "noresults": "Lo sentimos!, no se han encontrado resultados",
+                "results": "Localizados {{totalElements}} registros"
+            },
+            "map":{
+                "longitude":"Longitud",
+                "area":"Área"
+            },
+
+            "confirmdelete":
+            {
+                "title": "Confirma eliminar",
+                "message": "Esta operación eliminará el elemento seleccionado y no se podrá deshacer. <br/><strong>¿Deseas continuar?</strong>"
+            },
+            
+            "save":
+            {
+                "error":
+                {
+                    "required":
+                    {
+                        "title": "¡No se pudo completar la operación!",
+                        "message": "Debes especificar datos para los campos requeridos:"
+                    },
+                    "pattern":
+                    {
+                        "title": "¡Se han encontrado errores de formato!",
+                        "message": "Introduce valores según el formato en los campos:"
+                    }
+                }
+            },
+            "file": {
+                "upload": {
+                    "success":"Ficheiro registrado correctamente",
+                    "error":"Problemas al subir el fichero (Tamaño máximo 10MB)"
+                },
+                "delete": {
+                    "success":"Fichero eliminado correctamente",
+                    "error":"Error al eliminar el fichero",
+                    "confirm": {
+                        "title":"Confirma eliminar fichero",
+                        "message":"Esta operación no se puede deshacer. Deseas continuar?"
+                    }
+                }
+            },
+            "validate":
+            {
+                "newpassword":
+                {
+                    "required": "Es necesario que indiques una contraseña.",
+                    "minlength": "Es necesario que tu contraseña tenga por lo menos 5 caracteres",
+                    "maxlength": "Tu contraseña no puede tener más de 50 caracetes.",
+                    "strength": "Seguridad de la contraseña:"
+                },
+                "confirmpassword":
+                {
+                    "required": "Es necesario que confirmes tu contraseña.",
+                    "minlength": "Es necesario que tu contraseña tenga por lo menos 5 caracteres",
+                    "maxlength": "Tu contraseña no puede tener más de 50 caracteres."
+                },
+                "email":
+                {
+                    "required": "Es necesario que introduzcas un email",
+                    "invalid": "Tu correo electrónico no es válido.",
+                    "minlength": "Es necesario que tu email tenga por lo menos 5 caracteres",
+                    "maxlength": "Tu email no puede tener más de 50 caracetes.",
+                    "duplicated":"Email no válido (duplicado)"
+                },
+                "datetime":
+                {
+                    "required": "Es necesario que introduzcas una fecha",
+                    "invalid": "La fecha introducida no es válida."
+                },
+                "textarea":
+                {
+
+                    "required": "Es necesario que introduzcas un texto",
+                    "pattern": "Formato del texto: {{format}}",
+                    "invalid": "El texto introducido no es válido"
+                },
+                "text":
+                {
+                    "required": "Es necesario que introduzcas un texto",
+                    "pattern": "Formato del texto: {{format}}",
+                    "invalid": "El texto introducido no es válido"
+                },
+                "number":
+                {
+                    "range": "El valor debe estar entre {{min}} y {{max}}",
+                    "required": "Es necesario que introduzcas un valor numérico",
+                    "invalid": "El valor numérico introducido no es válido.",
+                    "max": "El valor debe ser inferior a: {{max}}",
+                    "min": "El valor debe ser superior a: {{min}}"
+                },
+                "select":
+                {
+                    "required": "Es necesario que selecciones un valor"
+                }
+            }
+        },
+        "button":
+        {
+            "yes": "Si",
+            "no": "No",
+            "close": "Cerrar",
+            "accept": "Aceptar",
+            "create": "Crear",
+            "cancel": "Cancelar",
+            "remove": "Eliminar",
+            "delete": "Eliminar",
+            "confirm": "Confirmar",
+            "edit": "Editar",
+            "link": "Vincular",
+            "unlink": "Desvincular",
+            "ok": "Aceptar",
+            "end": "Fin",
+            "next": "Siguiente",
+            "previous": "Anterior",
+            "finish": "Finalizar",
+            "continue":"Continuar",
+            "geoposition": "GeoLocalización",
+            "centermap":"Centrar mapa",
+            "photo":"Foto",
+            "print":"Imprimir",
+            "detail":"Detalles",
+            "add": "Añadir",
+            "save": "Guardar",
+            "clone": "Duplicar",
+            "share": "Compartir",
+            "select":"Seleccionar",
+            "showHide":"Mostrar/Ocultar",
+            "measure":"Medir",
+			"selectfile":"Selecciona fichero..."
+        },
+        "field":
+        {
+            "id": "ID"
+        },
+        "ribbon":
+        {
+            "dev": "Development"
+        },
+        "item-count": "Monstrando {{first}} - {{second}} de {{total}} artículos."
+    },
+    "entity":
+    {
+        "action":
+        {
+            "addblob": "Añadir fichero",
+            "addimage": "Añadir imagen",
+            "back": "Volver",
+            "cancel": "Cancelar",
+            "delete": "Eliminar",
+            "edit": "Editar",
+            "open": "Abrir",
+            "save": "Guardar",
+            "view": "Vista",
+            "link": "Vincular",
+            "unlink": "Desvincular",
+            "accept": "Aceptar",
+            "select": "Seleccionar",
+            "unselect": "Desmarcar"
+        },
+        "detail":
+        {
+            "field": "Campo",
+            "value": "Valor"
+        },
+        "select":
+        {
+            "title": "Seleccionar elementos"
+        },
+
+        "delete":
+        {
+            "title": "Confirmar operación de borrado"
+        },
+        "unlink":
+        {
+            "title": "Confirmar operación de desvincular"
+        },
+        "validation":
+        {
+            "required": "Este campo es obligatorio.",
+            "minlength": "Este campo requiere por lo menos {{min}} caracteres.",
+            "maxlength": "Este campo no puede superar más de {{max}} caracteres.",
+            "min": "Este campo debe ser mayor que {{min}}.",
+            "max": "Este campo no puede ser mayor que {{max}}.",
+            "minbytes": "Este campo debe tener como mínimo {{min}} bytes.",
+            "maxbytes": "Este campo no puede tener más de {{max}} bytes.",
+            "pattern": "Este campo debe seguir el patrón {{pattern}}.",
+            "number": "Este campo debe ser un número.",
+            "datetimelocal": "Este campo debe ser una fecha y hora."
+        }
+    },
+    "component": {
+        "mapPositionPanel": {
+            "latDegree": "Latitud (º)",
+            "latMinutes": "Latitud (minutos)",
+            "lonDegree": "Longitud (º)",
+            "lonMinutes": "Longitud (minutos)",
+            "N":"Norte",
+            "S":"Sur",
+            "W":"Oeste",
+            "E":"Este",
+            "currentPosition" : "Pos. actual",
+            "addPoint": "Añadir punto"
+        }
+    },
+    "error":
+    {
+        "internalServerError": "Error del servidor interno",
+        "server.not.reachable": "Servidor no accesible",
+        "url.not.found": "No encontrado",
+        "NotNull": "El campo {{fieldName}} no puede estar vacío!",
+        "Size": "El campo {{fieldName}} no cumple con los requisitos de tamaño mínimo/máximo!",
+        "userexists": "El nombre de userlogin ya existe!",
+        "emailexists": "El email ya está en uso!",
+        "idexists": "Un nuevo {{entityName}} no puede tener ya una identificación"
+    },
+    "footer": "pié de página"
+}

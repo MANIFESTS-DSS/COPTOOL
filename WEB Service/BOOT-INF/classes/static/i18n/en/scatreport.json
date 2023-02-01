@@ -1,0 +1,305 @@
+{
+    "app":
+    {
+        "scatreport":
+        {
+            "title": "SCAT",
+            "review":"Review and finish",
+            "page":
+            {
+                "dashboard":
+                {
+                    "title": "SCAT"
+                }
+            },
+            "home":
+            {
+                "title": "SCAT",
+                "createLabel": "Create new SCAT",
+                "linkLabel": "Assign a new Customer",
+                "unlinkLabel": "Unlink SCAT",				
+                "createOrEditLabel": "Create or edit a Customer",
+                "search": "Search for Customer"
+            },
+            "map":
+            {
+                "draw": "Draw"
+            },
+            "createform":
+            {
+                "step1": "Information",
+                "step2": "Team",
+                "step3": "Segment",
+                "step4": "Coast type",
+                "step5": "Operational features"
+            },
+            "created": "New SCAT created",
+            "updated": "SCAT updated succesfully",
+            "deleted": "SCAT deleted",
+            "delete":
+            {
+                "question": "Do you want to delete the SCAT report {{ id }}?"
+            },
+            "unlink":
+            {
+                "question": "Do you want to delete the SCAT report {{ id }}?"
+            },
+            "detail":
+            {
+                "title": "SCAT",
+                "review":"Review and finish",
+                 "mobile": {
+                    "tab": {
+                        "elements":"Pollution details",
+                        "map":"Map",
+                        "detail":"Primary information",
+                        "surveyteams":"Users"
+                    }
+                },
+                "tab":
+                {
+                    "generalinfo": "1.Info",
+                    "surveyteams": "2.Team",
+                    "segment": "3.Segment",
+                    "shorelinetypes": "4.Shoreline",
+                    "operationalfeatures": "5.Operational",
+                    "surfaceoilconditions": "6.Surface HC",
+                    "subsurfaceoilconditions": "7.Subsurface HC",
+                    "othersubstances": "8.Other susbstances",
+                    "photos": "9.Photos",
+                    "comments": "10.Comments"
+                },
+                "message":
+                {
+                    "contactsempty": "There's no records, press edit to add a new one"
+                }
+            },
+            "entityname": "SCAT",
+            "generalinformation": "Primary information",
+            "accessfromnextsegment": "Access by contiguous segment",
+            "author": "Author",
+            "begindate": "Start date",
+            "cleanuprecommends": "Clean up recomendations",
+            "communeregion": "Place",
+            "surveyteam": "Inspection team",
+            "directbackshoreaccess": "Direct access",
+            "enddate": "End date",
+            "id": "Id",
+            "incident": "Incident",
+            "localauthority": "Local authority",
+            "oiledbris": "Oiled debris",
+            "operationalfeatures": "Operational features",
+            "plural": "SCATs",
+            "pollutionepisode": "Contingence",
+            "records": "Records",
+            "reporttime": "Report time",
+            "resourcesensitivities": "Resources sensitivities",
+            "scatzones": "SCAT zones",
+            "segment": "Segment",
+            "startposition": "Start position",
+            "endposition": "End position",
+            "notexistssurfaceoilconditions": "No surface oil conditions",
+            "notexistssubsurfaceoilconditions": "No subsurface oil conditions",
+            "weatherinfo": "Weather info",
+            "tideinfo": "Tide",
+            "tidetype": "Tide type",
+            "tidetime": "Tide time",
+            "tideheight": "Tide height (m)",
+            "shoresubstrata": "Shore substrate",
+            "spill": "Spill",
+            "status": "Status",
+            "subsurfaceoilconditions": "Subsurface oil conditions",
+            "surfaceoilconditions": "Surface oil conditions",
+            "photos": "Photos",
+            "map": "Map",
+            "comments": "Comments",
+            "surfaceoilcondition": "Surface oil condition",
+            "surveyedfrom": "Surveyed from",
+            "surveyedsegment": "Surveyed to",
+            "surveyendtime": "Surveyed time",
+            "surveyors": "Inspectors",
+            "surveystarttime": "Survey start time",
+            "waveexposure": "Wave exposure",
+            "shorelinetype": "Shoreline type",
+            "externalSurveyTeam":"External surveyors"
+
+        },
+        "tideinfo":
+        {
+            "tidetype": "Tide type",
+            "tideheight": "Tide height",
+            "tidetime": "Tide time"
+        },
+        "weatherinfo":
+        {
+            "sun": "Sun",
+            "clouds": "Clouds",
+            "fog": "Fog",
+            "rain": "Rain",
+            "snow": "Snow",
+            "windy": "Windy"
+        },
+        "tidetype":
+        {
+            "hightide": "High tide",
+            "lowtide": "Low tide",
+            "notide": "No tide"
+        },
+        "contact":
+        {
+            "contactname": "Name",
+            "organization": "Organization",
+            "phonenumber": "Phone"
+        },
+        "segment":
+        {
+            "segmentid": "Segment ID ",
+            "coastlinetype": "Shoreline type",
+            "lengthsurveyed": "Surveyed length",
+            "segmentlength": "Segment length",
+            "sitename": "Place name",
+            "waveexposure": "Wave exposure"
+        },
+        "waveexposure":
+        {
+            "veryexposed": "Very exposed",
+            "exposed": "Exposed",
+            "partiallysheltered": "Partially Sheltered",
+            "verysheltered": "Very sheltered",
+            "extremelysheltered": "Extremely sheltered"
+        },
+        "shorelinetype":
+        {
+            "bedrockcliff": "Bedrock cliff",
+            "bedrockplatform": "Bedrock platform",
+            "manmadesolid": "Manmade solid",
+            "manmadepermeable": "Manmade permeable",
+            "mudsediments": "Mud sediments",
+            "saltmarsh": "Salt marsh",
+            "sandsediments": "Sand sediments",
+            "mixedsediments": "Mixed sediments",
+            "pebblecobbleshingle": "Cobble/Pebble/Gravel",
+            "boulder": "Boulder",
+            "wetlands": "Estuary",
+            "primary": "Primary"
+        },
+        "localfeature":
+        {
+            "primary_info": "Primary(just one)",
+            "secondary_info": "Secondary",
+            "estuary": "Estuary",
+            "historicalartifact": "Historical artifact",
+            "deadseagrass": "Dead seagrass",
+            "amenityarea": "Amenity area",
+            "pools": "Pools",
+            "deepcracks": "Deep cracks",
+            "primary": "Primary",
+            "oiled": "Oiled",
+            "other_characteristics": "Other characteristics"
+        },
+        "operationalfeature":
+        {
+            "id": "Id",
+            "title": "Operational feature",
+            "plural": "Operational features",
+            "notes": "Notes",
+            "oiled": "Oiled",
+            "debrises": "Debris",
+            "algaes": "Algae",
+            "access": "Access",
+            "accessrestrictions": "Access restrictions",
+            "algaeoiled": "Oiled Algae",
+            "algaevolume": "Algae volume",
+            "bagstrucks": "Bags trucks",
+            "debrisoiled": "Oiled debris",
+            "debrisvolume": "Debris volume",
+            "faunaoiled": "Oiled fauna",
+            "laydownareas": "Laydown areas",
+            "ongoingactivity": "Ongoing activity",
+            "ongoingcleanupactivity": "Ongoing cleanup activity",
+            "backshorecliff": "Backshore cliff",
+            "backshorecliffheight": "Backshore cliff height (m)",
+            "suitablelaydownarea": "suitable laydown area",
+            "existdebris":"Debris?",
+            "oileddebris":"Oiled?",
+            "numberdebris":"Amount",			
+            
+            "typedebris": {
+                "title":"Bags/Trucks",
+                "bags":"Bags",
+                "trucks":"Trucks"
+            },
+
+            "algaetype":
+            {
+                "cups": "Cups",
+                "volume": "m3",
+                "litres": "Litres"
+            },
+            "algae":
+            {
+                "title": "Algae",
+                "no": "No",
+                "no_much": "Not much",
+                "a_lot": "A lot",
+                "dont_know": "Don't know:",
+                "number": "Nº",
+                "type": "Type",
+                "oiled": "Oiled"
+            },
+            "conservation":
+            {
+                "title": "Conservation",
+                "no": "No",
+                "historical": "Historical",
+                "archaeological": "Archaeological",
+                "nature": "Nature"
+            },
+            "debristype":
+            {
+                "cups": "Cups",
+                "volume": "m3",
+                "litres": "Litres"
+            },
+            "debris":
+            {
+                "title": "Debris",
+                "number": "Nº",
+                "oiled": "Oiled",
+                "type": "Type",
+                "no": "No",
+                "no_much": "Not much",
+                "a_lot": "A lot",
+                "dont_know": "Don't know:"
+            },       
+            "directbackshoreaccess":
+            {
+                "title": "Direct backshore access",
+                "no": "No",
+                "pedestrian": "Pedestrian",
+                "trucks": "Trucks"
+            },
+            "neighboursegmentaccess":
+            {
+                "title": "Neighbour segment access",
+                "no": "No",
+                "pedestrian": "Pedestrian",
+                "trucks": "Trucks"
+            },
+            "oiledfaunas":
+            {
+                "title": "Oiled fauna",
+                "number": "Nº",
+                "oiled": "Oiled",
+                "type": "type"
+            },
+            "uses":
+            {
+                "title": "Uses",
+                "tourism": "Tourism",
+                "fishing": "fishing",
+                "other": "Other"
+            }
+        }
+    }
+}

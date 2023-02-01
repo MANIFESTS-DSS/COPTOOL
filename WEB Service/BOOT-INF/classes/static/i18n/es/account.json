@@ -1,0 +1,117 @@
+{
+	"activate": {
+		"title": "Confirmando tu correo",
+		"messages": {
+			"success": "<strong>Tu correo ha sido confirmado.</strong> En cuanto la confraría verifique tus credenciales, podrás acceder a la plataforma.",
+			"error": "<strong>Tu correo no pudo ser confirmado.</strong> Por favor, inscríbete mediante el formulario de registro"
+		}
+	},
+	"login": {
+		"title": "Iniciar la sesión",
+		"form": {
+			"userlogin":"Usuario",
+			"password": "Contraseña",
+			"password.placeholder": "Tu contraseña",
+			"rememberme": "Iniciar la sesión automáticamente",
+			"button": "Iniciar sesión"
+		},
+		"messages": {
+			"error": {
+				"authentication": "<strong>¡Ha fallado el inicio de sesión!</strong> Por favor, revisa las credenciales y vuelve a intentalo."
+			}
+		},
+		"password": {
+			"forgot": "¿Olvidaste tu contraseña?"
+		}
+	},
+	"password": {
+		"title": "Contraseña de [<b>{{username}}</b>]",
+		"form": {
+			"button": "Guardar"
+		},
+		"messages": {
+			"error": "<strong>¡Ha ocurrido un error!</strong> La contraseña no se pudo modificar.",
+			"success": "<strong>¡Se ha cambiado la contraseña!</strong>"
+		}
+	},
+	"register": {
+		"title": "Formulario de registro",
+		"form": {
+			"button": "Crear la cuenta"
+		},
+		"messages": {
+			"validate": {
+				"login": {
+					"required": "Tu nombre de userlogin es obligatorio.",
+					"minlength": "Tu nombre de userlogin debe tener por lo menos 1 caracter.",
+					"maxlength": "Tu nombre de userlogin no puede tener más de 50 caracteres.",
+					"pattern": "Tu nombre de userlogin solo puede contener letras minúsculas y dígitos."
+				}
+			},
+			"success": "<strong>Gracias por registrarte.</strong><br> En breves recibirás un correo para confirmar el email.<br>Una vez confirmado el email, la confradía tiene que verificar las credenciales antes de que puedas acceder.",
+			"error": {
+				"fail": "<strong>Ha fallado el registro!</strong> Por favor, vuelve a intentarlo de nuevo más tarde.",
+				"userexists": "<strong>El nombre de userlogin ya está registrado!</strong> Por favor, escoge otro userlogin.",
+				"emailexists": "<strong>El correo electrónico ya está en uso!</strong> Por favor, escoge otro email."
+			}
+		}
+	},
+	"reset": {
+		"request": {
+			"title": "Restablecer tu contraseña",
+			"form": {
+				"button": "Restablecer contraseña"
+			},
+			"messages": {
+				"info": "Introduce el email asociado a tu cuenta y te enviaremos un enlace para restablecer tu contraseña.",
+				"success": "En breves recibirás en tu correo electrónico más información sobre cómo restablecer tu contraseña.",
+				"notfound": "<strong>¡Dirección de correo no registrada!</strong> Por favor, compruébala y vuelve a intentalo"
+			}
+		},
+		"finish": {
+			"title": "Restablecer tu contraseña",
+			"form": {
+				"button": "Validar la nueva contraseña"
+			},
+			"messages": {
+				"info": "Escoge una contraseña nueva",
+				"success": "<strong>Tu contraseña ha sido restablecida.</strong> Por favor, <a class=\"alert-link\" ui-sref=\"account.auth\">inicia sesión</a>.",
+				"keymissing": "Falta la clave de reinicio.",
+				"error": "Tu contraseña no puede restablecerse. Recuerda que una solicitud de reinicio de la contraseña solo es valida durante 24 horas."
+			}
+		}
+	},
+	"settings": {
+		"title": "Ajustes del userlogin [<b>{{username}}</b>]",
+		"form": {
+			"username": "Nombre de userlogin", 
+			"password": "Contraseña",
+			"changepassword": "Cambiar la contraseña",
+			"firstname": "Nombre",
+			"firstname.placeholder": "Tu nombre",
+			"lastname": "Apellidos",
+			"lastname.placeholder": "Tus apellidos",
+			"language": "Idioma",
+			"button": "Guardar"
+		},
+		"messages": {
+			"error": {
+				"fail": "<strong>¡Ha habido un error!</strong> Los ajustes no se pudieron guardar.",
+				"emailexists": "<strong>¡La dirección de correo ya existe!</strong> Por favor, escoge otra."
+			},
+			"success": "<strong>¡Ajustes guardados!</strong>",
+			"validate": {
+				"firstname": {
+					"required": "Es necesario que introduzcas tu nombre.",
+					"minlength": "Tu nombre debe tener por lo menos 1 caracter.",
+					"maxlength": "Tu nombre no puede tener más de 50 caracteres."
+				},
+				"lastname": {
+					"required": "Es necesario que introduzcas tus apellidos.",
+					"minlength": "Tus apellidos deben tener por lo menos 1 caracter.",
+					"maxlength": "Tus apellidos no pueden tener más de 50 caracteres."
+				}
+			}
+		}
+	}
+}

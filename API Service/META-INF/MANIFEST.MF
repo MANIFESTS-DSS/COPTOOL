@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Implementation-Title: arcopol-api
+Implementation-Version: 2.0.1
+Archiver-Version: Plexus Archiver
+Built-By: pdorgambide
+Implementation-Vendor-Id: com.qualigy.arcopol
+Spring-Boot-Version: 1.5.4.RELEASE
+Implementation-Vendor: Pivotal Software, Inc.
+Main-Class: org.springframework.boot.loader.JarLauncher
+Start-Class: eu.arcopol.api.ArcopolApiApplication
+Spring-Boot-Classes: BOOT-INF/classes/
+Spring-Boot-Lib: BOOT-INF/lib/
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_111
+Implementation-URL: http://projects.spring.io/spring-boot/arcopol-api/
+

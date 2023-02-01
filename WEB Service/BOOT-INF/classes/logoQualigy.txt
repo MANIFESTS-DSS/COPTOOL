@@ -1,0 +1,10 @@
+  ${AnsiColor.BRIGHT_RED}   ____ ${AnsiColor.BRIGHT_BLUE}            _ _             
+  ${AnsiColor.BRIGHT_RED}  /___ \${AnsiColor.BRIGHT_BLUE}_   _  __ _| (_) __ _ _   _ 
+  ${AnsiColor.BRIGHT_RED} //  / /${AnsiColor.BRIGHT_BLUE} | | |/ _` | | |/ _` | | | |
+  ${AnsiColor.BRIGHT_RED}/ \_/ /${AnsiColor.BRIGHT_BLUE}| |_| | (_| | | | (_| | |_| |
+  ${AnsiColor.BRIGHT_RED}\___,_\${AnsiColor.BRIGHT_BLUE} \__,_|\__,_|_|_|\__, |\__, |
+  ${AnsiColor.BRIGHT_RED}      ${AnsiColor.BRIGHT_BLUE}                  |___/ |___/
+  ${AnsiStyle.NORMAL} Copyright © 2022 by Qualigy Solutions Innovation S.L
+  ${AnsiColor.BRIGHT_RED}_________${AnsiColor.BRIGHT_BLUE} info@qualigy.com ${AnsiColor.BRIGHT_RED}_________${AnsiStyle.NORMAL}
+
+:: Running Spring Boot ${spring-boot.version} ::

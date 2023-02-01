@@ -1,0 +1,130 @@
+{
+
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)=(.*)$":
+    {
+        "$1": "$2"
+    },
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)_([a-z]*)=(.*)$":
+    {
+        "$1":
+        {
+            "$2": "$3"
+        }
+    },
+
+    "app":
+    {
+        "layer":
+        {
+            "home":
+            {
+                "title": "Layer",
+                "createLabel": "Create new layer",
+                "linkLabel": "Link layer",
+                "createOrEditLabel": "Create or edit layer",
+                "search": "Search layer"
+            },
+            "createform":
+            {
+                "step1": "Pollution features",
+                "step2": "Location (center of spill)",
+                "step3": "Affected area",
+                "step4": "Course",
+                "step5": "Aspect"
+            },
+            "created": "New layer {{ code }} created",
+            "updated": "Layer {{ code }}: updated",
+            "deleted": "Layer {{code}} deleted",
+            "delete":
+            {
+                "question": "Do you want to delete layer {{ code }}?"
+            },
+            "unlink":
+            {
+                "question": "Do you want to unlink layer {{ code }}?"
+            },
+            "detail":
+            {
+                "title": "Layer",
+                "tab":
+                {
+                    "caller": "Communicator",
+                    "observer": "Observer",
+                    "meteo": "Meteo",
+                    "spills": "Spills",
+                    "pollutionsources": "Sources",
+                    "photos": "Photos",
+                    "comments": "Comments"
+                },
+                "fieldset":
+                {
+                    "properties": "Pollution features",
+                    "aspect": "Aspect",
+                    "geometry": "Location (center of spill)",
+                    "affectedarea": "Affected area",
+                    "course": "Course"
+                },
+                "map":
+                {
+                    "deletepoints": "delete points",
+                    "edit": "Edit layer"
+                }
+            },
+
+            "title": "Title",
+            "code": "Code",
+            "level": "Level",
+            "baselayer": "Base layer",
+            "description": "Description",
+            "filters": "Filters",
+            "id": "Id",
+            "type": "Type",
+            "style": "Style",
+            "filter": "Filter",
+            "latlonboundingbox":{
+                "title": "Outline Lat/Lon",
+                "minX": "minX",
+                "minY": "minY",
+                "maxX":"maxX",
+                "maxY":"maxY"
+            } ,
+            "layergroup": "Group",
+            "name": "Name",
+            "options": "Options",
+            "params": "Parameters",
+            "plural": "Layers",
+            "projection": "Projection",
+            "queryable": "Queryable",
+            "url": "Url",
+            "projection": "Projection",
+            "queryable": "Queryable",
+            "tags": "Tags",
+			"secondaryUrl": "Secondary URL",
+			"downloadUrl": "Download URL",
+			"downloadable": "Downloadable layer",
+            "help":
+            {
+                "create": "If the position differs from the current one, indicate it on the map, insert the comments and press Add.",
+                "noresults": "There are no layers. Create a new one pressing the button <i class='ion-plus-round'></i>"
+            },
+            "layerclass":
+            {
+                "title": "Class",
+                "tiles": "Tiles",
+                "wms": "WMS",
+                "wfs": "WFS",
+                "vector": "Vector"
+            },
+            "layertype":
+            {
+                "title": "Layer type",
+                "0": "Static layer",
+                "1": "Dynamic layer (changes with time)",
+                "2": "Oilspill server -> opacity 40%",
+                "3": "Oilspill server: arrows -> opacity 100%",
+                "4": "Layers with filters"
+            }
+
+        }
+    }
+}

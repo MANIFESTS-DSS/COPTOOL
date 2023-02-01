@@ -1,0 +1,60 @@
+{
+
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)=(.*)$":
+    {
+        "$1": "$2"
+    },
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)_([a-z]*)=(.*)$":
+    {
+        "$1":
+        {
+            "$2": "$3"
+        }
+    },
+
+    "app":
+    {
+        "layergroup":
+        {
+            "home":
+            {
+                "title": "Layer group",
+                "createLabel": "Create new group",
+                "linkLabel": "Link group",
+                "createOrEditLabel": "Create or edit group",
+                "search": "Search group"
+            },
+            "created": "New group {{ code }} created",
+            "updated": "Group {{ code }}: updated",
+            "deleted": "Group {{code}} deleted",
+            "delete":
+            {
+                "question": "Do you want to delete group {{ code }}?"
+            },
+            "unlink":
+            {
+                "question": "Do you want to delete group {{ code }}?"
+            },
+            "detail":
+            {
+                "title": "Layer group"
+            },
+
+            "title": "Layer group",
+            "plural": "Layer groups",
+            "code": "Code",
+            "description": "Description",
+            "id": "UUID",
+            "layers": "Layers",
+            "panel": "Panel",
+            "name": "Name",
+            "uuid": "UUID",
+            "Versión": "Version",
+            "help":
+            {
+                "create": "If the position differs from the current one, indicate it on the map, insert the comments and press Add.",
+                "noresults": "There are no layers. Create a new one pressing the button 'Create new layer'"
+            }
+        }
+    }
+}

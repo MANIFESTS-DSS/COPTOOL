@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="proba" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="42a6a68f-18e2-4a41-bc1c-106828451c82">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     pollution_source."id" AS id,
+     pollution_source."cause_description" AS causeDescription,
+     pollution_source."description" AS description,
+     pollution_source."name" AS name,
+     pollution_source."pollution_cause" AS pollutionCause,
+     pollution_source."source_type" AS sourceType
+FROM
+     "public"."pollution_source" pollution_source]]>
+	</queryString>
+	<field name="sourcetype" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="pollutioncause" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="185" height="20" uuid="cb057084-9af6-4a60-8f69-978f912f2ca0"/>
+				<text><![CDATA[sourcetype]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="0" width="185" height="20" uuid="376c5982-7255-4a4c-8569-fc1e83b5d2a5"/>
+				<text><![CDATA[name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="0" width="185" height="20" uuid="45f454fe-bcc6-4568-b86d-0f2237036b07"/>
+				<text><![CDATA[pollutioncause]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="185" height="20" uuid="5f492839-d30d-4e30-94fc-235444c825cc"/>
+				<textFieldExpression><![CDATA[$F{sourcetype}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="0" width="185" height="20" uuid="6d116830-04b6-4f22-b2b9-efaafac9624c"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="185" height="20" uuid="4b13b8ef-d6aa-46f5-adb6-4ffe5aa41e3c"/>
+				<textFieldExpression><![CDATA[$F{pollutioncause}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

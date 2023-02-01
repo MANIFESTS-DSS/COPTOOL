@@ -1,0 +1,73 @@
+{
+
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)=(.*)$":
+    {
+        "$1": "$2"
+    },
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)_([a-z]*)=(.*)$":
+    {
+        "$1":
+        {
+            "$2": "$3"
+        }
+    },
+
+    "app":
+    {
+        "layergroup":
+        {
+            "home":
+            {
+                "title": "Grupo de capas",
+                "createLabel": "Crear novo grupo",
+                "linkLabel": "Asociar grupo",
+                "createOrEditLabel": "Crear ou editar grupo",
+                "search": "Buscar grupo"
+            },
+            "created": "Novo grupo {{ code }} creada correctamente",
+            "updated": "Grupo {{ code }}: actualizada correctamente",
+            "deleted": "Grupo {{code}} eliminada correctamente",
+            "delete":
+            {
+                "question": "Desexas eliminar a grupo {{ code }}?"
+            },
+            "unlink":
+            {
+                "question": "Desexas eliminar a grupo {{ code }}?"
+            },
+            "detail":
+            {
+                "title": "Grupo de capas",
+                "fieldset":
+                {
+                    "inputEnabled":
+                    {
+                        "title": "Marcar para activar o grupo"
+                    }
+                }
+            },
+            "search": {
+                "viewEnabled":"Ver grupos activos"
+            },
+
+            "title": "Grupo de capas",
+            "plural": "Grupos de capas",
+            "code": "Código",
+            "description": "Descrición",
+            "id": "UUID",
+            "layers": "Capas",
+            "panel": "Panel",
+            "name": "Nome",
+            "uuid": "UUID",
+            "tags": "Etiquetas",
+            "Versión": "Versión",
+            "enabled": "Activo",
+            "disabled": "Non activo",
+            "help":
+            {
+                "create": "Se a posición difire da actual indícaa no mapa, insere os comentarios e preme Engadir.",
+                "noresults": "Non existen capas. Crea unha premendo o botón <i class='ion-plus-round'></i>"
+            }
+        }
+    }
+}

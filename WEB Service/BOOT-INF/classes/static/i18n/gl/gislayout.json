@@ -1,0 +1,54 @@
+{
+    "app":
+    {
+        "gislayout":
+        {
+            "title": "Mapa extratéxico",
+            "home":
+            {
+                "title": "Mapa extratéxico",
+                "createLabel": "Novo mapa",
+                "linkLabel": "Vincular mapa",
+                "createOrEditLabel": "Editar mapa",
+                "search": "Buscar mapa"
+            },
+            "createform":
+            {
+                "step1": "Mapa estratéxico"
+            },
+            "created": "Mapa estratéxico '{{ name }}' creado correctamente",
+            "updated": "Mapa estratéxico '{{ name }}' actualizado correctamente",
+            "deleted": "Mapa estratéxico '{{name}}' eliminado correctamente",
+            "delete":
+            {
+                "question": "¿Desexas eliminar o mapa {{ name }}?"
+            },
+            "unlink":
+            {
+                "question": "¿Desexas desvincular o mapa {{ name }}?"
+            },
+            "detail":
+            {
+                "title": "Mapa estratéxico"
+            },
+
+            "entityname": "Mapa estratéxico",
+            "name": "Nome",
+            "episode":"Continxencia",
+            "description": "Descrición",
+            "createdBy": "Usuario",
+            "createdTime": "Data creación",
+            "map":
+            {
+                "draw":
+                {
+                    "point": "Punto",
+                    "linestring": "Liña",
+                    "polygon": "Polígono",
+                    "asset": "Elemento",
+                    "cancel": "Cancelar"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,331 @@
+{
+    "global":
+    {
+        "language": "English",
+        "languages": {
+            "gl":"Galician",
+            "es":"Spanish",
+            "en":"English"
+        },
+
+
+        "title": "app",
+        "browsehappy": "You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/?locale=en\">update your browser</a> to improve the experience .",
+        "theme":
+        {
+            "component":
+            {
+                "hola":"Hello",
+                "bookmark":
+                {
+                   "created": "Bookmark {{title}} created",
+                   "removed": "Bookmark {{title}} removed",
+                   "empty":"No bookmarks found!"
+                }
+            }
+        },
+        "menu":
+        {
+            "home": "Home",
+            "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
+            "entities":
+            {
+                "main": "Entities",
+                "countryGbi": "Country",
+                "unitGbi": "Unit",
+                "lineGbi": "Line",
+                "lineVersionGbi": "Line Version",
+                "country": "Country",
+                "unit": "Unit",
+                "lineVersion": "Line Version",
+                "line": "Line",
+                "territory": "Territory",
+                "employeeTerritoryOccupation": "Employee Territory Occupation",
+                "employee": "Employee",
+                "customerGroupTypeHierarchy": "Customer Group Type Hierarchy",
+                "customerGroupType": "Type of customer groups",
+                "customerGroup": "Customer Group",
+                "customer": "Customer",
+                "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
+            },
+            "account":
+            {
+                "main": "Account",
+                "settings": "Settings",
+                "password": "Password",
+                "sessions": "Sessions",
+                "login": "Login",
+                "logout": "Logout",
+                "register": "Create an account"
+            },
+            "admin":
+            {
+                "main": "Administration",
+                "userManagement": "Userlogin management",
+                "tracker": "Userlogins log",
+                "metrics": "Metrics",
+                "health": "Health",
+                "configuration": "Configuration",
+                "logs": "Logs",
+                "audits": "Audits",
+                "apidocs": "API",
+                "database": "Database",
+                "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
+            },
+            "language": "Language"
+        },
+        "form":
+        {
+           "username": "UserLogin",
+            "username.placeholder": "Userlogin name",
+            "newpassword": "New password",
+            "newpassword.placeholder": "New password",
+            "confirmpassword": "Confirm new password",
+            "confirmpassword.placeholder": "Confirm new password",
+            "email": "Email",
+            "email.placeholder": "Your email"
+        },
+        "modal":{
+            "wait": {
+                "title":"Operation in progress",
+                "message":"We are processing your request, this operation may take a few minutes. Please wait..."
+            }
+        },
+        "messages":
+        {
+            "info":
+            {
+                "authenticated": "If you already have an account you can <a class=\"alert-link\" ui-sref=\"account.auth\">log in</a>.",
+                "register": "Not registered yet? <a class=\"alert-link\" ui-sref=\"account.register\">Create an account</a>",
+                "opennewtab": "Press Ctrl to open a new tab"
+            },
+            "error":
+            {
+               "dontmatch": "Passwords do not match!"
+            },
+            "search":
+            {
+                "inforesults":"{{length}} results",
+                "noresults": "Sorry! No results found",
+                "results": "Located {{totalElements}} records"
+                
+            },
+            "map":{
+                "longitude":"Longitude",
+                "area":"Area"
+            },
+
+            "confirmdelete":
+            {
+              "title": "Confirm delete",
+              "message": "This operation will delete the selected item and cannot be undone. <br/><strong>Do you want to continue?</strong>"
+            },
+            
+            "save":
+            {
+                "error":
+                {
+                    "required":
+                    {
+                        "title": "Could not complete operation!",
+                        "message": "You must specify data for the required fields:"
+                    },
+                    "pattern":
+                    {
+                       "title": "Format errors found!",
+                       "message": "Enter values according to the format in the fields:"
+                    }
+                }
+            },
+            "file": {
+                "upload": {
+                    "success": "File successfully registered",
+                    "error":"Problems uploading the file (Maximum size 10MB)"
+                },
+                "delete": {
+                   "success":"File deleted successfully",
+                    "error":"Error deleting file",
+                    "confirm": {
+                    "title":"Confirm delete file",
+                    "message":"This operation cannot be undone. Do you want to continue?"
+                    }
+                }
+            },
+            "validate":
+            {
+                "newpassword":
+                {
+                    "required": "A password is required.",
+                    "minlength": "Your password must have at least 5 characters",
+                    "maxlength": "Your password cannot be longer than 50 characters.",
+                    "strength": "Password strength:"
+                },
+                "confirmpassword":
+                {
+                    "required": "You need to confirm your password.",
+                    "minlength": "Your password must have at least 5 characters",
+                    "maxlength": "Your password cannot be longer than 50 characters."
+                },
+                "email":
+                {
+                    "required": "You need to enter an email",
+                    "invalid": "Your email is invalid.",
+                    "duplicated":"Email not valid (duplicated)",
+                    "minlength": "Your email must have at least 5 characters",
+                    "maxlength": "Your email cannot be longer than 50 characters."
+                },
+                "datetime":
+                {
+                    "required": "You must enter a date",
+                    "invalid": "The date entered is not valid."
+                },
+                "textarea":
+                {
+
+                    "required": "You must enter some text",
+                    "pattern": "Text format: {{format}}",
+                    "invalid": "The text entered is not valid"
+                },
+                "text":
+                {
+                    "required": "You must enter some text",
+                    "pattern": "Text format: {{format}}",
+                    "invalid": "The text entered is not valid"
+                },
+                "number":
+                {
+                    "range": "Out of range. Value must be between {{min}} and {{max}}",
+                    "required": "You must enter a numeric value",
+                    "invalid": "The numerical value entered is not valid.",
+                    "max": "Value must be less than: {{max}}",
+                    "min": "Value must be greater than: {{min}}"
+                },
+                "select":
+                {
+                    "required": "You must select a value"
+                }
+            }
+        },
+        "button":
+        {
+             "yes": "Yes",
+			 "no": "No",
+             "nerd":"Nerd",
+             "close": "Close",
+             "accept": "Accept",
+             "create": "Create",
+             "cancel": "Cancel",
+             "remove": "Remove",
+             "delete": "Delete",
+             "confirm": "Confirm",
+             "edit": "Edit",
+             "link": "Link",
+             "unlink": "Unlink",
+             "ok": "Accept",
+             "end": "End",
+             "next": "Next",
+             "previous": "Previous",
+             "finish": "Finish",
+             "continue":"Continue",
+             "geoposition": "GeoLocation",
+             "centermap":"Center map",
+             "photo":"Photo",
+             "print":"Print",
+             "detail":"Details",
+             "add": "Add",
+             "save": "Save",
+             "clone": "Duplicate",
+             "share": "Share",
+             "select":"Select",
+             "showHide":"Show/Hide",
+             "measure":"Measure",
+			 "selectfile":"Select file..."
+        },
+        "field":
+        {
+            "id": "ID"
+        },
+        "ribbon":
+        {
+            "dev": "Development"
+        },
+       "item-count": "Displaying {{first}} - {{second}} of {{total}} items."
+    },
+    "entity":
+    {
+        "action":
+        {
+            "addblob": "Add file",
+            "addimage": "Add Image",
+            "back": "Back",
+            "cancel": "Cancel",
+            "delete": "Delete",
+            "edit": "Edit",
+            "open": "Open",
+            "save": "Save",
+            "view": "View",
+            "link": "Link",
+            "unlink": "Unlink",
+            "accept": "Accept",
+            "select": "Select",
+            "unselect": "Unselect"
+        },
+        "detail":
+        {
+           "field": "Field",
+           "value": "Value"
+        },
+        "select":
+        {
+            "title": "Select Items"
+        },
+
+        "delete":
+        {
+            "title": "Confirm delete operation"
+        },
+        "unlink":
+        {
+            "title": "Confirm unlink operation"
+        },
+        "validation":
+        {
+            "required": "This field is required.",
+            "minlength": "This field requires at least {{min}} characters.",
+            "maxlength": "This field cannot exceed {{max}} characters.",
+            "min": "This field must be greater than {{min}}.",
+            "max": "This field cannot be greater than {{max}}.",
+            "minbytes": "This field must have at least {{min}} bytes.",
+            "maxbytes": "This field cannot be more than {{max}} bytes.",
+            "pattern": "This field must follow the pattern {{pattern}}.",
+            "number": "This field must be a number.",
+            "datetimelocal": "This field must be a date and time."
+        }
+    },
+    "component":{
+        "mapPositionPanel": {
+           "latDegree": "Latitude (º)",
+           "latMinutes": "Latitude (minutes)",
+           "lonDegree": "Longitude (º)",
+           "lonMinutes": "Longitude (minutes)",
+           "N":"North",
+           "S":"South",
+           "W":"West",
+           "E":"East",
+           "currentPosition" : "My position",
+            "addPoint": "Add point"
+        }
+    },
+    "error":
+    {
+       "internalServerError": "Internal Server Error",
+        "server.not.reachable": "Server not reachable",
+        "url.not.found": "Not found",
+        "NotNull": "The field {{fieldName}} cannot be empty!",
+        "Size": "The field {{fieldName}} does not meet the minimum/maximum size requirements!",
+        "userexists": "Userlogin name already exists!",
+        "emailexists": "The email is already in use!",
+        "idexists": "A new {{entityName}} cannot already have an id"
+    },
+    "footer": "footer"
+}

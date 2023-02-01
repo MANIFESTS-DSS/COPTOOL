@@ -1,0 +1,80 @@
+{
+
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)=(.*)$":
+    {
+        "$1": "$2"
+    },
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)_([a-z]*)=(.*)$":
+    {
+        "$1":
+        {
+            "$2": "$3"
+        }
+    },
+
+    "app":
+    {
+        "dashboard":
+        {
+            "bookmarks":
+            {
+                "title": "Favoritos"
+            },
+            "pollutionreports":
+            {
+                "title": "Informes POLREP"
+            },
+            "scatreports":
+            {
+                "title": "Informes POLREP Costa"
+            },
+            "pollutionepisodes":
+            {
+                "title": "COP viewer"
+            },
+            "logbookrecords":
+            {
+                "title": "Bitácora"
+            },
+            "home":
+            {
+                "title": "Grupo de capas",
+                "createLabel": "Crear nuevo grupo",
+                "linkLabel": "Asociar grupo",
+                "createOrEditLabel": "Crear o editar grupo",
+                "search": "Buscar grupo"
+            },
+            "created": "Nuevo grupo {{ code }} creado correctamente",
+            "updated": "Grupo {{ code }}: actualizado correctamente",
+            "deleted": "Grupo {{code}} eliminado correctamente",
+            "delete":
+            {
+                "question": "Deseas eliminar el grupo {{ code }}?"
+            },
+            "unlink":
+            {
+                "question": "Deseas desvincular el grupo {{ code }}?"
+            },
+            "detail":
+            {
+                "title": "Grupo de capas"
+            },
+
+            "title": "Grupo de capas",
+            "plural": "Grupos de capas",
+            "code": "Código",
+            "description": "Descripción",
+            "id": "UUID",
+            "layers": "Capas",
+            "panel": "Panel",
+            "name": "Nombre",
+            "uuid": "UUID",
+            "Versión": "Versión",
+            "help":
+            {
+                "create": "Si la posición difiere de la actual indícala en el mapa, inserta los comentarios y pulsa Añadir.",
+                "noresults": "No existen capas. Crea una pulsando el botón <i class='ion-plus-round'></i>"
+            }
+        }
+    }
+}
