@@ -1,0 +1,138 @@
+{
+    "app/[folder(singular)]/[subfloders]": "Nombre/traducir reglas",
+    "app":
+    {
+        "pollutionepisodemap":
+        {
+            "title": "Visor"
+        },
+        "pollutionepisode":
+        {
+            "title": "Contingencias",
+			"publicUser": "Usuario público",
+            "pollutionreports":
+            {
+                "title": "POLREP"
+            },
+            "scatreports":
+            {
+                "title": "POLREP Costa"
+            },
+            "map":
+            {
+                "title": "Mapa"
+            },
+            "photos":
+            {
+                "title": "Fotos"
+            },
+            "home":
+            {
+                "title": "Contingencias",
+                "createLabel": "Nueva contingencia",
+                "copyLabel": "Copiar contingencia",
+
+                "linkLabel": "Asignar un nuevo contingencia",
+                "createOrEditLabel": "Crear o editar un contingencia",
+                "search": "Buscar contingencia"
+            },
+            "createform":
+            {
+                "step1":"Información",
+                "step2": "Área afectada",
+                "step3": "Capas",
+                "step4": "Usuarios"
+            },
+            "copydialog":
+            {
+                "title": "Copiar contingencia",
+                "message": "Se realizará una copia de la contingencia actual. ¿Deseas continuar?",
+                "success": "Contingencia copiado correctamente"
+            },
+
+            "created": "Nueva contingencia creada. Identificador {{ id }}",
+            "updated": "Contingencia actualizada correctamente",
+            "deleted": "Contingencia eliminada",
+            "delete":
+            {
+                "question": "¿Deseas eliminar la contingencia?"
+            },
+
+            "unlink":
+            {
+                "question": "Estás seguro de que quieres desvincular la contingencia {{ id }}?"
+            },
+            "create":
+            {
+                "title": "Nueva"
+            },
+            "detail":
+            {
+                "title": "{{pollutionepisode.name}}",
+                "tab":
+                {
+                    "info": "Información",
+                    "map": "Mapa",
+                    "pollutionreports": "POLREPs",
+                    "scatreports": "POLREP Costas",
+                    "photos": "Fotos",
+                    "logbookrecords": "Bitácora",
+                    "users": "Usuarios",
+                    "layers": "Capas",
+                    "observers": "Observadores",
+                    "gislayouts":"Mapas"
+
+                },
+                "pub":
+                {
+                    "linkTitle": "Compartir enlace",
+                    "link": "Enlace para compartir",
+                    "linkCopy": "Copiar el enlace para compartir",
+                    "linkCopied": "Enlace copiado en el portapapeles"
+                },
+                "fieldset":
+                {
+                    "inputPublish":
+                    {
+                        "title": "Permitir acceso público a la contingencia?"
+                    }
+                }
+            },
+            "search":
+            {
+                "placeholder": "Búsqueda por nombre..."
+            },
+            "code": "Código",
+            "name": "Nombre",
+            "status": "Estado",
+            "description": "Descripción",
+            "begintime": "Fecha inicio",
+            "endtime": "Fecha Fin",
+            "pollutionreports": "POLREPs",
+            "tags": "Etiquetas",
+            "rating": "Valoración",
+            "publish": "Publicar?",
+            "publicAccess": "Acceso público",
+            "publishclose":"Publicar y cerrar",
+            "requireAuthentification": "Requiere autentificación"
+        },
+        "episodestatus":
+        {
+            "NEW": "Nuevo",
+            "OPEN": "Abierto",
+            "CLOSE": "Finalizado",
+            "ARCHIVED":"Archivado"
+        },
+        "map":
+        {
+            "draw":
+            {
+                "point": "Punto",
+                "linestring": "Línea",
+                "polygon": "Polígono",
+                "asset": "Elemento",
+                "cancel": "Cancelar"
+        }
+    }
+}
+}

@@ -1,0 +1,53 @@
+{
+    "app":
+    {
+        "gislayout":
+        {
+            "title": "Tactic GIS",
+            "home":
+            {
+                "title": "Tactic GIS",
+                "createLabel": "New map",
+                "linkLabel": "Show map",
+                "createOrEditLabel": "Edit map",
+                "search": "Search map"
+            },
+            "createform":
+            {
+                "step1": "Tactic GIS"
+            },
+            "created": "Tactic GIS '{{ name }}' created",
+            "updated": "Tactic GIS '{{ name }}' updated",
+            "deleted": "Tactic GIS '{{name}}' deleted",
+            "delete":
+            {
+                "question": "Do you want to delete map: {{ name }}?"
+            },
+            "unlink":
+            {
+                "question": "Do you want to delete map: {{ name }}?"
+            },
+            "detail":
+            {
+                "title": "Tactic GIS"
+            },
+            "entityname": "Tactic GIS",
+            "name": "Name",
+            "episode":"Contingency",
+            "description": "Description",
+            "createdBy": "User",
+            "createdTime": "Created time",
+            "map":
+            {
+                "draw":
+                {
+                    "point": "Point",
+                    "linestring": "Line",
+                    "polygon": "Polygon",
+                    "asset": "Asset",
+                    "cancel": "Cancel"
+                }
+            }
+        }
+    }
+}

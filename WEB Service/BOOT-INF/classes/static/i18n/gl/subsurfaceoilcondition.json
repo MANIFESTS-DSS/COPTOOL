@@ -1,0 +1,119 @@
+{
+    "app":
+    {
+        "subsurfaceoilcondition":
+        {
+            "title": "Hidrocarburo baixo superficie",
+            "home":
+            {
+                "title": "Hidrocarburo baixo superficie",
+                "createLabel": "Crear novo rexistro"
+            },
+            "createform":
+            {
+                "step1": "Detalles",
+                "step2": "Ubicación xeográfica"
+            },
+            "created": "Nova mancha de hidrocarburo baixo superficie {{ code }} creada correctamente",
+            "updated": "Mancha  de hidrocarburo baixo superficie {{ code }}: actualizada correctamente",
+            "deleted": "Mahcha  de hidrocarburo baixo superficie {{code}} eliminada correctamente",
+            "delete":
+            {
+                "question": "Desexas eliminar a mancha {{ code }}?"
+            },
+            "unlink":
+            {
+                "question": "Desexas eliminar a mancha {{ code }}?"
+            },
+            "messages":
+            {
+                "geometry": "Insere a localización xeográfica da mancha de hidrocarburo baixo superficie pintando directamente no mapa",
+                "affectedarea": "Establece a extensión da área afectada manualmente ou medindo no mapa (premendo no botón de cada campo).",
+                "validate":
+                {
+                    "height":
+                    {
+                        "required": "Debes indicar lonxitude",
+                        "invalid": "Valor da lonxitude non válido"
+                    },
+                    "course":
+                    {
+                        "required": "Debes indicar un valor para a deriva (graos)",
+                        "invalid": "O valor debe estar entre 0 e 360"
+                    }
+                },
+                "oiledzone_empty":"No se detecta hidrocarburo na calicata",
+                "no_results":"Non se atoparon resultados"
+
+            },
+            "help": {
+                "create": "Introduce os datos solicitados no formulario e pinta sobre o mapa a superficie afectada polo hidrocarburo",
+                "edit": "Introduce os datos solicitados no formulario e pinta sobre o mapa a superficie afectada polo hidrocarburo",
+                "create_old":"Se a posición difire da actual indícaa no mapa, insere os comentarios e preme Engadir.",
+                "noresults": "Non existen rexistros de hidrocarburo baixo a superficie. Crea un premendo o botón <i class='ion-plus-round'></i>"
+            },
+            "id": "ID",
+            "code": "Código",
+            "distribution": "Distribución",
+            "geometry": "Xeometría",
+            "pitid": "ID Cata",
+            "pitdepth": "Profundidade da cata (cm)",
+            "burieddepth": "Nivel do contaminante (cm)",
+            "buriedthickness": "Espesor contaminado (cm)",
+            "buriedwater": "Nivel da agua (cm)",
+            "zoneid": "ID da Zona",
+            "cleanbelow": "Limpo debaixo",
+            "oildistribution":
+            {
+                "title": "Distribución da contaminación",
+                "trace": "Trazas( < 1 % )",
+                "sporadic": "Esporádico(1 - 10 % )",
+                "patchy": "Discontinuo(11 - 50 % )",
+                "broken": "Fragmentado(51 - 90 % )",
+                "continuous": "Continuo(91 - 100 % )",
+                "extensive": "Común",
+                "frequent": "Frequente",
+                "uncommon": "Pouco común"
+            },
+
+
+            "oilthickness":
+            {
+                "title": "Espesor",
+                "to": "Balsa(BA)",
+                "cv": "Cuberta(CV)",
+                "ct": "Capa(CA)",
+                "st": "Mancha(MA)",
+                "fl": "Película(PE)"
+            },
+            "oiledzonestart": "Inicio hidrocarburo",
+            "oiledzoneend": "Fin hidrocarburo",
+            "oilcoverlength": "Lonx. cobertura",
+            "oilcoverwidth": "Ancho cobertura",
+            "latitude": "Latitude",
+            "longitude": "Lonxitude",
+            "substrate": "Substrato",
+            "plural": "Hidrocarburos superficiais",
+            "substratumtypes": "Tipos de substrato",
+            "tidalzone": "Zona mareal",
+            "level": "Nivel",
+            "oilcharacter":
+            {
+                "title": "Apariencia do hidrocarburo",
+                "oilfilledpores": "Poros cheos",
+                "partialfilledpores": "Poros parcialmente cheos",
+                "oilresidue": "Residuo de hidrocarburo",
+                "oilfilm": "Película de hidrocarburo",
+                "trace": "Traza"
+            },
+            "level":
+            {
+                "title":"Posición mareal",
+                "l": "Inferior",
+                "m": "Media",
+                "u": "Superior",
+                "s": "Supra mareal"
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+{
+    "app":
+    {
+        "episodeuser":
+        {
+            "cmd": {
+                "layers.edit":"Configure Layers"
+            },
+            "title": "UserLogins",
+            "home":
+            {
+                "title": "UserLogins",
+                "createLabel": "Create new POLREP",
+                "linkLabel": "Link POLREP",
+                "unlinkLabel": "Unlink POLREP",
+                "createOrEditLabel": "Create or edit a Client",
+                "search": "Search Client"
+            },
+            "createform":
+            {
+                "step1": "Caller",
+                "step2": "Observer",
+                "step3": "Meteorological conditions"
+            },
+            "copydialog":{ 
+                "title":"Copy UserLogins/Layers",
+                "message":"A copy of the current UserLogin and layers will be made. Do you want to continue?",
+                "success":"UserLogin and layers copied correctly"
+            },
+            "created": "New episode USER successfully created",
+             "updated": "Episode USER successfully updated",
+             "deleted": "Episode USER successfully deleted",
+            "delete":
+            {
+                "question": "Are you sure you want to delete Contingency {{ id }}?"
+            },
+            "unlink":
+            {
+                "question": "Are you sure you want to unlink Contingency {{ id }}?"
+            },
+            "detail":
+            {
+                "title": "{{name}}",
+                "tab":
+                {
+                    "caller": "Caller",
+                    "observer": "Observer",
+                    "meteo": "Meteorological conditions",
+                    "spills": "Spillss",
+                    "pollutionsources": "Sources",
+                    "photos": "Photos",
+                    "comments": "Comments"
+                }
+            },
+            "episode": "Episode",
+            "userlogin": "User (login)",
+            "userrole": "Role",
+            "url": "Public URL",
+            "layers": "Layers",
+            "message": {
+                "layersUpdated": "User layers updated successfully",
+                "layersSelected":"Selected user layers:",
+                "usersSelected":"Selected users:",
+                "layersUnchanged":"Unchanged user layers"
+            }
+        }
+    }
+}

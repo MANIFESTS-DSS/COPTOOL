@@ -1,0 +1,74 @@
+{
+    "app":
+    {
+        "episodeobserver":
+        {
+            "cmd": {
+                "layers.edit":"Configure Layers"
+            },
+            "title": "Observer",
+            "home":
+            {
+                "title": "Observer",
+                "createLabel": "Create new observer",
+                "linkLabel": "Link observer",
+                "unlinkLabel": "Unlink observer",
+                "createOrEditLabel": "Create or edit a Client",
+                "search": "Search Client"
+            },
+            "createform":
+            {
+                "step1": "Caller",
+                "step2": "Observer",
+                "step3": "Meteorological conditions"
+            },
+            "copydialog":{
+                "title":"Copy Observer/Layers",
+                "message":"A copy of the observer will be made. Do you want to continue?",
+                "success":"Observer copied successfully"
+            },
+            "created": "New episode observer created successfully",
+            "updated": "Episode observer updated successfully",
+            "deleted": "Episode observer deleted successfully",
+            "delete":
+            {
+                "question": "Do you want to remove the observer user {{ userLogin.fullName }}?"
+            },
+            "assign": {
+                "logbookrecords": {
+                    "title": "¿Assign user logbook records?",
+                    "message": "Logbook records will be linked to episode. Are you sure?",
+                    "success": "User and records successfully assigned"
+                }
+            },
+            "unlink":
+            {
+                "question": "Do you want to unbind the observer user {{ userLogin.fullName }}?"
+            },
+            "detail":
+            {
+                "title": "{{name}}",
+                "tab":
+                {
+                    "caller": "Caller",
+                    "observer": "Observer",
+                    "meteo": "Meteorological conditions",
+                    "spills": "Spills",
+                    "pollutionsources": "Sources",
+                    "photos": "Photos",
+                    "comments": "Comments"
+                }
+            },
+            "episode": "Episode",
+            "userlogin": "User",
+            "userrole": "Rol",
+            "createdtime":"Assignment date",
+            "starttime":"Start time",
+            "endtime":"End time",
+            "url": "Public URL",
+            "message": {
+                "usersSelected":"Selected users:"
+            }
+        }
+    }
+}

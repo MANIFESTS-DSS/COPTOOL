@@ -1,0 +1,120 @@
+{
+    "app":
+    {
+        "subsurfaceoilcondition":
+        {
+            "home":
+            {
+                "title": "Subsurface oil condition",
+                "createLabel": "Create new"
+            },
+            "createform":
+            {
+                "step1": "Detail",
+                "step2": "Position"
+            },
+            "created": "New subsurface oil condition {{ code }} created",
+            "updated": "Subsurface oilspill {{ code }}: updated",
+            "deleted": "Subsurface oilspill {{code}} deleted",
+            "delete":
+            {
+                "question": "Do you want to remove the spill {{ code }}?"
+            },
+            "unlink":
+            {
+                "question": "Do you want to remove the spill {{ code }}?"
+            },
+            "messages":
+            {
+                "geometry": "Insert the geographic location of the subsurface oilspill by painting directly on the map",
+                "affectedarea": "Set the extent of the affected area manually or by measuring on the map (by clicking on the button in each field).",
+                "validate":
+                {
+                    "height":
+                    {
+                        "required": "Must indicate length",
+                        "invalid": "Invalid length value"
+                    },
+                    "course":
+                    {
+                        "required": "Must indicate a value for the drift (degrees)",
+                        "invalid": "The value must be between 0 and 360"
+                    }
+                },
+                "oiledzone_empty":"No oilspill detected in pit",
+                "no_results":"No results found"
+
+            },
+            "help": {
+                "create":"If the position differs from the current one, indicate it on the map, insert the comments and press Add.",
+                "noresults": "There are no Subsurface oil condtions. Create new one pressing button <i class='ion-plus-round'></i>"
+            },
+            "title": "Subsurface oil condition",
+            "id": "ID",
+            "code": "Code",
+            "distribution": "Distribution",
+            "geometry": "Geometry",
+            "pitid": "Pit ID",
+            "zoneid": "Zone ID",
+            "burieddepth": "Buried depth (cm)",
+            "buriedthickness": "Buried thickness (cm)",
+            "buriedwater": "Buried water (cm)",
+            "cleanbelow": "Clean below",
+            "pitdepth": "Pit depth (cm)",
+            "burieddepth": "Buried depth (cm)",
+            "buriedthickness": "Buried thickness (cm)",
+            "oildistribution":
+            {
+                "title": "Oil distribution",
+                "trace": "Trace( < 1 % )",
+                "sporadic": "Sporadic(1 - 10 % )",
+                "patchy": "Patchy(11 - 50 % )",
+                "broken": "Broken(51 - 90 % )",
+                "continuous": "Continuous(91 - 100 % )",
+                "extensive": "Extensive",
+                "frequent": "Frequent",
+                "uncommon": "Uncommon"
+            },
+            "oilthickness":
+            {
+                "title": "Oil thickness",
+                "to": "Thick oil(TO)",
+                "cv": "Cover(CV)",
+                "ct": "Coat(CT)",
+                "st": "Stain(ST)",
+                "fl": "Film(FL)"
+            },
+            "oiledzonestart": "Oiled zone start",
+            "oiledzoneend": "Oiled zone end",
+
+            "oilcover":"Oil cover",
+            "oilcoverlength": "Oil cover length",
+            "oilcoverwidth": "Oil cover width",
+            "latitude": "Latitude",
+            "longitude": "Longitude",
+            "substrate": "Substrate",
+            "plural": "Surface Oil conditions ",
+            "substratumtypes": "Substratum types",
+            "tidalzone": "Tidal zone",
+            "level": "Level",
+            "oilcharacter":
+            {
+                "title": "Oil character",
+                "fr": "Fresh oil",
+                "ms": "Mousse",
+                "tb": "Tarballs",
+                "pt": "Patties",
+                "sr": "Surface residue",
+                "ap": "Asphalt pavement"
+            },
+            "level":
+            {
+                "title":"Level",
+                "l": "Low tide",
+                "m": "Middle tide",
+                "u": "High tide",
+                "s": "Intertidal"
+            }
+        }
+    }
+}

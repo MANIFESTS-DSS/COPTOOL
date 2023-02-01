@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="pdorgambide (generated)" id="1498121778358-1">
+        <addColumn tableName="task">
+            <column name="category" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498121778358-2">
+        <addColumn tableName="task">
+            <column name="comments" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498121778358-3">
+        <addColumn tableName="tideinfo">
+            <column name="datetime" type="timestamp(29, 6)">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498121778358-4">
+        <addColumn tableName="specie">
+            <column name="id" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498121778358-5">
+        <addColumn tableName="task">
+            <column name="status" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498121778358-6">
+        <addColumn tableName="task">
+            <column name="type" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498121778358-7">
+        <addColumn tableName="person">
+            <column name="userlogin" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498121778358-8">
+        <addForeignKeyConstraint baseColumnNames="place" baseTableName="team" constraintName="fk_90udpp9cpo130pqjg42vqbjc3" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="place"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498121778358-9">
+        <addForeignKeyConstraint baseColumnNames="userlogin" baseTableName="person" constraintName="fk_dv0ynck23h6vqxgawuqqwt8xf" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="userlogin"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498121778358-10">
+        <dropColumn columnName="comments" tableName="workerevent"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498121778358-11">
+        <dropColumn columnName="datetime" tableName="workerevent"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498121778358-12">
+        <dropColumn columnName="dtype" tableName="workerevent"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498121778358-13">
+        <dropColumn columnName="taskmemberstatus" tableName="taskmember"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498121778358-14">
+        <dropColumn columnName="taskstatus" tableName="task"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498121778358-15">
+        <dropForeignKeyConstraint baseTableName="extractionquota" constraintName="fk_7vptrhpx70tlgsch9eh6c5tmd"/>
+        <addForeignKeyConstraint baseColumnNames="specie" baseTableName="extractionquota" constraintName="fk_7vptrhpx70tlgsch9eh6c5tmd" referencedColumnNames="id" referencedTableName="specie"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498121778358-16">
+        <dropForeignKeyConstraint baseTableName="operationalplanspecie" constraintName="fk_9dtcyiyfvhkbo75rqmeoe7tna"/>
+        <addForeignKeyConstraint baseColumnNames="specie" baseTableName="operationalplanspecie" constraintName="fk_9dtcyiyfvhkbo75rqmeoe7tna" referencedColumnNames="id" referencedTableName="specie"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498121778358-17">
+        <addNotNullConstraint columnDataType="varchar(255)" columnName="gender" tableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498121778358-18">
+        <modifyDataType columnName="restoretaskmember" newDataType="bytea" tableName="taskmember"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498121778358-19">
+        <dropNotNullConstraint columnDataType="varchar(255)" columnName="sortname" tableName="specie"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498121778358-20">
+        <dropNotNullConstraint columnDataType="varchar(255)" columnName="specie" tableName="extractionquota"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1498121778358-21">
+        <dropPrimaryKey tableName="specie"/>
+        <addPrimaryKey columnNames="id" constraintName="specie_pkey" tableName="specie"/>
+    </changeSet>
+</databaseChangeLog>

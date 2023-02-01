@@ -1,0 +1,116 @@
+{
+    "app":
+    {
+        "userlogin":
+        {
+            "$title": "Usuarios",
+            "$name": "Usuario",
+            "$plural": "Usuarios",
+            
+            "code":"Código",
+            "geometry": "Ubicación geográfica",
+            "comments": "Comentarios",
+            "username": "Login",
+            "enabled": "Activo",
+            "disabled": "Desactivado",
+            "userEmail": "Correo electrónico",
+            "userLogin": "Login",
+            "login": "Login",
+            "createdTime": "Creado en",
+            "password":"Contraseña",
+            "userRole":"Perfil",
+            "fullName":"Nombre y apelidos",
+            "level":"Nivel",
+            "enabled":"Activo",
+            "disabled":"Desactivado",
+            "userAuthorities":"Permisos del usuario",
+            "home":
+            {
+                "title": "Usuarios",
+                "createLabel": "Nuevo usuario",
+                "linkLabel": "Vincular usuario",
+                "createOrEditLabel": "Crear o editar usuario",
+                "search": "Buscar usuario"
+            },
+            "createform":
+            {
+                "step1": "Datos del usuario",
+                "step2": "Ubicación"
+            },
+            "created": "Usuario '{{ username }}' creado correctamente",
+            "updated": "Usuario '{{ username }}' actualizado correctamente",
+            "deleted": "Usuario '{{username}}' eliminado",
+            "delete":
+            {
+                "question": "¿Deseas eliminar el usuario {{ username }}?"
+            },
+            "unlink":
+            {
+                "question": "¿Deseas eliminar el usuario {{ username }}?"
+            },
+            "messages":
+            {
+                "geometry": "Inserta la localización geográfica del usuario pintando directamente en mapa o estableciendo manualmente las coordenadas del centro."
+            },
+            "detail":
+            {
+                "title": "Comentario",
+                "fieldset":
+                {
+                   "inputEnabled": {
+                        "title":"Marcar para activar o usuario"
+                   }
+                },
+                "validate": {
+                    "maxfilesize": "No se pueden subir ficheros de más de 10MB, fichero: {{name}}",
+                    "selectfile":"Por favor, selecciona una imagen",
+                    "markphotoonmap":"Por favor, marca la posición del usuario en el mapa",
+                    "drawsegmentonmap": "Introduce los datos solicitados en el formulario y pinta sobre el mapa el segmento afectado",
+                    "confirmdeletepoint": "Esta operación eliminará el punto seleccionado. ¿Está seguro?"                     
+                }
+            },
+            "search": {
+                "viewEnabled":"Ver usuarios activos"
+            },
+            "help": {
+                "create":"Si la posición difiere de la actual indícala en el mapa, inserta los comentarios y pulsa Añadir.",
+                "noresults": "No existen comentarios. Crea uno pulsando el botón <i class='ion-plus-round'></i>"
+            },
+            "cmd": {
+                "create": "Crear usuario",
+                "update": "Editar usuario",
+                "delete": "Eliminar usuario",
+                "search": "Buscar usuarios",
+                "link": "Vincular usuario",
+                "sort": "Ordenar",
+                "init": "Inicializar",
+                "clear": "Limpiar"
+            },
+            "userAuthority": {
+                "ROLE_POLREP": "Informes POLREP",
+                "ROLE_SCAT":"Informes POLREP Costa",
+                "ROLE_POLLUTION_EPISODE": "Gestión COP",
+                "ROLE_POLLUTION_EPISODE_MAP": "Visor",
+                "ROLE_PANEL":"Gestión paneles",
+                "ROLE_LAYERGROUP": "Gestión grupos",
+                "ROLE_LAYER": "Gestión capas",
+                "ROLE_LOGBOOKRECORD": "Observador",
+                "ROLE_USERLOGIN": "Gestión usuarios",
+                "ROLE_GISLAYOUT":"Mapa estratégico",
+				"ROLE_BITACORE":"Bitácora"
+            }
+        },
+                "userrole":
+        {
+            "ADMIN": "Administrador",
+            "SUPERVISOR": "Supervisor (deprecated)",
+            "OBSERVER": "Observador (deprecated)",
+            "VISOR": "Visor (deprecated)",
+            "MODELER": "Modelado (deprecated)",
+            "POLREP": "Polrep (deprecated)",
+            "POLREP Costa": "POLREP Costa (deprecated)",
+            "USER":"Usuario",
+            "PUBLIC":"Público"
+        }
+    }
+}

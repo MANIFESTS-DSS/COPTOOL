@@ -1,0 +1,143 @@
+{
+    "app":
+    {
+        "opearationalfeature":
+        {
+            "title": "Característica operativa",
+            "page":
+            {
+                "dashboard":
+                {
+                    "title": "Característica operativa"
+                }
+            },
+
+            "home":
+            {
+                "title": "Característica operativa",
+                "createLabel": "Nueva Característica operativa",
+                "linkLabel": "Vincular Característica operativa",
+                "unlinkLabel": "Desvincular Característica operativa",
+                "createOrEditLabel": "Crear o editar Característica operativa",
+                "search": "Buscar cliente"
+            },
+
+            "help":
+            {
+                "edit": "Introduce los datos solicitados en el formulario y pinta sobre el mapa la superficie afectada por el hidrocarburo",
+                "create": "Introduce los datos solicitados en el formulario y pinta sobre el mapa la superficie afectada por el hidrocarburo",
+                "segment": "Pinta el segmento directamente en el mapa, inserta los puntos manualmente o marcando la posición actual",
+                "surveyteam": "Añade los datos de los miembros del equipo de inspección"
+            },
+            "created": "Nuevo TIPO DE COSTA creado correctamente: {{ incident }} ",
+            "updated": "TIPO DE COSTA actualizado correctamente",
+            "deleted": "TIPO DE COSTA eliminado correctamente",
+            "delete":
+            {
+                "question": "¿Deseas eliminar la característica operativa {{ id }}?"
+            },
+
+            "id": "Id",
+            "title": "Característica Operativa",
+            "plural": "Características operativas",
+            "notes": "Notas",
+            "oiled": "Contaminado",
+            "debrises": "Escombros",
+            "algaes": "Algas",
+            "access": "Acceso",
+            "accessrestrictions": "Restricciones de acceso",
+            "algaeoiled": "Algas contaminadas",
+            "algaevolume": "Volumen de algas",
+            "bagstrucks": "Carretillas",
+            "debrisoiled": "Escombros contaminados",
+            "debrisvolume": "Volumen de escombros",
+            "faunaoiled": "Fauna petroleada",
+            "laydownareas": "Áreas de depósito",
+            "ongoingactivity": "Operaciones de limpieza en marcha",
+            "ongoingcleanupactivity": "Operaciones de limpieza en marcha",
+            "backshorecliff": "Acantilado",
+            "backshorecliffheight": "Acantilado (m)",
+            "suitablelaydownarea": "Área de deposito adecuada",
+            "comments":"Notas",
+            "algaetype":
+            {
+                "cups": "Bolsas",
+                "volume": "m3",
+                "litres": "Litros"
+            },
+            "algae":
+            {
+                "title": "Algas",
+                "no": "No",
+                "no_much": "No Mucho",
+                "a_lot": "Mucho",
+                "dont_know": "Desconocido/Volumen aprox:",
+                "number": "Nº",
+                "type": "Tipo",
+                "oiled": "Petroleada"
+            },
+            "conservation":
+            {
+                "title": "Conservación",
+                "no": "No",
+                "historical": "Histórica",
+                "archaelogical": "Arqueológica",
+                "nature": "Naturaleza"
+            },
+            "debristype":
+            {
+                "cups": "Bolsas",
+                "volume": "m3",
+                "litres": "Litros"
+            },
+            "debris":
+            {
+                "title": "Escombros",
+                "number": "Nº",
+                "oiled": "Petroleada",
+                "type": "Tipo",
+                "no": "No",
+                "no_much": "No Mucho",
+                "a_lot": "Mucho",
+                "dont_know": "Desconocido/Volumen aprox:"
+            },
+            "directbackshoreaccess":
+            {
+                "title": "Acceso directo desde tierra",
+                "no": "No",
+                "pedestrian": "Caminando",
+                "trucks": "Vehículos"
+            },
+            "neighboursegmentaccess":
+            {
+                "title": "Acceso a través de un segmento contiguo",
+                "no": "No",
+                "pedestrian": "Caminando",
+                "trucks": "Vehículos"
+            },
+            "oiledfaunas":
+            {
+                "title": "Fauna petroleada",
+                "number": "Nº",
+                "oiled": "Petroleada",
+                "type": "Tipo"
+            },
+            "uses":
+            {
+                "title": "Usos",
+                "tourism": "Turístico",
+                "fishing": "Pesca",
+                "other": "Otros"
+            },
+            "algae": {
+                "empty": "Todavía no se registraron algas"
+            },
+            "debris": {
+                "empty": "Todavía no se registraron escombros"
+            },
+            "oiledfauna": {
+                "empty": "Todavía no se registró fauna petroleada"
+            }
+        }
+    }
+}

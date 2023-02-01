@@ -1,0 +1,326 @@
+{
+    "app":
+    {
+        "scatreport":
+        {
+            "title": "Informe POLREP Costa",
+            "page":
+            {
+                "dashboard":
+                {
+                    "title": "Informes POLREP Costa"
+                }
+            },
+
+            "home":
+            {
+                "title": "POLREP Costa",
+                "createLabel": "Crear novo POLREP Costa",
+                "linkLabel": "Vincular POLREP Costa",
+                "unlinkLabel": "Desvincular POLREP Costa",
+                "createOrEditLabel": "Crear ou editar a Cliente",
+                "search": "Buscar Cliente"
+            },
+            "map":
+            {
+                "activelayer": "Capa activa",
+                "centermap": "Centrar",
+                "confirm": "Confirmar",
+                "confirmdeletepoint": "Eliminarase o punto punto seleccionado. Desexas continuar?",
+                "draw": "Debuxar",
+                "manual": "Manual(Lat/Lon)",
+                "points": "Eliminar",
+                "geolocation": "Xeolocalización",
+                "currentPoint": "Ubicación actual",
+                "edit": "Editar",
+                "info":
+                {
+                    "draw": "Marca os puntos no mapa",
+                    "deletePoint": "Indica os puntos a eliminar",
+                    "none": "Insere as coordenadas manualmente ou preme para recoller a posición actual do teu dispositivo"
+                }
+            },
+            "help":
+            {
+                "edit": "Introduce os datos solicitados no formulario e pinta sobre o mapa a superficie afectada polo hidrocarburo",
+                "create": "Introduce os datos solicitados no formulario e pinta sobre o mapa a superficie afectada polo hidrocarburo",
+                "segment": "Pinta o segmento directamente no mapa, insere os puntos manualmente ou marcando a posición actual",
+                "surveyteam": "Engade os datos dos membros do equipo de inspección"
+            },
+            "createform":
+            {
+                "step1": "Información",
+                "step2": "Equipo",
+                "step3": "Segmento",
+                "step4": "Tipos de costa",
+                "step5": "Características operativas"
+            },
+            "created": "Novo POLREP Costa creado correctamente: {{ incident }} ",
+            "updated": "POLREP Costa actualizado correctamente",
+            "deleted": "POLREP Costa eliminado correctamente",
+            "delete":
+            {
+                "question": "¿Desexas eliminar o informe POLREP Costa {{ id }}?"
+            },
+            "unlink":
+            {
+                "question": "¿Desexas desvincular o informe POLREP Costa {{ id }}?"
+            },
+            "detail":
+            {
+                "mobile": {
+                    "tab": {
+                        "elements":"Detalles contaminación",
+                        "map":"Mapa",
+                        "detail":"Información xeral",
+                        "surveyteams":"Usuarios"
+                    }
+                },
+                "title": "POLREP Costa",
+                "review":"Revisar e finalizar",
+                "tab":
+                {
+                    "generalinfo": "1.Información",
+                    "surveyteams": "2.Equipo de inspección",
+                    "segment": "3.Segmento",
+                    "shorelinetypes": "4.Tipos de costa",
+                    "operationalfeatures": "5.Caract. operativas",
+                    "surfaceoilconditions": "6.Hidrocarburo superficial",
+                    "subsurfaceoilconditions": "7.Hidrocarburo baixo superficie",
+                    "othersubstances": "8.Outras sustancias",
+                    "photos": "9.Fotos",
+                    "comments": "10.Comentarios"
+                },
+                "message":
+                {
+                    "contactsempty": "Non existen rexistros, pulsa editar para engadir"
+                }
+            },
+            "entityname": "Scat Report",
+            "generalinformation": "Información xeral",
+            "accessfromnextsegment": "Acessible dende segmento contiguo",
+            "author": "Autor",
+            "begindate": "Data inicio",
+            "cleanuprecommends": "Recomendacións limpieza",
+            "communeregion": "Rexión",
+            "surveyteam": "Equipo de inspección",
+            "directbackshoreaccess": "Acceso directo",
+            "enddate": "Data fin",
+            "id": "Id",
+            "incident": "Incidente",
+            "localauthority": "Autoridade local",
+            "localauthrity": "Autoridade local",
+            "oiledbris": "Escombro contaminado",
+            "operationalfeatures": "Condicións de operación",
+            "plural": "Scat Reports",
+            "pollutionepisode": "Episodio de contaminación",
+            "records": "Rexistros",
+            "reporttime": "Data do Informe",
+            "resourcesensitivities": "Recursos sensibles",
+            "scatzones": "Zonas de POLREP Costa",
+            "segment": "Segmento",
+            "startposition":"Posición inicio",
+            "endposition":"Posición fin",
+            "notexistssurfaceoilconditions": "Non se observa hidrocarburo superficial",
+            "notexistssubsurfaceoilconditions": "Non se realiza investigación",
+            "weatherinfo": "Información meteorolóxica",
+            "tideinfo": "Marea",
+            "tidetype": "Preamar/Baixamar",
+            "tidetime": "Hora",
+            "tideheight": "Nivel da marea (m)",
+            "shoresubstrata": "Substrato",
+            "spill": "Mancha",
+            "status": "Estado",
+            "subsurfaceoilconditions": "Hidrocarburo baixo superficie",
+            "surfaceoilconditions": "Hidrocarburo superficial",
+            "photos": "Fotos",
+            "comments": "Comentarios",
+            "surfaceoilcondition": "Hidrocarburo superficial",
+            "surveyedfrom": "Inspeccionado dende",
+            "surveyedsegment": "Segmento inspeccionado",
+            "surveyendtime": "Hora Fin (local)",
+            "surveyors": "Inspectores",
+            "surveystarttime": "Hora Inicio (local)",
+            "waveexposure": "Exposición ó oleaxe",
+            "shorelinetype":"Tipo de costa",
+            "externalSurveyTeam":"Persoal externo"
+
+        },
+        "tideinfo":
+        {
+            "tidetype": "Preamar/Baixamar",
+            "tideheight": "Altura da marea(m)",
+            "tidetime": "Hora"
+        },
+        "weatherinfo":
+        {
+            "sun": "Sol",
+            "clouds": "Nubes",
+            "fog": "Neboa",
+            "rain": "Chuvia",
+            "snow": "Neve",
+            "windy": "Vento"
+        },
+        "tidetype":
+        {
+            "hightide": "Preamar",
+            "lowtide": "Baixamar",
+            "notide": "Sin Marea"
+        },
+        "contact":
+        {
+            "contactname": "Nome",
+            "organization": "Organización",
+            "phonenumber": "Teléfono"
+        },
+        "segment":
+        {
+            "segmentid": "ID do segmento",
+            "coastlinetype": "Tipo línea de costa",
+            "lengthsurveyed": "Distancia inspeccionada",
+            "segmentlength": "Lonxitude do segmento",
+            "sitename": "Nome do lugar",
+            "waveexposure": "Exposición ó oleaxe"
+        },
+        "waveexposure":
+        {
+            "veryexposed": "Moi exposto",
+            "exposed": "Exposto",
+            "partiallysheltered": "Parcialmente protexido",
+            "verysheltered": "Moi protexido",
+            "extremelysheltered": "Extremadamente protexido"
+        },
+        "shorelinetype":
+        {
+            "bedrockcliff": "Acantilado Rochoso",
+            "bedrockplatform": "Plataforma ou ladeira rochosa",
+            "manmadesolid": "Estructura artificial non permeable",
+            "manmadepermeable": "Estructura artificial permeable",
+            "mudsediments": "Sedimentos fangosos",
+            "saltmarsh": "Marisma de auga salobre",
+            "sandsediments": "Sedimentos areosos",
+            "mixedsediments": "Sedimentos mixtos",
+            "pebblecobbleshingle": "Guijarros/cantos/grava",
+            "boulder": "Rochas",
+            "wetlands": "Estuario",
+            "primary": "Primaria"
+        },
+        "localfeature":
+        {
+            "primary_info": "Primaria(só unha)",
+            "secondary_info": "Secundaria",
+            "estuary": "Desembocadura río/estuario",
+            "historicalartefact": "Artefacto/estructura histórica",
+            "deadseagrass": "Depósitos de algas mortas (Posidonia)",
+            "amenityarea": "Área recreativa",
+            "pools": "Balsas",
+            "deepcracks": "Grietas profundas ou hendiduras",
+            "primary": "Primaria",
+            "oiled": "Contaminada",
+            "other_characteristics": "Outras características"
+        },
+        "operationalfeature":
+        {
+            "id": "Id",
+            "title": "Caracteristica Operativa",
+            "plural": "Características operativas",
+            "notes": "Notas",
+            "oiled": "Contaminado",
+            "debrises": "Escombros",
+            "algaes": "Algas",
+            "access": "Acceso",
+            "accessrestrictions": "Restriccións de acceso",
+            "algaeoiled": "Algas contaminadas",
+            "algaevolume": "Volume de algas",
+            "bagstrucks": "Carretillas",
+            "debrisoiled": "Escombros contaminados",
+            "debrisvolume": "Volume de escombros",
+            "faunaoiled": "Fauna petroleada",
+            "laydownareas": "Áreas de depósito",
+            "ongoingactivity": "Operacións de limpieza en marcha",
+            "ongoingcleanupactivity": "Operacións de limpeza en marcha",
+            "ongoingcleanupactivitycomments": "Comentarios relativos as operacións de limpeza",
+            "backshorecliff": "Acantilado",
+            "backshorecliffheight": "Acantilado (m)",
+            "suitablelaydownarea": "Área de deposito axeitada",
+            "existdebris":"Restos?",
+            "oileddebris":"Contaminados?",
+            "numberdebris":"Cantidade",
+            "typedebris": {
+                "title":"Bolsas/Camións",
+                "bags":"Bolsas",
+                "trucks":"Camións"
+            },
+            "algaetype":
+            {
+                "cups": "Bolsas",
+                "volume": "m3",
+                "litres": "Litros"
+            },
+            "algae":
+            {
+                "title": "Algas",
+                "no": "Non",
+                "no_much": "Non Moito",
+                "a_lot": "Moito",
+                "dont_know": "Descoñecido/Volume aprox:",
+                "number": "Nº",
+                "type": "Tipo",
+                "oiled": "Petroleada"
+            },
+            "conservation":
+            {
+                "title": "Conservación",
+                "no": "Non",
+                "historical": "Histórica",
+                "archaelogical": "Arqueolóxica",
+                "nature": "Natureza"
+            },
+            "debristype":
+            {
+                "cups": "Bolsas",
+                "volume": "m3",
+                "litres": "Litros"
+            },
+            "debris":
+            {
+                "title": "Escombros",
+                "number": "Nº",
+                "oiled": "Petroleada",
+                "type": "Tipo",
+                "no": "Non",
+                "no_much": "Non Moito",
+                "a_lot": "Moito",
+                "dont_know": "Descoñecido/Volume aprox:"
+            },
+            "directbackshoreaccess":
+            {
+                "title": "Acceso directo dende terra",
+                "no": "Non",
+                "pedestrian": "Camiñando",
+                "trucks": "Vehículos"
+            },
+            "neighboursegmentaccess":
+            {
+                "title": "Acceso a través de un segmento contiguo",
+                "no": "Non",
+                "pedestrian": "Camiñando",
+                "trucks": "Vehículos"
+            },
+            "oiledfaunas":
+            {
+                "title": "Fauna petroleada",
+                "number": "Nº",
+                "oiled": "Petroleada",
+                "type": "Tipo"
+            },
+            "uses":
+            {
+                "title": "Usos",
+                "tourism": "Turistico",
+                "fishing": "Pesca",
+                "other": "Outros"
+            }
+        }
+    }
+}

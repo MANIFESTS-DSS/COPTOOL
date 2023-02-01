@@ -1,0 +1,156 @@
+{
+    "app": {
+        "pollutionreport": {
+            "title":"POLREP report",
+            "page": {
+                "dashboard": {
+                    "title": "POLREP reports"
+                }
+            },
+
+            "home": {
+               "title": "UserLogins",
+                "createLabel": "Create new POLREP",
+                "linkLabel": "Link POLREP",
+                "unlinkLabel": "Unlink POLREP",
+                "createOrEditLabel": "Create or edit a Client",
+                "search": "Search Client"
+            },
+            "createform":{
+                      "step1": "Caller",
+                "step2": "Observer",
+                "step3": "Meteorological conditions"
+            },
+            "map": {
+                    "activelayer": "Active layer",
+                    "centermap": "Center",
+                    "confirm": "Confirm",
+                    "confirmdeletepoint": "The selected point will be deleted. Do you want to continue?",
+                    "draw": "Draw",
+                    "manual": "Manual(Lat/Lon)",
+                    "points": "Delete",
+                    "currentPoint":"Current location",
+                    "edit": "Edit",
+                    "info": {
+                        "draw":"Mark the points on the map",
+                        "deletePoint":"Indicate the points to delete",
+                        "none":"Enter the coordinates manually or press to collect the current position of your device"
+                    }
+            },
+            "help":{
+                "winddirection":"Direction from where the wind comes measured in geographic degrees. From 0º (excluded) to 360º (included). Values close to 1º and 360º indicate wind from the north, 90º from the east, 180º from the south and 270º from the west.",
+                "seadirection":"Direction from where the sea comes in geographic degrees. From 0º (excluded) to 360º (included), values close to 1º and 360º indicate south current, close to 90º west current, 180º north and 270º east"            
+            },
+            "created": "New POLREP created successfully.",
+            "continue": "Continue covering contamination information: Spills, photographs, observations, ...",
+            "updated": "POLREP updated succesfully",
+            "deleted": "POLREP deleted succesfully",
+            "delete": {
+                "question": "Are you sure you want to delete Contingency {{ id }}?"
+            },
+            "unlink": {
+                "question": "Are you sure you want to unlink Contingency {{ id }}?"
+            },
+            "detail": {
+                "mobile": {
+                    "tab": {
+                        "elements":"Pollution info",
+                        "map":"Map",
+                        "detail":"Report"
+                    }
+                },
+                "showDetail":"Show details",
+                "review":"Review and finish",
+                "title": "Contingency",
+                "tab" :{
+                    "spills": "1.Spills",
+                    "pollutionsources":"2.Sources",
+                    "photos": "3.Photos",
+                    "caller": "Caller",
+                    "observer": "Observer",
+                    "meteo": "Meteorological conditions",
+                    
+                    
+                    
+                    "comments":"4.Comments",
+                    "map": "Map"
+                }
+            },
+            "author": "Author",
+            "begindate": "Start date",
+            "caller": "Caller",
+            "observer": "Observer",
+            "meteorologicalconditions": "Meteorological conditions",
+            "callernumber": "Agent Nº ",
+            "callerorganization": "Organization",
+            "callertransportnumber": "Distinguishing mark",
+            "callertransporttype": "Type of transport",
+            "cloudcover": "Covered sky",
+            "cloudheight": "Cloud height",
+            "enddate": "End date",
+            "id": "UUID",
+            "meteocondition": "Meteorological conditions",
+            "observationsystem": "Observation system",
+            "observername": "Observer name",
+            "observerrole": "Observer role (Nº)",
+            "plural": "POLREP reports",
+            "pollutionepisode": "Pollution episode",
+            "records": "Records",
+            "reporttime": "Date/Time",
+            "seadirection": "Sea direction (º)",
+            "seastatus": "Sea status",
+            "status": "Status",
+            "userlogin": "UserLogin",
+            "Version": "Version",
+            "visibilitystatus": "Visibility",
+            "winddirection": "Wind direction (º)",
+            "windspeed": "Wind speed",
+            "windstatus": "Wind status",
+            "spill": {
+                "info": {
+                    "deletePoints": "Click on the map to remove the points",
+                    "draw": "Click on the map to mark the points of the spill"
+                }
+            }
+        },
+        "windspeedunit":{
+            "m/s": "m/s",
+            "knots": "knots",
+            "km/h": "km/h"
+        },  
+        "observationsystem": {
+            "visual": "Visual ",
+            "termographic": "Termography",
+            "teledetection": "Teledetection"
+        },
+        "cloudheight": {
+            "low": "Low",
+            "high": "High",
+            "medium": "Medium"
+        },
+        "callertransporttype": {
+            "boat": "Boat/Vehicle",
+            "plane": "Plane",
+            "cycle": "Bicycle"
+        },
+
+        "seastatus": {
+            "rizado": "Curly sea",
+            "ovellado": "Tidal wave",
+            "marusia": "Swell",
+            "fortemarusia": "Strong swell",
+            "mediavaga": "Vague average",
+            "vaga": "Vague",
+            "vagallon": "Wagon",
+            "vagalloncampal": "Field Wagon"
+        },
+        "visibilitystatus": {
+            "excelente": "Excellent",
+            "moiboa": "Very good",
+            "boa": "Good",
+            "regular": "Regular",
+            "mala": "Bad",
+            "nula": "Null"
+        }
+    }
+}

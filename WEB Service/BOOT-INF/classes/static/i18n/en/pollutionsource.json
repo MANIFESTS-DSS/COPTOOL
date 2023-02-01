@@ -1,0 +1,122 @@
+{
+
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)=(.*)$":
+    {
+        "$1": "$2"
+    },
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)_([a-z]*)=(.*)$":
+    {
+        "$1":
+        {
+            "$2": "$3"
+        }
+    },
+
+    "app":
+    {
+        "pollutionsource":
+        {
+            "title": "Poll. Sources",
+            "home":
+            {
+                "title": "Pollution Source",
+                "createLabel": "Create new pollution source",
+                "linkLabel": "Link pollution source",
+                "createOrEditLabel": "Create or edit pollution source",
+                "search": "Search pollution source"
+            },
+            "createform":
+            {
+                "step1": "Origin",
+                "step2": "Cause",
+                "step3": "Location"
+            },
+            "created": "New pollution source '{{ code }}' created successfully",
+            "updated": "Source '{{ code }}': Updated successfully",
+            "deleted": "Font '{{code}}' removed successfully",
+            "delete":
+            {
+                "question": "Do you want to delete the pollution source {{ code }}?"
+            },
+            "unlink":
+            {
+                "question": "You want to delete the pollution source {{ code }}?"
+            },
+            "messages":
+            {
+                "geometry": "Insert the geographic location of the polluting source by painting directly on the map or manually setting the center coordinates.",
+                "affectedarea": "Set the extent of the affected area manually or by measuring on the map (by clicking on the button in each field).",
+                "validate":
+                {
+                    "height":
+                    {
+                        "required": "You must indicate length",
+                        "invalid": "Invalid length value"
+                    },
+                    "course":
+                    {
+                        "required": "You must indicate a value for the drift (degrees)",
+                        "invalid": "The value must be between 0 and 360"
+                    }
+                }
+            },
+            "detail":
+            {
+                "title": "Spill",
+                "tab":
+                {
+                    "caller": "Caller",
+                    "observer": "Observer",
+                    "meteo": "Meteorological conditions",
+                    "spills": "Spills",
+                    "pollutionsources": "Sources",
+                    "photos": "Photos",
+                    "comments": "Comments"
+                },
+                "fieldset":
+                {
+                    "origin": "Pollution source",
+                    "cause":"Cause"
+                }
+            },
+            "entityname": "Pollution source",
+            "code": "Code",
+            "causedescription": "Description (of the cause)",
+            "createdtime": "Creation time",
+            "description": "Description",
+            "geometry": "Geometry",
+            "id": "UUID",
+            "name": "Name",
+            "observedtime": "Date/Time",
+            "plural": "Pollution sources",
+            "pollutioncause": "Cause",
+            "pollutionreport": "POLREP report",
+            "positions": "Positions ",
+            "sourcetrack": "Source path",
+            "sourcetype": "Source type",
+            "help": {
+                "create":"If the position differs from the current one, indicate it on the map, insert the comments and press Add.",
+                "noresults": "There are no pollution sources. Create one by pressing the 'Create new contaminant source' button"
+            }
+        },
+        "pollutioncause":
+        {
+            "collision": "Collision",
+            "sink": "Shipwreck",
+            "explosion": "Explosion",
+            "runaground": "Stranded",
+            "leak": "Operational spill",
+            "loadfuel": "Fuel intake",
+            "unknown": "Unknown",
+            "others": "Others"
+        },
+
+        "sourcetype":
+        {
+            "ship": "Ship",
+            "land": "Land",
+            "unknown": "Unkown"
+
+        }
+    }
+}

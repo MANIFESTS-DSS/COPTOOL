@@ -1,0 +1,28 @@
+banner:
+  location: classpath:/logoQualigyDev.txt
+
+management:
+  port: 9000
+  address: 127.0.0.1
+  context-path: /actuator
+  security:
+    enabled: false
+logging:
+  level:
+    root: INFO
+    #org.hibernate.SQL: DEBUG
+    #Show SQL Parameters
+    #org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    #org.springframework.data-rest: DEBUG
+    #org.springframework.web.client: DEBUG
+    #org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
+    eu.arcopol.api: INFO
+    eu.arcopol.api.service: DEBUG
+    #org.hibernate.boot.model.naming: TRACE
+    #org.springframework.web.method: DEBUG
+    #    org.springframework.security: DEBUG
+    
+    
+
+  
+  

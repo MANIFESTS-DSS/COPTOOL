@@ -1,0 +1,80 @@
+{
+
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)=(.*)$":
+    {
+        "$1": "$2"
+    },
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)_([a-z]*)=(.*)$":
+    {
+        "$1":
+        {
+            "$2": "$3"
+        }
+    },
+
+    "app":
+    {
+        "dashboard":
+        {
+            "bookmarks":
+            {
+                "title": "Favorites"
+            },
+            "pollutionreports":
+            {
+                "title": "POLREP reports"
+            },
+            "scatreports":
+            {
+                "title": "SCAT"
+            },
+            "pollutionepisodes":
+            {
+                "title": "COP viewer"
+            },
+            "logbookrecords":
+            {
+                "title": "Report"
+            },
+            "home":
+            {
+                "title": "Layer group",
+                "createLabel": "Create new group",
+                "linkLabel": "Asociate group",
+                "createOrEditLabel": "Create or edit group",
+                "search": "Search group"
+            },
+            "created": "New group {{ code }} created successfully",
+            "updated": "Group {{ code }}: updated successfully",
+            "deleted": "Group {{code}} removed successfully",
+            "delete":
+            {
+                "question": "Do you want to delete the group {{ code }}?"
+            },
+            "unlink":
+            {
+                "question": "Do you want to unlink the group {{ code }}?"
+            },
+            "detail":
+            {
+                "title": "Layer group"
+            },
+
+            "title": "Layer group",
+            "plural": "Layer groups",
+            "code": "Code",
+            "description": "Description",
+            "id": "UUID",
+            "layers": "Layers",
+            "panel": "Panel",
+            "name": "Name",
+            "uuid": "UUID",
+            "Versión": "Version",
+            "help":
+            {
+                "create": "If the position differs from the current one, indicate it on the map, insert the comments and press Add.",
+                "noresults": "There are no layers. Create one by pressing the <i class='ion-plus-round'></i> button"
+            }
+        }
+    }
+}

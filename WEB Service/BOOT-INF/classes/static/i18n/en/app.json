@@ -1,0 +1,112 @@
+{
+    "app":
+    {
+        "menu":
+        {
+            "dashboard": "Home",
+            "pollutionepisodes": "COP manager",
+            "pollutionepisodesmap": "COP viewer",
+            "pollutionreports": "POLREP",
+            "scatreports": "SCAT",
+            "panels": "Panels",
+            "layergroups": "Layer groups",
+            "layers": "Layers",
+            "logbookrecords": "Report",
+            "userlogins": "Users"
+        },
+        "page":
+        {
+            "home":
+            {
+                "title": "Home",
+				"episodes": "Episodes"
+			},
+            "dashboard":
+            {
+                "title": "Home"
+			},
+            "episode":
+            {
+				"title": "EPISODE"
+			},
+            "gislayouts":
+            {
+                "title": "Tactic GIS"
+            },
+
+            "logbookrecords":
+            {
+                "title": "Report"
+            },
+            "pollutionreports":
+            {
+				"title": "POLREP",
+                "map":
+                {
+					"activelayer": "Active layer",
+					"centermap": "Center map",
+					"confirm": "Confirm the operation",
+					"confirmdeletepoint": "This operation will delete the selected point. Are you sure?",
+					"draw": "Draw map",
+					"manual": "Manual(Lat/Lon)",
+					"points": "Points",
+					"edit": "Edit"
+				}
+			},
+            "pollutionepisodes":
+            {
+                "title": "COP manager"
+            },
+            "pollutionepisodesmap":
+            {
+                "title": "COP viewer"
+			},
+            "scatreports":
+            {
+				"title": "SCAT",
+                "map":
+                {
+					"activelayer": "Active layer",
+					"centermap": "Center map",
+					"confirm": "Confirm operation",
+					"confirmdeletepoint": "This operation will delete the selected point. Are you sure?",
+					"draw": "Draw map",
+					"manual": "Manual(Lat/Lon)",
+					"points": "Points",
+					"edit": "Edit"
+				}
+			},
+            "admin":
+            {
+                "title": "Layer management"
+            },
+            "layergroups":
+            {
+				"title": "Layer group"
+			},
+            "panels":
+            {
+				"title": "Panels"
+            },
+            "layers":
+            {
+                "title": "Layers"
+            },
+            "userlogins":{
+            	"title":"Users"
+			}
+		},
+        "detail":
+        {
+			"home": "Home",
+			"batea": "Raft: {{nome}}",
+			"pedido": "Order {{numPedido}}: {{ fechaPedido | fecha: 'dd/MM/yy' }}",
+			"delegacion": "Delegation: {{nomeCompleto}}",
+			"listaReparto": "Delivery list: {{nombre}}",
+			"ordenextraccion": "Extraction Order: {{nombreCompleto}}",
+			"productor": "Producer details",
+			"cliente": "Customer details",
+			"userlogin": "Userlogin details"
+	}
+}
+}

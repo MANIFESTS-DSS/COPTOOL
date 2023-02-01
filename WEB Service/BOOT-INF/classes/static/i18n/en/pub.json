@@ -1,0 +1,10 @@
+{
+    "app/[folder(singular)]/[subfloders]": "Name/translate rules",
+    "app":
+    {
+        "pub":
+        {
+            "title":"Public"
+        }
+    }
+}

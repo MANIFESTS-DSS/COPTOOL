@@ -1,0 +1,59 @@
+{
+    "app":
+    {
+        "panel":
+        {
+            "home":
+            {
+                "title": "Panels",
+                "createLabel": "Create new panel",
+                "linkLabel": "Asociate panel",
+                "createOrEditLabel": "Create or edit panel",
+                "search": "Search panel"
+            },
+            "created": "Panel {{ code }} successfully created",
+            "updated": "Panel {{ code }}: Updated successfully",
+            "deleted": "Panel {{code}} removed successfully",
+            "delete":
+            {
+                "question": "Do you want to delete panel {{ code }}?"
+            },
+            "unlink":
+            {
+                "question": "Do you want to delete panel {{ code }}?"
+            },
+            "search": {
+                "viewEnabled":"View active panels"
+            },
+            "detail":
+            {
+                "title": "Panels",
+                "fieldset":
+                {
+                    "inputEnabled":
+                    {
+                        "title": "Mark to activate  panel"
+                    }
+                }
+            },
+
+            "title": "Panel",
+            "plural": "Panels",
+            "code": "Code",
+            "description": "Description",
+            "id": "UUID",
+            "layergroups": "Layers panel",
+            "type": "Type",
+            "name": "Name",
+            "uuid": "UUID",
+            "enabled": "Active",
+            "disabled": "Inactive",
+
+            "help":
+            {
+                "create": "If the position differs from the current one, indicate it on the map, insert the comments and press Add.",
+                "noresults": "There are no panels. Create one by pressing the <i class='ion-plus-round'></i> button"
+            }
+        }
+    }
+}

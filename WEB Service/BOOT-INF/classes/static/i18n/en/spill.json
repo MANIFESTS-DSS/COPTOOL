@@ -1,0 +1,155 @@
+{
+
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)=(.*)$":
+    {
+        "$1": "$2"
+    },
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)_([a-z]*)=(.*)$":
+    {
+        "$1":
+        {
+            "$2": "$3"
+        }
+    },
+
+    "app":
+    {
+        "spill":
+        {
+            "home":
+            {
+                "title": "Spill",
+                "createLabel": "New spill",
+                "linkLabel": "Assign spill",
+                "createOrEditLabel": "Create or edit spill",
+                "search": "Search spill"
+            },
+            "createform":{
+                "step1":"Characteristics",
+                "step2":"Location",
+                "step3":"Affected area",
+                "step4":"Course",
+                "step5":"Aspect"
+            },
+            "created": "New spill {{ code }}",
+            "updated": "Spill {{ code }}: updated",
+            "deleted": "Spill {{code}} deleted",
+            "delete":
+            {
+                "question": "Do you want to remove the spill {{ code }}?"
+            },
+            "unlink":
+            {
+                "question": "Do you want to remove the spill {{ code }}?"
+            },
+            "messages":{
+                "geometry": "Insert the geographic location ot the spill painting directly on the map or manually stablishing the center coordinates.",
+                "affectedarea": "Set the extent of the affected area manually or by measuring on the map (by clicking on the button in each field).",
+                "validate": {
+                    "height": {
+                        "required":"Must indicate length",
+                        "invalid":"Invalid length value"
+                    },
+                    "course": {
+                        "required": "Must indicate a value for the drift (degrees)",
+                        "invalid":"The value must be between 0 and 360" 
+                    }
+                }
+            },
+            "detail":
+            {
+                "title": "Spill",
+                "tab":
+                {
+                    "caller": "Comunicator",
+                    "observer": "Observer",
+                    "meteo": "Meteo",
+                    "spills": "Spills",
+                    "pollutionsources": "Sources",
+                    "photos": "Photos",
+                    "comments": "Comments"
+                },
+                "fieldset":
+                {
+                    "properties": "Pollution features",
+                    "aspect": "Aspect",
+                    "geometry": "Location (center of spill)",
+                    "affectedarea": "Affected area",
+                    "course": "Course"
+                },
+                "map" :{
+                    "deletepoints":"Delete points",
+                    "edit":"Edit spill"
+                }
+            },
+            "entityname": "Spill",
+            "area": "Area",
+            "course": "Course (º)",
+            "createdtime": "Created time",
+            "demora": "Delay",
+            "description": "Description",
+            "distance": "Distance",
+            "distanceunit": "Unit",
+            "drift": "Drift",
+            "geometry": "Geometry",
+            "height": "Height (m)",
+            "id": "UUID",
+            "image": "Image",
+            "imagepath": "Image path",
+            "latitude": "Latitude",
+            "longitude": "Longitude",
+            "observedtime": "Observed time",
+            "plural": "Spills",
+            "pollutant": "Pollutant",
+            "pollutantorigin": "Pollutant origin",
+            "pollutionreport": "POLREP",
+            "report": "Report",
+            "code": "Code",
+            "shape": "Shape",
+            "speed": "Speed",
+            "speedunit": "Unit",
+            "spillaparience": "Appearance",
+            "spillaspect": "Aspect",
+            "width": "Width",
+            "help": {
+                "create":"If the position differs from the current one, indicate it on the map, insert the comments and press Add.",
+                "noresults": "There are no spills. Create new one pressing button <i class='ion-plus-round'></i>"
+            }
+        },
+        "geometry":
+                    {
+                        "map": "Map",
+                        "manual": "Manual (Lat/Lon)"
+                    },
+        "spillaspect":
+        {
+            "continuous": "Continuous",
+            "bands": "Bands",
+            "patches": "Patches"
+        },
+        "spillaparience":
+        {
+            "translucent": "Translucent",
+            "filmplatted": "Film platted",
+            "darktraces": "Drak traces",
+            "lightbands": "Light bands",
+            "colorbands": "Color bands",
+            "darkbands": "Dark bands"
+        },
+        "speed":
+        {
+            "km/h": "km/h",
+            "m/s": "m/s",
+            "knots": "Knots"
+        },
+        "pollutantorigin":
+        {
+            "crudeoil": "Crude oil",
+            "fuel": "Fuel/Oil",
+            "chemicals": "Chemicals",
+            "solid": "Solid",
+            "organic": "Organic",
+            "unknown": "Unknown"
+        }
+    }
+}

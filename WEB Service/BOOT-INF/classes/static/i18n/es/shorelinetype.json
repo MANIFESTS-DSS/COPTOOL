@@ -1,0 +1,53 @@
+{
+    "app":
+    {
+        "shorelinetype":
+        {
+            "title": "Tipos de costa",
+            "page":
+            {
+                "dashboard":
+                {
+                    "title": "Tipos de costa"
+                }
+            },
+
+            "home":
+            {
+                "title": "Tipos de costa",
+                "createLabel": "Nuevo tipo de costa",
+                "linkLabel": "Vincular tipo de costa",
+                "unlinkLabel": "Desvincular tipo de costa",
+                "createOrEditLabel": "Crear o editar tipo de costa",
+                "search": "Buscar cliente"
+            },
+
+            "help":
+            {
+                "edit": "Introduce los datos solicitados en el formulario y pinta sobre el mapa la superficie afectada por el hidrocarburo",
+                "create": "Introduce los datos solicitados en el formulario y pinta sobre el mapa la superficie afectada por el hidrocarburo",
+                "segment": "Pinta el segmento directamente en el mapa, inserta los puntos manualmente o marcando la posición actual",
+                "surveyteam": "Añade los datos de los miembros del equipo de inspección"
+            },
+            "created": "Novo TIPO DE COSTA creado correctamente: {{ incident }} ",
+            "updated": "TIPO DE COSTA actualizado correctamente",
+            "deleted": "TIPO DE COSTA eliminado correctamente",
+            "delete":
+            {
+                "question": "¿Deseas eliminar el tipo de costa {{ id }}?"
+            },
+            "bedrockcliff": "Acantilado Rocoso",
+            "bedrockplatform": "Plataforma o ladera rocosa",
+            "manmadesolid": "Estructura artificial no permeable",
+            "manmadepermeable": "Estructura artificial permeable",
+            "mudsediments": "Sedimentos fangosos",
+            "saltmarsh": "Marisma de agua salobre",
+            "sandsediments": "Sedimentos arenosos",
+            "mixedsediments": "Sedimentos mixtos",
+            "pebblecobbleshingle": "Guijarros/cantos/grava",
+            "boulder": "Rocas",
+            "wetlands": "Estuario",
+            "primary": "Primaria"
+        }
+    }
+}

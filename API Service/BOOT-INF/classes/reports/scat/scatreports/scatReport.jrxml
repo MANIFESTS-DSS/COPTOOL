@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pollutionReport" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="23274c03-3845-4efa-86ac-e181b8cf846d">
+	<property name="ireport.zoom" value="1.6105100000000012"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Heading 3" fontSize="14" isBold="true"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<style name="Heading 1" fontSize="16" isBold="true"/>
+	<style name="Heading 2" fontSize="14" isBold="true" isItalic="true"/>
+	<style name="Bold" fontSize="12" isBold="true"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Heading 4" fontSize="12" isBold="true" isItalic="true"/>
+	<style name="Heading" fontSize="14"/>
+	<parameter name="surfaceOilConditions" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="SurfaceOilConditionsSubreport" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="contacts" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="SubsurfaceOilConditionsSubreport" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="subsurfaceOilConditions" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="id" class="java.lang.String"/>
+	<field name="reportTime" class="java.util.Date"/>
+	<field name="author.userDetails" class="java.lang.String"/>
+	<field name="contacts" class="java.util.List">
+		<fieldDescription><![CDATA[contacts]]></fieldDescription>
+	</field>
+	<field name="incident" class="java.lang.String">
+		<fieldDescription><![CDATA[incident]]></fieldDescription>
+	</field>
+	<field name="operationalFeatures" class="eu.arcopol.domain.scat.OperationalFeature">
+		<fieldDescription><![CDATA[operationalFeatures]]></fieldDescription>
+	</field>
+	<field name="segment" class="eu.arcopol.domain.map.Segment">
+		<fieldDescription><![CDATA[segment]]></fieldDescription>
+	</field>
+	<field name="status" class="eu.arcopol.domain.base.ReportStatus">
+		<fieldDescription><![CDATA[status]]></fieldDescription>
+	</field>
+	<field name="subsurfaceOilConditions" class="java.util.List">
+		<fieldDescription><![CDATA[subsurfaceOilConditions]]></fieldDescription>
+	</field>
+	<field name="surfaceOilConditions" class="java.util.List">
+		<fieldDescription><![CDATA[surfaceOilConditions]]></fieldDescription>
+	</field>
+	<field name="surveyEndTime" class="java.lang.String">
+		<fieldDescription><![CDATA[surveyEndTime]]></fieldDescription>
+	</field>
+	<field name="surveyStartTime" class="java.lang.String">
+		<fieldDescription><![CDATA[surveyStartTime]]></fieldDescription>
+	</field>
+	<field name="surveyedFrom" class="java.lang.String">
+		<fieldDescription><![CDATA[surveyedFrom]]></fieldDescription>
+	</field>
+	<field name="surveyedSegment" class="eu.arcopol.domain.map.Segment">
+		<fieldDescription><![CDATA[surveyedSegment]]></fieldDescription>
+	</field>
+	<field name="tideHeight" class="java.lang.Float">
+		<fieldDescription><![CDATA[tideHeight]]></fieldDescription>
+	</field>
+	<field name="tideType" class="java.lang.String">
+		<fieldDescription><![CDATA[tideType]]></fieldDescription>
+	</field>
+	<field name="version" class="java.lang.Integer">
+		<fieldDescription><![CDATA[version]]></fieldDescription>
+	</field>
+	<field name="weatherInfo" class="java.lang.String">
+		<fieldDescription><![CDATA[weatherInfo]]></fieldDescription>
+	</field>
+	<field name="segment.segmentId" class="java.lang.String"/>
+	<field name="segment.siteName" class="java.lang.String"/>
+	<field name="segment.segmentLength" class="java.lang.String"/>
+	<field name="segment.lengthSurveyed" class="java.lang.String"/>
+	<field name="segment.waveExposure" class="java.lang.String"/>
+	<field name="segment.coastlineType" class="java.lang.String"/>
+	<group name="Group1">
+		<groupExpression><![CDATA[(int)($V{REPORT_COUNT}/15)]]></groupExpression>
+	</group>
+	<group name="Group2">
+		<groupExpression><![CDATA[(int)($V{REPORT_COUNT}/5)]]></groupExpression>
+	</group>
+	<pageHeader>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement uuid="7c46f0b6-b5ba-475d-8983-5235ef1cba79" style="Bold" x="430" y="1" width="123" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{author.userDetails}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="0a728155-ac11-45fb-9dea-02c14756b031" style="Heading 1" x="4" y="0" width="547" height="32" forecolor="#006699"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Calibri" size="20" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Oiled Shoreline Assessment Form]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="103" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="f6d23e87-fca5-4934-bdc1-7ec0c15913c4" mode="Opaque" x="0" y="0" width="150" height="14" forecolor="#FFFFFF" backcolor="#666666"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[  GENERAL INFORMATION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="11bd35df-5dbf-468d-b9ab-d2baf4490597" x="152" y="0" width="49" height="14"/>
+				<textElement/>
+				<text><![CDATA[Incident:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="70b8fa0f-32c0-4768-814a-e7559bbfda26" x="201" y="0" width="203" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{incident}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fd072778-ad0b-43a6-8c91-0d056f07a249" x="453" y="0" width="100" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{reportTime}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="19d9743f-fe6b-4e0e-ba20-52e415e55712" x="404" y="0" width="49" height="14"/>
+				<textElement/>
+				<text><![CDATA[Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="824fe72c-403e-41e4-a338-f3d3849e69cb" x="152" y="14" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Survey time:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="c6a33257-871a-461e-bb7e-943715606804" x="252" y="14" width="57" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{surveyStartTime}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="ab29e1c5-6d03-4714-8897-4fc99530a43e" x="152" y="14" width="401" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="d992337f-4ac2-47c6-a255-ea61da86975e" x="4" y="31" width="547" height="1" forecolor="#CCCCCC"/>
+				<graphicElement>
+					<pen lineWidth="2.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="c44e224c-155a-417f-bff0-75ed156ff539" x="309" y="14" width="21" height="15"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[to]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="2e718e2e-63e9-4a26-a816-0a79b10932c6" x="330" y="14" width="100" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{surveyEndTime}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="6c1ad08d-fe2d-4af4-9150-ba42c9be22c3" mode="Opaque" x="2" y="35" width="150" height="14" forecolor="#FFFFFF" backcolor="#666666"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[  SEGMENT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fec4122d-6436-4f8d-95e3-d164558c85bf" x="152" y="35" width="100" height="14"/>
+				<textElement/>
+				<text><![CDATA[Segment ID:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="e38e4e76-bfa3-472b-aa75-818eff4ef2f5" x="252" y="35" width="100" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{segment.segmentId}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="5dab7038-9a80-4952-8dde-5c89d5a4afca" x="354" y="35" width="100" height="14"/>
+				<textElement/>
+				<text><![CDATA[Name of site:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="2a28e8eb-84b1-47e8-90d0-a8ec1c8441a5" x="454" y="35" width="100" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{segment.siteName}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="6ad5e7a4-c1d2-4c63-ba78-64d98aaff0b1" x="152" y="48" width="401" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="3493598a-21f1-4215-a509-3deb11b62ee1" x="4" y="49" width="70" height="14"/>
+				<textElement/>
+				<text><![CDATA[Total Length:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="d1861770-0af8-4c92-911e-32536e453ca7" x="74" y="49" width="78" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{segment.segmentLength}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="73cc1fea-b7e9-43ea-9698-4e5593f2cf27" x="252" y="48" width="152" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{segment.lengthSurveyed}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="38bfe72c-79c8-48ca-9da8-6349df7118a7" x="152" y="49" width="100" height="14"/>
+				<textElement/>
+				<text><![CDATA[Length surveyed:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b76bf87c-5e8f-4697-80f7-c1a48c3d16f6" x="74" y="64" width="127" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{segment.waveExposure}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="805d7cae-3902-4109-804a-3bb0e85e5a7d" x="4" y="64" width="70" height="14"/>
+				<textElement/>
+				<text><![CDATA[Exposure:]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="26ec215d-7592-475c-8fff-bd14c7d1d514" x="4" y="63" width="549" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="262b486f-c0a3-4554-a5f8-3d86f67c2d0c" x="4" y="78" width="70" height="14"/>
+				<textElement/>
+				<text><![CDATA[Coastline Type:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="38f81eb6-45da-4629-a705-2d6be4a4f488" x="74" y="78" width="360" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{segment.coastlineType}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="c889ee89-2322-4cfc-a6b3-92efe97a332a" x="4" y="78" width="549" height="1"/>
+			</line>
+		</band>
+		<band height="52">
+			<subreport>
+				<reportElement uuid="a8813f8a-937f-4608-99bc-6cf39abcc183" positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="555" height="52"/>
+				<subreportParameter name="pollutionReport">
+					<subreportParameterExpression><![CDATA[$F{id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{surfaceOilConditions}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SurfaceOilConditionsSubreport}]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="50">
+			<subreport>
+				<reportElement uuid="a8813f8a-937f-4608-99bc-6cf39abcc123" positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="555" height="50"/>
+				<subreportParameter name="pollutionReport">
+					<subreportParameterExpression><![CDATA[$F{id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{subsurfaceOilConditions}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SubsurfaceOilConditionsSubreport}]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement uuid="b7763734-6236-4066-8e06-3e126c7afd49" mode="Opaque" x="2" y="0" width="555" height="13" forecolor="#D0B48E" backcolor="#006699"/>
+				<textField evaluationTime="Report">
+					<reportElement uuid="33394dd4-5bf2-4879-8080-41ba5f44967b" style="Column header" x="512" y="0" width="40" height="13" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="d17d9c32-efa1-4e18-b792-3a65ffe107da" style="Column header" x="432" y="0" width="80" height="13" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}+" /"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement uuid="56abccd2-9fe3-4bfb-b8dd-f179006012f9" style="Column header" x="2" y="0" width="197" height="13" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="b097e006-4124-4880-832a-f9a6130e3537" x="241" y="0" width="100" height="13" forecolor="#FFFFFF"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Arcopol PLUS]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="pdorgambide (generated)" id="1501135526212-1">
+        <createTable tableName="additionaltaskmember">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="alternate" type="BOOL"/>
+            <column name="assignedtime" type="TIMESTAMP(29) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="comments" type="VARCHAR(255)"/>
+            <column name="executedtime" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="position" type="INT"/>
+            <column name="role" type="VARCHAR(255)"/>
+            <column name="taskmemberstatus" type="VARCHAR(255)"/>
+            <column name="task" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="team" type="VARCHAR(255)"/>
+            <column name="worker" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        
+        
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1501135526212-2">
+        <createTable tableName="pointcloud_formats">
+            <column name="pcid" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="srid" type="INT"/>
+            <column name="schema" type="TEXT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1501135526212-3">
+        <addColumn tableName="person">
+            <column name="nif" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1501135526212-5">
+        <addPrimaryKey columnNames="id" constraintName="additionaltaskmember_pkey" tableName="additionaltaskmember"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1501135526212-6">
+        <addPrimaryKey columnNames="pcid" constraintName="pointcloud_formats_pkey" tableName="pointcloud_formats"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1501135526212-7">
+        <addForeignKeyConstraint baseColumnNames="worker" baseTableName="additionaltaskmember" constraintName="fk_150ba5qmwkt5i40x75rfk9075" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="person"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1501135526212-8">
+        <addForeignKeyConstraint baseColumnNames="task" baseTableName="additionaltaskmember" constraintName="fk_bdtg9b1sw07sumgf555xrnvjj" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="task"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1501135526212-9">
+        <addForeignKeyConstraint baseColumnNames="restoretaskmember" baseTableName="taskmember" constraintName="fk_hligf3a85g8tvea9mn58f8gyy" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="taskmember"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1501135526212-10">
+        <addForeignKeyConstraint baseColumnNames="team" baseTableName="additionaltaskmember" constraintName="fk_qtgw7be0thjn1f438le9h9lwv" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="team"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1501135526212-12">
+        <dropForeignKeyConstraint baseTableName="task" constraintName="fk_1caxwmxulmvywqj0yka5o7rj8"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1501135526212-13">
+        <dropForeignKeyConstraint baseTableName="permex" constraintName="fk_663gxyvg624hquw7fmiceh4r8"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1501135526212-14">
+        <dropForeignKeyConstraint baseTableName="task" constraintName="fk_d375kdo404kxms6m92njyyn0a"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1501135526212-15">
+        <dropForeignKeyConstraint baseTableName="task" constraintName="fk_q18mc2u9bk3gr79bxw2crk9b4"/>
+    </changeSet>
+    <changeSet author="pdorgambide (generated)" id="1501135526212-16">
+        <dropTable tableName="place"/>
+    </changeSet>
+</databaseChangeLog>

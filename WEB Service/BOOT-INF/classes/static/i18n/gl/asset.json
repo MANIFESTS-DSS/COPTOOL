@@ -1,0 +1,64 @@
+{
+    "app":
+    {
+        "asset":
+        {
+            "title": "Elementos",
+            "home":
+            {
+                "title": "Elementos",
+                "createLabel": "Novo elemento",
+                "detailLabel": "Detalle do elemento",
+                "linkLabel": "Vincular elemento",
+                "createOrEditLabel": "Crear ou editar elemento",
+                "search": "Buscar elemento"
+            },
+            "createform":
+            {
+                "step1": "Datos do elemento",
+                "step2": "Ubicación"
+            },
+            "created": "Novo elemento '{{ code }}' creado correctamente",
+            "updated": "Elemento '{{ code }}' actualizado correctamente",
+            "deleted": "Elemento '{{code}}' eliminado correctamente",
+            "delete":
+            {
+                "question": "¿Desexas eliminar o elemento {{ code }}?"
+            },
+            "unlink":
+            {
+                "question": "¿Desexas desvincular o elemento {{ code }}?"
+            },
+            "messages":
+            {
+                "geometry": "Insire a localización xeográfica do elemento pintando directamente no mapa ou establecendo manualmente as coordenadas do centro."
+            },
+            "detail":
+            {
+                "title": "Elemento",
+                "fieldset":
+                {
+                   
+                },
+                "validate": {
+                    "maxfilesize": "Non se poden subir ficheiros de máis de 10MB, ficheiro: {{name}}",
+                    "selectfile":"Por favor, selecciona unha imaxe",
+                    "markphotoonmap":"Por favor, marca a posición do elemento no mapa",
+                    "drawsegmentonmap": "Introduce os datos solicitados no formulario e pinta sobre o mapa o segmento afectado",
+                    "confirmdeletepoint": "Esta operación eliminará o punto seleccionado. ¿Estás seguro?"                     
+                }
+            },
+            "entityname": "Elemento",
+            "name":"Nome",
+            "description":"Descrición",
+            "geometry": "Ubicación xeográfica",
+            "comment": "Elemento",
+            "userlogin": "Usuario",
+            "createdtime": "Creado en",
+            "help": {
+                "create":"Se a posición difire da actual indícaa no mapa, insire os elementos e preme Engadir.",
+                "noresults": "Non existen elementos. Crea un premendo o botón <i class='ion-plus-round'></i>"
+            }
+        }
+    }
+}
