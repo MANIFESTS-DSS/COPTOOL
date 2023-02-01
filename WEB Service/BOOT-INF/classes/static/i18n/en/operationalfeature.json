@@ -1,0 +1,99 @@
+{
+    "app":
+    {
+        "operationalfeature": {
+            "id": "Id",
+            "title": "Operational feature",
+            "plural": "Operational features",
+            "notes": "Notes",
+            "oiled": "Oiled",
+            "debrises": "Debris",
+            "algaes": "Algae",
+            "access": "Access",
+            "accessrestrictions": "Access restrictions",
+            "algaeoiled": "Oiled algae",
+            "algaevolume": "Algae volume",
+            "bagstrucks": "Bags trucks",
+            "debrisoiled": "Oiled debris",
+            "debrisvolume": "Debris volume",
+            "faunaoiled": "Oiled fauna",
+            "laydownareas": "Laydown areas",
+            "ongoingactivity": "Ongoing activity",
+            "ongoingcleanupactivity": "Ongoing cleanup activity",
+            "backshorecliff": "Backshore cliff",
+            "backshorecliffheight": "Backshore cliff height (m)",
+            "suitablelaydownarea": "suitable laydown area",
+            "comments":"Comments",
+            "algaetype":
+            {
+                "cups": "Cups",
+                "volume": "m3",
+                "litres": "Litres"
+            },
+            "algae":
+            {
+                "title": "Algae",
+                "no": "No",
+                "no_much": "Not much",
+                "a_lot": "A lot",
+                "dont_know": "Don't know:",
+                "number": "Nº",
+                "type": "Type",
+                "oiled": "Oiled"
+            },
+            "conservation":
+            {
+                "title": "Conservation",
+                "no": "No",
+                "historical": "Historical",
+                "archaelogical": "Archaeological",
+                "nature": "Nature"
+            },
+            "debristype":
+            {
+                "cups": "Cups",
+                "volume": "m3",
+                "litres": "Litres"
+            },
+            "debris":
+            {
+                "title": "Debris",
+                "number": "Nº",
+                "oiled": "Oiled",
+                "type": "Type",
+                "no": "No",
+                "no_much": "Not much",
+                "a_lot": "A lot",
+                "dont_know": "Don't know:"
+            },
+            "directbackshoreaccess":
+            {
+                "title": "Direct backshore access",
+                "no": "No",
+                "pedestrian": "Pedestrian",
+                "trucks": "Trucks"
+            },
+            "neighboursegmentaccess":
+            {
+                "title": "Neighbour segment access",
+                "no": "No",
+                "pedestrian": "Pedestrian",
+                "trucks": "Trucks"
+            },
+            "oiledfaunas":
+            {
+                "title": "Oiled fauna",
+                "number": "Nº",
+                "oiled": "Oiled",
+                "type": "type"
+            },
+            "uses":
+            {
+                "title": "Uses",
+                "tourism": "Tourism",
+                "fishing": "fishing",
+                "other": "Other"
+            }
+        }
+    }
+}

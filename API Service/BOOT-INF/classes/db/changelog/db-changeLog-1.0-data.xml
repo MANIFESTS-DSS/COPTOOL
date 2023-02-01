@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+<!--    <changeSet author="pdorgambide" id="data-update-configrecibo-1_0"> -->
+<!--     	<update schemaName="dbo" -->
+<!--             tableName="configrecibo"> -->
+<!--         <column name="dtype" value="BateaConfigRecibo"/> -->
+<!--     </update> -->
+<!-- </changeSet> -->
+
+
+</databaseChangeLog>

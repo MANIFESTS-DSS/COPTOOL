@@ -1,0 +1,68 @@
+{
+    "app":
+    {
+        "episodeuser":
+        {
+            "cmd": {
+                "layers.edit":"Configurar Capas"
+            },
+            "title": "UserLogins",
+            "home":
+            {
+                "title": "UserLogins",
+                "createLabel": "Crear nuevo POLREP",
+                "linkLabel": "Vincular POLREP",
+                "unlinkLabel": "Desvincular POLREP",
+                "createOrEditLabel": "Crea o edita un Cliente",
+                "search": "Busca Cliente"
+            },
+            "createform":
+            {
+                "step1": "Comunicante",
+                "step2": "Observador",
+                "step3": "Condiciones Meteorológicas"
+            },
+            "copydialog":{ 
+                "title":"Copiar UserLogins/capas",
+                "message":"Se realizará una copia del UserLogin y capas actual. ¿Deseas continuar?",
+                "success":"UserLogin y capas copiados correctamente"
+            },
+            "created": "Nuevo USUARIO del episodio creado correctamente", 
+            "updated": "USUARIO del episodio actualizado correctamente",
+            "deleted": "USUARIO del episodio eliminado correctamente",
+            "delete":
+            {
+                "question": "Estás seguro de que quieres eliminar Contingencia {{ id }}?"
+            },
+            "unlink":
+            {
+                "question": "Estás seguro de que quieres desvincular Contingencia {{ id }}?"
+            },
+            "detail":
+            {
+                "title": "{{name}}",
+                "tab":
+                {
+                    "caller": "Comunicante",
+                    "observer": "Observador",
+                    "meteo": "Condiciones Meteorológicas",
+                    "spills": "Manchas",
+                    "pollutionsources": "Fuentes",
+                    "photos": "Fotos",
+                    "comments": "Comentarios"
+                }
+            },
+            "episode": "Episodio",
+            "userlogin": "Usuario (login)",
+            "userrole": "Rol",
+            "url": "URL pública",
+            "layers": "Capas",
+            "message": {
+                "layersUpdated": "Capas del usuario actualizadas correctamente",
+                "layersSelected":"Capas de usuario seleccionadas:",
+                "usersSelected":"Usuarios seleccionados:",
+                "layersUnchanged":"Capas de usuario no modificadas"
+            }
+        }
+    }
+}

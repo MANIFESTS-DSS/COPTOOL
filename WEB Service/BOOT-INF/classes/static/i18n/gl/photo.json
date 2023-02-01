@@ -1,0 +1,101 @@
+{
+
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)=(.*)$":
+    {
+        "$1": "$2"
+    },
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)_([a-z]*)=(.*)$":
+    {
+        "$1":
+        {
+            "$2": "$3"
+        }
+    },
+
+    "app":
+    {
+        "photo":
+        {
+            "title": "Fotos",
+            "home":
+            {
+                "title": "Fotos",
+                "createLabel": "Crear nova fotografía",
+                "linkLabel": "Vincular fotografia",
+                "createOrEditLabel": "Crear ou editar fotografía",
+                "search": "Buscar fotografía"
+            },
+            "createform":
+            {
+                "step1": "Fotografía",
+                "step2": "Ubicación"
+            },
+            "help": {
+                "create":"Se a posición é diferente da actual indícaa no mapa, preme o botón da cámara para achegar a foto, insere comentarios (máx 255 caracteres) e preme Engadir",
+                "show": "Preme o botón da cámara para achegar a foto, insere o comentario (máx 255 caracteres) e finalmente preme Engadir. ",
+                "label":"Preme o botón da cámara para achegar a foto, insere o comentario (máx 255 caracteres) e finalmente preme Engadir"
+
+            },
+            "created": "Nova fotografía '{{ code }}' creada correctamente",
+            "updated": "Fotografía '{{ code }}' actualizada correctamente",
+            "deleted": "Fotografía '{{code}}' eliminada correctamente",
+            "delete":
+            {
+                "question": "¿Desexas eliminar a fotografía {{ code }}?"
+            },
+            "unlink":
+            {
+                "question": "¿Desexas eliminar a fotografía {{ code }}?"
+            },
+            "messages":
+            {
+                "geometry": "Insere a localización xeográfica da fotografía pintando directamente no mapa ou establecendo manualmente as coordenadas do centro."
+            },
+             "map":
+            {
+                "activelayer": "Capa activa",
+                "centermap": "Centrar",
+                "confirm": "Confirmar",
+                "confirmdeletepoint": "Eliminarase o punto punto seleccionado. Desexas continuar?",
+                "draw": "Pintar",
+                "manual": "Manual(Lat/Lon)",
+                "points": "Eliminar",
+                "geolocation": "Xeolocalización",
+                "currentPoint": "Ubicación actual",
+                "edit": "Editar",
+                "info":
+                {
+                    "draw": "Marca os puntos no mapa",
+                    "deletePoint": "Indica os puntos a eliminar",
+                    "none": "Insere as coordenadas manualmente ou preme para recoller a posición actual do teu dispositivo"
+                }
+            },
+            "detail":
+            {
+                "title": "Fotografía",
+                "fieldset":
+                {
+                    "origin": "Orixe da contaminación",
+                    "cause": "Causa"
+                },
+                "validate": {
+                    "maxfilesize": "Non se poden subir ficheiros de mais de 10MB, ficheiro: {{name}}",
+                    "selectfile":"Por favor, selecciona unha imaxe",
+                    "markphotoonmap":"Por favor, marca a posición da foto no mapa",
+                    "drawsegmentonmap": "Introduce os datos solicitados no formulario e pinta sobre o mapa o segmento afectado",
+                    "confirmdeletepoint": "Esta operación eliminará o punto seleccionado. ¿Estás seguro?"                     
+                }
+            },
+            "entityname": "Fotografía",
+            "comments": "Comentarios",
+            "file": "Ficheiro",
+            "filename": "Nome do ficheiro",
+            "createdtime": "Creado en",
+            "help": {
+                "create":"Se a posición difire da actual indícaa no mapa, insere os comentarios e preme Engadir.",
+                "noresults": "Non existen fotografías. Crea unha premendo o botón <i class='ion-plus-round'></i>"
+            
+            }
+        }
+    }
+}

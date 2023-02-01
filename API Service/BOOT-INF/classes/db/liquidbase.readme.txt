@@ -1,0 +1,13 @@
+Para generar el fichero de cambios diferencial.
+
+
+1. Editar liquibase.properties y cambiar el nombre el fichero diferencial.
+2. Generar el fichero de cambios diferencia con la release que corresponda.
+> mvn liquibase:diff   [output db-changeLog-1.x.xml]
+3. Crear los cambios en lso datos [db-changeLog-1.x-data.xml]
+4. Incluir los ficheor en el db-changeLog-master.xml
+
+5. Al arrancar la app con el liquibase.enabled=true Se ejecutarán los cambios en orden
+
+-- Para generar un fichero de cambio completo.
+mvn liquibase:generateChangeLog

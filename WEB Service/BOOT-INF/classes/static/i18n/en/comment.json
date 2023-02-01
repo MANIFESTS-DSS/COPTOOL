@@ -1,0 +1,96 @@
+{
+
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)=(.*)$":
+    {
+        "$1": "$2"
+    },
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)_([a-z]*)=(.*)$":
+    {
+        "$1":
+        {
+            "$2": "$3"
+        }
+    },
+
+    "app":
+    {
+        "comment":
+        {
+            "title": "Comments",
+            "home":
+            {
+                "title": "Comments",
+                "createLabel": "New comment",
+                "linkLabel": "Link comment",
+                "createOrEditLabel": "Create or edit comment",
+                "search": "Search comment"
+            },
+            "createform":
+            {
+                "step1": "Comment data",
+                "step2": "Location"
+            },
+            "help": {
+                "create":"If the position differs from the current one, indicate it on the map, insert the comments and press Add",
+                "show":"If the position differs from the current one, indicate it on the map, insert the comments and press Add",
+                "label":"Include your own comments"
+            },
+            "created": "New comment '{{ code }}' created successfully",
+            "updated": "Comment '{{ code }}' updated successfully",
+            "deleted": "Comment '{{code}}' removed successfully",
+            "delete":
+            {
+                "question": "Do you want to remove the comment {{ code }}?"
+            },
+            "map": {
+                    "activelayer": "Active layer",
+                    "centermap": "Center",
+                    "confirm": "Confirm",
+                    "confirmdeletepoint": "The selected point will be deleted. Do you want to continue?",
+                    "draw": "Draw",
+                    "manual": "Manual(Lat/Lon)",
+                    "points": "Delete",
+                    "currentPoint":"Current location",
+                    "edit": "Edit",
+                    "info": {
+                        "draw":"Mark the points on the map",
+                        "deletePoint":"Indicate the points to remove",
+                        "none":"Enter the coordinates manually or press to collect the current position of your device"
+                    }
+            },
+            "unlink":
+            {
+                "question": "Do you want to unlink the comment {{ code }}?"
+            },
+            "messages":
+            {
+                "geometry": "Insert the geographic location of the comment by painting directly on the map or manually setting the center coordinates."
+            },
+            "detail":
+            {
+                "title": "Comment",
+                "fieldset":
+                {
+                   
+                },
+                "validate": {
+                    "maxfilesize": "Files larger than 10MB cannot be uploaded, file: {{name}}",
+                    "selectfile":"Please select an image",
+                    "markphotoonmap":"Please mark the position of the comment on the map",
+                    "drawsegmentonmap": "Enter the data requested in the form and paint the affected segment on the map",
+                    "confirmdeletepoint": "This operation will delete the selected point. Are you sure?"                     
+                }
+            },
+            "entityname": "Comment",
+            "code":"Code",
+            "gemetry": "Geographic location",
+            "comment": "Comment",
+            "userlogin": "User",
+            "createdtime": "Created in",
+            "help": {
+                "create":"If the position differs from the current one, indicate it on the map, insert the comments and press Add.",
+                "noresults": "There are no comments. Create one by pressing the <i class='ion-plus-round'></i> button"
+            }
+        }
+    }
+}

@@ -1,0 +1,1023 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pollutionReport" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="23274c03-3845-4efa-86ac-e181b8cf846d">
+	<property name="ireport.zoom" value="1.2100000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="553"/>
+	<style name="Heading 3" fontSize="14" isBold="true"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<style name="Heading 1" fontSize="16" isBold="true"/>
+	<style name="Heading 2" fontSize="14" isBold="true" isItalic="true"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="meteodata" uuid="049be20e-9758-4339-a0e1-52bc2bac4a3e">
+		<parameter name="cloudCover" class="java.lang.String">
+			<defaultValueExpression><![CDATA[$F{pollution_report_cloud_cover}]]></defaultValueExpression>
+		</parameter>
+		<parameter name="cloudHeight" class="java.lang.String">
+			<defaultValueExpression><![CDATA[$F{pollution_report_cloud_height}]]></defaultValueExpression>
+		</parameter>
+		<parameter name="seaDirection" class="java.lang.Integer">
+			<defaultValueExpression><![CDATA[$F{pollution_report_sea_direction}]]></defaultValueExpression>
+		</parameter>
+		<parameter name="seaStatus" class="java.lang.String">
+			<defaultValueExpression><![CDATA[$F{pollution_report_sea_status}]]></defaultValueExpression>
+		</parameter>
+		<parameter name="visibilityStatus" class="java.lang.String">
+			<defaultValueExpression><![CDATA[$F{pollution_report_visibility_status}]]></defaultValueExpression>
+		</parameter>
+		<parameter name="windDirection" class="java.lang.Integer">
+			<defaultValueExpression><![CDATA[$F{pollution_report_wind_direction}]]></defaultValueExpression>
+		</parameter>
+		<parameter name="windSpeed" class="java.lang.Integer">
+			<defaultValueExpression><![CDATA[$F{pollution_report_wind_speed}]]></defaultValueExpression>
+		</parameter>
+		<parameter name="windStatus" class="java.lang.String">
+			<defaultValueExpression><![CDATA[$F{pollution_report_wind_status}]]></defaultValueExpression>
+		</parameter>
+		<queryString language="SQL">
+			<![CDATA[SELECT
+     pollution_report."id" AS pollution_report_id,
+     pollution_report."cloud_cover" AS pollution_report_cloud_cover,
+     pollution_report."cloud_height" AS pollution_report_cloud_height,
+     pollution_report."sea_direction" AS pollution_report_sea_direction,
+     pollution_report."sea_status" AS pollution_report_sea_status,
+     pollution_report."visibility_status" AS pollution_report_visibility_status,
+     pollution_report."wind_direction" AS pollution_report_wind_direction,
+     pollution_report."wind_speed" AS pollution_report_wind_speed,
+     pollution_report."wind_speed_unit" AS pollution_report_wind_speed_unit,
+     pollution_report."wind_status" AS pollution_report_wind_status
+FROM
+     "public"."pollution_report" pollution_report]]>
+		</queryString>
+		<field name="pollution_report_id" class="java.lang.String"/>
+		<field name="pollution_report_cloud_cover" class="java.lang.String"/>
+		<field name="pollution_report_cloud_height" class="java.lang.String"/>
+		<field name="pollution_report_sea_direction" class="java.lang.Integer"/>
+		<field name="pollution_report_sea_status" class="java.lang.String"/>
+		<field name="pollution_report_visibility_status" class="java.lang.String"/>
+		<field name="pollution_report_wind_direction" class="java.lang.Integer"/>
+		<field name="pollution_report_wind_speed" class="java.lang.Integer"/>
+		<field name="pollution_report_wind_speed_unit" class="java.lang.String"/>
+		<field name="pollution_report_wind_status" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="observerdata" uuid="3cf1cb6f-4eb4-40c7-9c1d-f9ff38c416c1">
+		<parameter name="observerName" class="java.lang.String">
+			<defaultValueExpression><![CDATA[$F{pollution_report_observer_name}]]></defaultValueExpression>
+		</parameter>
+		<parameter name="observerRole" class="java.lang.String">
+			<defaultValueExpression><![CDATA[$F{pollution_report_observer_role}]]></defaultValueExpression>
+		</parameter>
+		<queryString language="SQL">
+			<![CDATA[SELECT
+     pollution_report."id" AS pollution_report_id,
+     pollution_report."observer_name" AS pollution_report_observer_name,
+     pollution_report."observer_role" AS pollution_report_observer_role
+FROM
+     "public"."pollution_report" pollution_report]]>
+		</queryString>
+		<field name="pollution_report_observer_name" class="java.lang.String"/>
+		<field name="pollution_report_observer_role" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="spills" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="SpillsSubReport" class="net.sf.jasperreports.engine.JasperReport">
+		<defaultValueExpression><![CDATA["spillsSubreport.jrxml"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="pollutionsources" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="PollutionSourcesSubReport" class="net.sf.jasperreports.engine.JasperReport">
+		<defaultValueExpression><![CDATA["pollutionSourcesSubreport.jrxml"]]></defaultValueExpression>
+	</parameter>
+	<field name="id" class="java.lang.String"/>
+	<field name="callerNumber" class="java.lang.String"/>
+	<field name="callerOrganization" class="java.lang.String"/>
+	<field name="callerTransportNumber" class="java.lang.String"/>
+	<field name="callerTransportType" class="java.lang.String"/>
+	<field name="cloudCover" class="java.lang.String"/>
+	<field name="cloudHeight" class="java.lang.String"/>
+	<field name="observationSystem" class="java.lang.String"/>
+	<field name="observerName" class="java.lang.String"/>
+	<field name="observerRole" class="java.lang.String"/>
+	<field name="seaDirection" class="java.lang.Integer"/>
+	<field name="seaStatus" class="java.lang.String"/>
+	<field name="visibilityStatus" class="java.lang.String"/>
+	<field name="windDirection" class="java.lang.Integer"/>
+	<field name="windSpeed" class="java.lang.Integer"/>
+	<field name="windStatus" class="java.lang.String"/>
+	<field name="reportTime" class="java.util.Date"/>
+	<field name="author.userDetails" class="java.lang.String"/>
+	<group name="Group1">
+		<groupExpression><![CDATA[(int)($V{REPORT_COUNT}/15)]]></groupExpression>
+	</group>
+	<group name="Group2">
+		<groupExpression><![CDATA[(int)($V{REPORT_COUNT}/5)]]></groupExpression>
+	</group>
+	<pageHeader>
+		<band height="66" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="66" uuid="7de953a2-a6cb-4060-bb4b-9a00dee308e0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<frame>
+					<reportElement x="0" y="0" width="184" height="66" uuid="254f29a5-6312-476b-bede-5bd5e2677533"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<image>
+						<reportElement x="3" y="5" width="175" height="54" uuid="b290cbc7-bb0b-4ac0-8a71-39e921777cab"/>
+						<imageExpression><![CDATA["headXunta.png"]]></imageExpression>
+					</image>
+				</frame>
+				<line>
+					<reportElement x="184" y="35" width="371" height="1" uuid="308337cb-8872-4613-a98d-3ce30699b59c"/>
+				</line>
+				<staticText>
+					<reportElement x="215" y="1" width="128" height="31" uuid="a50f63fc-a88f-4e53-8670-8604194be733"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+						<font fontName="SansSerif" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[PLAN CAMGAL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="228" y="35" width="100" height="30" uuid="f07b33af-8df4-43ab-a07d-465123d83bbc"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[POLREP]]></text>
+				</staticText>
+				<frame>
+					<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="453" y="0" width="102" height="66" uuid="99ed907d-5228-42de-8493-7288116058f3"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<staticText>
+						<reportElement x="0" y="0" width="102" height="65" uuid="fdacdcf2-a646-4c09-b340-4187e4035ea5"/>
+						<textElement textAlignment="Center">
+							<font size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[
+Anexo
+
+IV.3
+Versión 0]]></text>
+					</staticText>
+				</frame>
+			</frame>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="250" splitType="Prevent">
+			<frame>
+				<reportElement x="0" y="0" width="275" height="250" uuid="061df316-fe4d-43db-9a0f-ea1d4bc9cf56"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<frame>
+					<reportElement x="0" y="0" width="275" height="25" uuid="03830af5-3306-471f-bbfb-b008900d78dc"/>
+					<box>
+						<pen lineWidth="1.0"/>
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<staticText>
+						<reportElement style="Heading 3" x="0" y="0" width="273" height="25" uuid="55d032f6-6938-4e7a-a890-83669f2b1867"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font size="12"/>
+						</textElement>
+						<text><![CDATA[COMUNICANTE]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement x="0" y="25" width="275" height="225" uuid="8801a9ac-d5a1-4e32-9ca3-b42251899e15"/>
+					<box>
+						<pen lineWidth="1.0"/>
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<frame>
+						<reportElement x="0" y="14" width="273" height="20" uuid="bd12159d-7521-4fe6-b4b1-b880c81182e6"/>
+						<staticText>
+							<reportElement x="0" y="0" width="129" height="20" uuid="9f287902-a1ab-4631-b912-c719d1958c83"/>
+							<textElement>
+								<paragraph leftIndent="3"/>
+							</textElement>
+							<text><![CDATA[ORGANISMO:]]></text>
+						</staticText>
+						<textField isBlankWhenNull="true">
+							<reportElement x="138" y="0" width="129" height="20" uuid="c2cb12e0-3c68-43e4-99bd-96e9b48d5e81"/>
+							<textElement>
+								<paragraph leftIndent="3"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{callerOrganization}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="57" width="273" height="20" uuid="daa380ee-5216-4a82-b095-74dc6e4c4b35"/>
+						<staticText>
+							<reportElement x="0" y="0" width="129" height="20" uuid="d65629ad-d984-41e0-bdc7-50deb877c5bd"/>
+							<textElement>
+								<paragraph leftIndent="3"/>
+							</textElement>
+							<text><![CDATA[OBSERVADOR(nº axente):]]></text>
+						</staticText>
+						<textField isBlankWhenNull="true">
+							<reportElement x="138" y="0" width="129" height="20" uuid="b1ec9116-d69e-41c3-9e81-a2165617ec50"/>
+							<textElement>
+								<paragraph leftIndent="3"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{callerNumber}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="100" width="273" height="20" uuid="9731b3f1-ceb6-4b21-8921-56ef58926be2"/>
+						<staticText>
+							<reportElement x="0" y="0" width="138" height="20" uuid="2d05d5be-8055-4ff5-8aed-4eca12c15d36"/>
+							<textElement>
+								<paragraph leftIndent="3"/>
+							</textElement>
+							<text><![CDATA[EMBARCACIÓN/VEHÍCULO:]]></text>
+						</staticText>
+						<textField isBlankWhenNull="true">
+							<reportElement x="138" y="0" width="129" height="20" uuid="80a294a0-2cac-4c40-9d61-c35fae5171d6"/>
+							<textElement>
+								<paragraph leftIndent="3"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{callerTransportNumber}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="143" width="273" height="20" uuid="be853962-9981-4306-9d33-d53b60d9e92c"/>
+						<staticText>
+							<reportElement x="0" y="0" width="129" height="20" uuid="d666d0c9-1f46-4b6b-a6a5-eeedd6f66cd1"/>
+							<textElement>
+								<paragraph leftIndent="3"/>
+							</textElement>
+							<text><![CDATA[SINAL DISTINTIVA:]]></text>
+						</staticText>
+						<textField isBlankWhenNull="true">
+							<reportElement x="138" y="0" width="129" height="20" uuid="ef0c20f6-1fa0-4dcb-bdbd-5d4590e07f62"/>
+							<textElement>
+								<paragraph leftIndent="3"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{callerTransportType}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement x="0" y="188" width="273" height="20" uuid="6ccc9372-3b01-4bfe-a429-9823ae2256be"/>
+						<staticText>
+							<reportElement x="0" y="0" width="129" height="20" uuid="88103c10-6a11-4de7-bf93-a3d6d200037e"/>
+							<textElement>
+								<paragraph leftIndent="3"/>
+							</textElement>
+							<text><![CDATA[DATA:]]></text>
+						</staticText>
+						<textField pattern="dd/MM/yyyy HH.mm" isBlankWhenNull="true">
+							<reportElement x="138" y="0" width="129" height="20" uuid="1e80291c-d2a9-404f-bc73-83a28a594bea"/>
+							<textElement>
+								<paragraph leftIndent="3"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{reportTime}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<elementGroup/>
+					<elementGroup/>
+					<elementGroup/>
+					<elementGroup/>
+					<elementGroup/>
+				</frame>
+			</frame>
+			<frame>
+				<reportElement x="275" y="0" width="280" height="250" uuid="dfe61190-efc0-4b00-9899-38e8b5b65e02"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<frame>
+					<reportElement x="0" y="0" width="280" height="25" uuid="3e9a5c5a-292b-434c-8c03-8c393ac88eba"/>
+					<box>
+						<pen lineWidth="1.0"/>
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<staticText>
+						<reportElement style="Heading 3" x="0" y="0" width="280" height="25" uuid="3b77a2d4-061f-4e81-85c6-c7f59dc3a34c"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font size="12"/>
+						</textElement>
+						<text><![CDATA[DESTINATARIO]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement x="0" y="25" width="280" height="225" uuid="74861a79-a9d0-4043-b9e4-2e5d14f84d3b"/>
+					<box>
+						<pen lineWidth="1.0"/>
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<frame>
+						<reportElement x="0" y="14" width="280" height="30" uuid="39a93725-307a-4711-9cf5-20cb898fbadf"/>
+						<staticText>
+							<reportElement x="0" y="0" width="280" height="30" uuid="eb73781d-54d9-417c-a6e9-06d6e5b225bf"/>
+							<textElement textAlignment="Center">
+								<font isBold="true"/>
+							</textElement>
+							<text><![CDATA[SUBDIRECCIÓN XERAL DE GARDACOSTAS
+DE GALICIA]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="0" y="60" width="280" height="30" uuid="31c89e6a-d301-417c-8ce3-075a9760545b"/>
+						<staticText>
+							<reportElement x="0" y="0" width="280" height="30" uuid="0e0cf4c6-9fa2-4170-b731-f4f62e66c0fa"/>
+							<textElement textAlignment="Center">
+								<font isBold="true"/>
+							</textElement>
+							<text><![CDATA[COORDINADOR/A OPERACIÓNS NO MAR
+COORDINADOR/A OPERACIÓNS EN TERRA]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="0" y="106" width="280" height="30" uuid="16651df0-b07a-4dc3-9006-6ff902da869e"/>
+						<staticText>
+							<reportElement x="0" y="0" width="280" height="30" uuid="62d544ea-9890-4621-aff3-2e35fc282ab8"/>
+							<textElement textAlignment="Center">
+								<font isBold="true"/>
+							</textElement>
+							<text><![CDATA[SALA DE OPERACIÓNS DA SUBDIRECCIÓN
+XERAL DE GARDACOSTAS DE GALICIA]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="0" y="152" width="280" height="20" uuid="96fe3ce0-52ce-4de1-9b1d-9091c394a601"/>
+						<staticText>
+							<reportElement x="0" y="0" width="280" height="20" uuid="e07c9429-d35b-4443-a8df-c1891dab288d"/>
+							<textElement>
+								<paragraph leftIndent="8"/>
+							</textElement>
+							<text><![CDATA[   FAX:	981 54 40 31]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement x="0" y="188" width="280" height="20" uuid="a6d7ae7a-310b-41a0-88bd-bb096e0f86c8"/>
+						<staticText>
+							<reportElement x="0" y="0" width="280" height="20" uuid="0550dfc7-ff82-49dc-8f6a-472ae8a36f9b"/>
+							<textElement>
+								<paragraph leftIndent="8"/>
+							</textElement>
+							<text><![CDATA[   TEL:	981 54 40 70]]></text>
+						</staticText>
+					</frame>
+					<elementGroup/>
+					<elementGroup/>
+					<elementGroup/>
+					<elementGroup/>
+					<elementGroup/>
+				</frame>
+			</frame>
+		</band>
+		<band height="52" splitType="Prevent">
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="555" height="52" uuid="a8813f8a-937f-4608-99bc-6cf39abcc183"/>
+				<subreportParameter name="pollutionReport">
+					<subreportParameterExpression><![CDATA[$F{id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{spills}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SpillsSubReport}]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="50" splitType="Prevent">
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="555" height="50" uuid="a8813f8a-937f-4608-99bc-6cf39abcc123"/>
+				<subreportParameter name="pollutionReport">
+					<subreportParameterExpression><![CDATA[$F{id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{pollutionsources}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{PollutionSourcesSubReport}]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="80" splitType="Prevent">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="20" uuid="3ca0065a-a308-4321-ad80-36be602b849b"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement x="0" y="0" width="555" height="20" uuid="3033983a-6c61-41d8-a0ed-082ca084f344"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CONDICIÓNS METEOROLÓXICAS DA ZONA]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="0" y="20" width="555" height="60" uuid="72bc93b5-63cb-4bb2-ae21-8b9f3a0e073b"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<componentElement>
+					<reportElement key="meteo" isPrintRepeatedValues="false" x="0" y="0" width="555" height="60" uuid="a00fb0cb-2165-47f3-b6fe-ee414cd66ab2"/>
+					<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+						<datasetRun subDataset="meteodata" uuid="de3c5b7c-87ba-49f7-97d8-ee6c1287a106">
+							<datasetParameter name="cloudCover">
+								<datasetParameterExpression><![CDATA[$F{cloudCover}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="cloudHeight">
+								<datasetParameterExpression><![CDATA[$F{cloudHeight}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="seaStatus">
+								<datasetParameterExpression><![CDATA[$F{seaStatus}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="visibilityStatus">
+								<datasetParameterExpression><![CDATA[$F{visibilityStatus}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="windStatus">
+								<datasetParameterExpression><![CDATA[$F{windStatus}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="seaDirection">
+								<datasetParameterExpression><![CDATA[$F{seaDirection}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="windDirection">
+								<datasetParameterExpression><![CDATA[$F{windDirection}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="windSpeed">
+								<datasetParameterExpression><![CDATA[$F{windSpeed}]]></datasetParameterExpression>
+							</datasetParameter>
+							<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource(1)]]></dataSourceExpression>
+						</datasetRun>
+						<jr:columnGroup width="150" uuid="b117da39-6fca-4108-99a7-798c748180d9">
+							<jr:columnHeader height="30" rowSpan="1">
+								<box>
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<staticText>
+									<reportElement x="0" y="0" width="150" height="30" uuid="eb5a3f29-a836-4d5b-b304-3438f2e1611e"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font size="11" isBold="true"/>
+									</textElement>
+									<text><![CDATA[VENTO]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:column width="77" uuid="8022b2bb-e04a-4fcc-91b5-b35f8f3d5606">
+								<jr:columnHeader height="30" rowSpan="1">
+									<box>
+										<pen lineWidth="1.0"/>
+										<topPen lineWidth="1.0"/>
+										<leftPen lineWidth="1.0"/>
+										<bottomPen lineWidth="1.0"/>
+										<rightPen lineWidth="1.0"/>
+									</box>
+									<staticText>
+										<reportElement x="0" y="0" width="77" height="30" uuid="c6a00c1f-925f-40d4-85af-7707b3d0598d"/>
+										<textElement textAlignment="Center" verticalAlignment="Middle"/>
+										<text><![CDATA[DIRECCIÓN]]></text>
+									</staticText>
+								</jr:columnHeader>
+								<jr:detailCell height="20" rowSpan="1">
+									<box>
+										<pen lineWidth="1.0"/>
+										<topPen lineWidth="1.0"/>
+										<leftPen lineWidth="1.0"/>
+										<bottomPen lineWidth="1.0"/>
+										<rightPen lineWidth="1.0"/>
+									</box>
+									<textField isBlankWhenNull="true">
+										<reportElement x="0" y="0" width="77" height="20" uuid="ae5603eb-6d3a-493b-afdb-35f6988c9fc0"/>
+										<textElement>
+											<paragraph leftIndent="3"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$P{windDirection}]]></textFieldExpression>
+									</textField>
+								</jr:detailCell>
+							</jr:column>
+							<jr:column width="73" uuid="b7d55029-ef30-4a6f-b3cc-14c12b9b320b">
+								<jr:columnHeader height="30" rowSpan="1">
+									<box>
+										<pen lineWidth="1.0"/>
+										<topPen lineWidth="1.0"/>
+										<leftPen lineWidth="1.0"/>
+										<bottomPen lineWidth="1.0"/>
+										<rightPen lineWidth="1.0"/>
+									</box>
+									<staticText>
+										<reportElement x="0" y="0" width="73" height="30" uuid="f74815f2-41c5-43cd-bbd0-703bfaaac9c1"/>
+										<textElement textAlignment="Center" verticalAlignment="Middle"/>
+										<text><![CDATA[VELOCIDADE]]></text>
+									</staticText>
+								</jr:columnHeader>
+								<jr:detailCell height="20" rowSpan="1">
+									<box>
+										<pen lineWidth="1.0"/>
+										<topPen lineWidth="1.0"/>
+										<leftPen lineWidth="1.0"/>
+										<bottomPen lineWidth="1.0"/>
+										<rightPen lineWidth="1.0"/>
+									</box>
+									<textField isBlankWhenNull="true">
+										<reportElement x="0" y="0" width="73" height="20" uuid="c4f7ce8f-6367-43f9-a1bd-2686fc7c8b44"/>
+										<textElement>
+											<paragraph leftIndent="3"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$P{windSpeed}]]></textFieldExpression>
+									</textField>
+								</jr:detailCell>
+							</jr:column>
+						</jr:columnGroup>
+						<jr:columnGroup width="126" uuid="d9ad5b89-433d-4ee1-8507-04827b5f3d7c">
+							<jr:columnHeader height="30" rowSpan="1">
+								<box>
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<staticText>
+									<reportElement x="0" y="0" width="126" height="30" uuid="40436092-867b-4b3c-a675-c4208cb5f67c"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font size="11" isBold="true"/>
+									</textElement>
+									<text><![CDATA[MAR]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:column width="58" uuid="73b5c936-7384-44f0-bb0a-3fd506555b37">
+								<jr:columnHeader height="30" rowSpan="1">
+									<box>
+										<pen lineWidth="1.0"/>
+										<topPen lineWidth="1.0"/>
+										<leftPen lineWidth="1.0"/>
+										<bottomPen lineWidth="1.0"/>
+										<rightPen lineWidth="1.0"/>
+									</box>
+									<staticText>
+										<reportElement x="0" y="0" width="58" height="30" uuid="d8a2655a-fa5b-4d8a-983f-4a640901ba56"/>
+										<textElement textAlignment="Center" verticalAlignment="Middle"/>
+										<text><![CDATA[DIRECCIÓN]]></text>
+									</staticText>
+								</jr:columnHeader>
+								<jr:detailCell height="20" rowSpan="1">
+									<box>
+										<pen lineWidth="1.0"/>
+										<topPen lineWidth="1.0"/>
+										<leftPen lineWidth="1.0"/>
+										<bottomPen lineWidth="1.0"/>
+										<rightPen lineWidth="1.0"/>
+									</box>
+									<textField isBlankWhenNull="true">
+										<reportElement x="0" y="0" width="58" height="20" uuid="1897d901-2156-444c-81ba-73c75e1ca6fb"/>
+										<textElement>
+											<paragraph leftIndent="3"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$P{seaDirection}]]></textFieldExpression>
+									</textField>
+								</jr:detailCell>
+							</jr:column>
+							<jr:column width="68" uuid="ea68ea6e-f47d-4b83-a458-e7567f6234b4">
+								<jr:columnHeader height="30" rowSpan="1">
+									<box>
+										<pen lineWidth="1.0"/>
+										<topPen lineWidth="1.0"/>
+										<leftPen lineWidth="1.0"/>
+										<bottomPen lineWidth="1.0"/>
+										<rightPen lineWidth="1.0"/>
+									</box>
+									<staticText>
+										<reportElement x="0" y="0" width="68" height="30" uuid="5ae7e39f-3949-44cc-8f0e-019dd58a30e4"/>
+										<textElement textAlignment="Center" verticalAlignment="Middle"/>
+										<text><![CDATA[ESTADO]]></text>
+									</staticText>
+								</jr:columnHeader>
+								<jr:detailCell height="20" rowSpan="1">
+									<box>
+										<pen lineWidth="1.0"/>
+										<topPen lineWidth="1.0"/>
+										<leftPen lineWidth="1.0"/>
+										<bottomPen lineWidth="1.0"/>
+										<rightPen lineWidth="1.0"/>
+									</box>
+									<textField isBlankWhenNull="true">
+										<reportElement x="0" y="0" width="68" height="20" uuid="913256f3-584c-4406-85e0-e00794f3341b"/>
+										<textElement>
+											<paragraph leftIndent="3"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$P{seaStatus}]]></textFieldExpression>
+									</textField>
+								</jr:detailCell>
+							</jr:column>
+						</jr:columnGroup>
+						<jr:column width="127" uuid="b5065c65-b14c-44bb-ae2b-53b21274ffd6">
+							<jr:columnHeader height="60" rowSpan="2">
+								<box>
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<staticText>
+									<reportElement x="0" y="0" width="127" height="60" uuid="96d48601-0960-4a1f-ba1f-5fbdf960bad5"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font size="11" isBold="true"/>
+									</textElement>
+									<text><![CDATA[VISIBILIDADE]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell height="20" rowSpan="1">
+								<box>
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textField isBlankWhenNull="true">
+									<reportElement x="0" y="0" width="127" height="20" uuid="e3dd1079-cc97-4155-af60-dbcdd1878738"/>
+									<textElement>
+										<paragraph leftIndent="3"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$P{visibilityStatus}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:columnGroup width="152" uuid="de559e60-8a8f-4389-baeb-507da06ce246">
+							<jr:columnHeader height="30" rowSpan="1">
+								<box>
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<staticText>
+									<reportElement x="0" y="0" width="151" height="30" uuid="09998199-b961-4b5e-a67f-9da07850559e"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font size="11" isBold="true"/>
+									</textElement>
+									<text><![CDATA[NUBOSIDADE]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:column width="71" uuid="0fe235ce-f768-425e-902b-a598dd8f3465">
+								<jr:columnHeader height="30" rowSpan="1">
+									<box>
+										<pen lineWidth="1.0"/>
+										<topPen lineWidth="1.0"/>
+										<leftPen lineWidth="1.0"/>
+										<bottomPen lineWidth="1.0"/>
+										<rightPen lineWidth="1.0"/>
+									</box>
+									<staticText>
+										<reportElement x="0" y="0" width="71" height="30" uuid="279bb113-cac3-4529-958f-78e59144348a"/>
+										<textElement textAlignment="Center" verticalAlignment="Middle"/>
+										<text><![CDATA[CEO CUBERTO]]></text>
+									</staticText>
+								</jr:columnHeader>
+								<jr:detailCell height="20" rowSpan="1">
+									<box>
+										<pen lineWidth="1.0"/>
+										<topPen lineWidth="1.0"/>
+										<leftPen lineWidth="1.0"/>
+										<bottomPen lineWidth="1.0"/>
+										<rightPen lineWidth="1.0"/>
+									</box>
+									<textField isBlankWhenNull="true">
+										<reportElement x="0" y="0" width="71" height="20" uuid="9194d351-a149-4fa3-b330-cc6899b52e49"/>
+										<textElement>
+											<paragraph leftIndent="3"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$P{cloudCover}]]></textFieldExpression>
+									</textField>
+								</jr:detailCell>
+							</jr:column>
+							<jr:column width="81" uuid="8b6a89b9-7f43-4ce1-98b8-921a92ad3475">
+								<jr:columnHeader height="30" rowSpan="1">
+									<box>
+										<pen lineWidth="1.0"/>
+										<topPen lineWidth="1.0"/>
+										<leftPen lineWidth="1.0"/>
+										<bottomPen lineWidth="1.0"/>
+										<rightPen lineWidth="1.0"/>
+									</box>
+									<staticText>
+										<reportElement x="0" y="0" width="80" height="30" uuid="5a1891c0-beb4-4963-81b1-0fa8be5b0e8f"/>
+										<textElement textAlignment="Center"/>
+										<text><![CDATA[ALTURA DAS NUBES]]></text>
+									</staticText>
+								</jr:columnHeader>
+								<jr:detailCell height="20" rowSpan="1">
+									<box>
+										<pen lineWidth="1.0"/>
+										<topPen lineWidth="1.0"/>
+										<leftPen lineWidth="1.0"/>
+										<bottomPen lineWidth="1.0"/>
+										<rightPen lineWidth="1.0"/>
+									</box>
+									<textField isBlankWhenNull="true">
+										<reportElement x="0" y="0" width="80" height="20" uuid="3d39806d-1c1f-4199-9fd5-0492acde15a4"/>
+										<textElement>
+											<paragraph leftIndent="3"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$P{cloudHeight}]]></textFieldExpression>
+									</textField>
+								</jr:detailCell>
+							</jr:column>
+						</jr:columnGroup>
+					</jr:table>
+				</componentElement>
+			</frame>
+		</band>
+		<band height="80" splitType="Prevent">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="20" uuid="3a36d3ac-01ec-4d0a-9b4a-0cf44d101da9"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement x="0" y="0" width="555" height="20" uuid="82fab47f-f190-4262-a071-bcc0627bf263"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[SISTEMA DE OBSERVACIÓN UTILIZADO]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="0" y="20" width="555" height="20" uuid="e44c0119-a6c6-473b-a314-cc0d898133d5"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textField>
+					<reportElement x="0" y="0" width="555" height="20" uuid="59adc6c0-ed01-4470-9dc1-f49fa85723e9"/>
+					<textElement verticalAlignment="Middle">
+						<paragraph leftIndent="3"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{observationSystem}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="0" y="40" width="555" height="20" uuid="61646c87-8fcc-4351-8c09-936f877f81ab"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement x="0" y="0" width="555" height="20" uuid="98b8ecf8-c983-4a3f-b84c-f4a0bcf6cfa1"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[INFORMACIÓN COMPLEMENTARIA]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="0" y="60" width="555" height="20" uuid="a7c8ee07-aada-4964-be53-6ba6a8b31831"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+			</frame>
+		</band>
+		<band height="160" splitType="Prevent">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="20" uuid="2c19d561-d390-490e-8d73-c19bfc554aae"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement x="0" y="0" width="555" height="20" uuid="808287ed-243f-454e-8332-dc6a0ed4b3c7"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[IDENTIFICACIÓN DO OBSERVADOR]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="0" y="20" width="555" height="60" uuid="46cd1fd5-3458-44ff-9d3a-ad8f9425aa5a"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<componentElement>
+					<reportElement key="table 1" x="0" y="0" width="555" height="60" uuid="c4207754-3fd7-4845-a24f-3f8d52e21b46"/>
+					<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+						<datasetRun subDataset="observerdata" uuid="590fba8e-7971-4dcf-913d-6563367ad34a">
+							<datasetParameter name="observerName">
+								<datasetParameterExpression><![CDATA[$F{observerName}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="observerRole">
+								<datasetParameterExpression><![CDATA[$F{observerRole}]]></datasetParameterExpression>
+							</datasetParameter>
+							<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource(1)]]></dataSourceExpression>
+						</datasetRun>
+						<jr:column width="307" uuid="d80550de-7de8-4e78-8cc2-03f1463f7f77">
+							<jr:columnHeader height="30" rowSpan="1">
+								<box>
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<staticText>
+									<reportElement x="0" y="0" width="150" height="30" uuid="73fd0523-71d6-4ac9-9c01-7736548397d5"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font size="12" isBold="true"/>
+									</textElement>
+									<text><![CDATA[NOME E APELIDOS]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell height="30" rowSpan="1">
+								<box>
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textField isBlankWhenNull="true">
+									<reportElement x="0" y="0" width="307" height="29" uuid="aa74d2eb-b519-4860-b7b0-6025e20f4898"/>
+									<textElement verticalAlignment="Middle">
+										<paragraph leftIndent="3"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$P{observerName}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="248" uuid="453d5a15-c16b-4425-86fe-1e0ac2d57221">
+							<jr:columnHeader height="30" rowSpan="1">
+								<box>
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<staticText>
+									<reportElement x="0" y="0" width="220" height="30" uuid="4cdec4b2-dfcc-4bd4-a1b7-6636a7f3eb34"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font size="12" isBold="true"/>
+									</textElement>
+									<text><![CDATA[CARGO (Nº AXENTE NO SEU CASO)]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell height="30" rowSpan="1">
+								<box>
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textField isBlankWhenNull="true">
+									<reportElement x="0" y="0" width="247" height="29" uuid="a31ccef3-21b3-4149-b643-c17f1046aebf"/>
+									<textElement verticalAlignment="Middle">
+										<paragraph leftIndent="3"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$P{observerRole}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+					</jr:table>
+				</componentElement>
+			</frame>
+			<frame>
+				<reportElement x="0" y="80" width="555" height="80" uuid="7e663d5f-9b37-4bfa-aedb-30bc02172fc3"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement x="0" y="0" width="555" height="20" uuid="e74bf2c7-3158-450b-b068-50b5c7e34f27"/>
+					<textElement verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+						<paragraph leftIndent="15"/>
+					</textElement>
+					<text><![CDATA[FIRMA:]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="2" y="0" width="555" height="13" forecolor="#D0B48E" backcolor="#006699" uuid="b7763734-6236-4066-8e06-3e126c7afd49"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="512" y="0" width="40" height="13" forecolor="#FFFFFF" uuid="33394dd4-5bf2-4879-8080-41ba5f44967b"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="432" y="0" width="80" height="13" forecolor="#FFFFFF" uuid="d17d9c32-efa1-4e18-b792-3a65ffe107da"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}+" /"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="2" y="0" width="197" height="13" forecolor="#FFFFFF" uuid="56abccd2-9fe3-4bfb-b8dd-f179006012f9"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="241" y="0" width="100" height="13" forecolor="#FFFFFF" uuid="b097e006-4124-4880-832a-f9a6130e3537"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Arcopol PLUS]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

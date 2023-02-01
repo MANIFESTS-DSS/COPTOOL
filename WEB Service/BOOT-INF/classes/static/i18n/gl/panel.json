@@ -1,0 +1,59 @@
+{
+    "app":
+    {
+        "panel":
+        {
+            "home":
+            {
+                "title": "Paneis",
+                "createLabel": "Crear novo panel",
+                "linkLabel": "Asociar panel",
+                "createOrEditLabel": "Crear ou editar panel",
+                "search": "Buscar panel"
+            },
+            "created": "Panel {{ code }} creado correctamente",
+            "updated": "Panel {{ code }}: actualizado correctamente",
+            "deleted": "Panel {{code}} eliminado correctamente",
+            "delete":
+            {
+                "question": "Desexas eliminar o panel {{ code }}?"
+            },
+            "unlink":
+            {
+                "question": "Desexas eliminar o panel {{ code }}?"
+            },
+            "search": {
+                "viewEnabled":"Ver paneis activos"
+            },
+            "detail":
+            {
+                "title": "Paneis",
+                "fieldset":
+                {
+                    "inputEnabled":
+                    {
+                        "title": "Marcar para activar o panel"
+                    }
+                }
+            },
+
+            "title": "Panel",
+            "plural": "Paneis",
+            "code": "Código",
+            "description": "Descrición",
+            "id": "UUID",
+            "layergroups": "Panel de capas",
+            "type": "Tipo",
+            "name": "Nome",
+            "uuid": "UUID",
+            "enabled": "Activo",
+            "disabled": "Non activo",
+
+            "help":
+            {
+                "create": "Se a posición difire da actual indícaa no mapa, insere os comentarios e pulsa Engadir.",
+                "noresults": "Non existen paneis. Crea un premendo o botón <i class='ion-plus-round'></i>"
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+{
+    "app":
+    {
+        "reportuser":
+        {
+            "cmd": {
+               
+            },
+            "title": "Users (Report)",
+            "home":
+            {
+                "title": "Users",
+                "createLabel": "Create new User-Report",
+                "linkLabel": "Link User to report",
+                "unlinkLabel": "Unlink User from report",
+                "search": "Search customer"
+            },
+            "createform":
+            {
+                "step1": "Caller",
+                "step2": "Observer",
+                "step3": "Meteorological conditions"
+            },
+            "copydialog":{ 
+                "title":"Copy UserLogins/layers",
+                "message":"A copy of the current UserLogin and layers will be made. Do you want to continue?",
+                "success":"UserLogin and layers copied succesfully"
+            },
+            "created": "New report USER created succesfully", 
+            "updated": "Report USER updated succesfully",
+            "deleted": "Report USER deleted succesfully",
+            "delete":
+            {
+                "question": "Are you sure you want to remove the report user?"
+            },
+            "unlink":
+            {
+                "question": "Are you sure yo want to unlink the report user?"
+            },
+            "detail":
+            {
+                "title": "{{name}}",
+                "tab":
+                {
+                    "caller": "Caller",
+                    "observer": "Observer",
+                    "meteo": "Meteorological conditions",
+                    "spills": "Spills",
+                    "pollutionsources": "Pollution sources",
+                    "photos": "Photos",
+                    "comments": "Coments"
+                }
+            },
+            "report": "Report",
+            "userlogin": "User (login)",
+            "userrole": "Role",
+            "url": "public URL",
+            "message": {
+                "usersSelected":"Users selected:",
+            }
+        }
+    }
+}

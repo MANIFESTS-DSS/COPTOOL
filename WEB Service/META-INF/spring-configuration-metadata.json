@@ -1,0 +1,42 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "eu.arcopol.web.TomcatConfiguration",
+      "name": "tomcat",
+      "type": "eu.arcopol.web.TomcatConfiguration"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "eu.arcopol.web.TomcatConfiguration",
+      "defaultValue": false,
+      "name": "tomcat.ajp-allow-trace",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "eu.arcopol.web.TomcatConfiguration",
+      "defaultValue": false,
+      "name": "tomcat.ajp-enabled",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "eu.arcopol.web.TomcatConfiguration",
+      "defaultValue": 8009,
+      "name": "tomcat.ajp-port",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "eu.arcopol.web.TomcatConfiguration",
+      "defaultValue": "http",
+      "name": "tomcat.ajp-scheme",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "eu.arcopol.web.TomcatConfiguration",
+      "defaultValue": false,
+      "name": "tomcat.ajp-secure",
+      "type": "java.lang.Boolean"
+    }
+  ]
+}

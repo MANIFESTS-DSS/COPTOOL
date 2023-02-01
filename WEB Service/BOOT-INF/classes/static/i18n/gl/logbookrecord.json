@@ -1,0 +1,91 @@
+{
+
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)=(.*)$":
+    {
+        "$1": "$2"
+    },
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)_([a-z]*)=(.*)$":
+    {
+        "$1":
+        {
+            "$2": "$3"
+        }
+    },
+
+    "app":
+    {
+        "logbookrecord":
+        {
+            "title": "Bitácora",
+            "type": "Tipo de mensaxe",
+            "style": "Cor da marca",
+            "home":
+            {
+                "title": "Bitácora",
+                "createLabel": "Crear novo rexistro",
+                "linkLabel": "Vincular rexistro",
+                "createOrEditLabel": "Crear ou editar rexistro",
+                "search": "Buscar rexistro"
+            },
+            "created": "Novo rexistro '{{ code }}' creado correctamente",
+            "updated": "Rexistro '{{ code }}' actualizado correctamente",
+            "deleted": "Rexistro '{{code}}' eliminado correctamente",
+            "delete":
+            {
+                "question": "¿Desexas eliminar o rexistro {{ code }}?"
+            },
+            "unlink":
+            {
+                "question": "¿Desexas eliminar o rexistro {{ code }}?"
+            },
+            "detail":
+            {
+                "title": "Rexistro de bitácora",
+                "fieldset":
+                {
+                    "origin": "Orixe da contaminación",
+                    "cause": "Causa"
+                },
+                "validate": {
+                    "maxfilesize": "Non se poden subir ficheiros de máis de 10MB, ficheiro: {{name}}",
+                    "selectfile":"Por favor, selecciona unha imaxe",
+                    "markphotoonmap":"Por favor, marca a posición da foto no mapa",
+                    "drawsegmentonmap": "Introduce os datos solicitados no formulario e pinta sobre o mapa o segmento afectado",
+                    "confirmdeletepoint": "Esta operación eliminará o punto seleccionado. ¿Estás seguro?"                     
+                }
+            },
+            "$name": "Rexistro de bitácora",
+            "$plural": "Rexistros de bitácora",
+            "title": "Título",
+            "message":"Mensaxe",
+            "file":"Ficheiro",
+            "fileName":"Nome ficheiro",
+            "filePath": "Ruta",
+            "createdBy": "Emisor",
+            "createdTime":"Data/Hora",
+            "geometry":"Ubicación xeográfica",
+            "comments":"Comentarios",
+            "episode":"Contixencia",
+            "tags":"Etiquetas",
+            "help": {
+                "create":"Se a posición difire da actual indícaa no mapa, insere os comentarios e preme Engadir.",
+                "noresults": "Non existen fotografías. Crea unha premendo o botón <i class='ion-plus-round'></i>"
+            },
+            "createform": {
+                "success": "Rexistro de bitácora creado correctamente",
+                "step1": "Detalles",
+                "step2": "Ubicación xeográfica",
+                "validate": {
+                    "fileEmpty":"Sen ficheiro adxunto",
+                    "geometryEmpty":"Ubicación xeográfica non especificada"
+                }
+            },
+            "search": {
+                "placeholder": "Búsqueda por texto..."
+            },
+            "messages": {
+                "geometry": "Insere a localización xeográfica establecendo manualmente as coordenadas ou marcando directamente no mapa"
+            }
+        }
+    }
+}

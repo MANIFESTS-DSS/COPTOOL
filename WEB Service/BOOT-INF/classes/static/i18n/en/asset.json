@@ -1,0 +1,64 @@
+{
+    "app":
+    {
+        "asset":
+        {
+            "title": "Elements",
+            "home":
+            {
+                "title": "Elements",
+                "createLabel": "New element",
+                "detailLabel": "Element Detail",
+                "linkLabel": "Link element",
+                "createOrEditLabel": "Create or edit element",
+                "search": "Search element"
+            },
+            "createform":
+            {
+                "step1": "Element data",
+                "step2": "Location"
+            },
+            "created": "New element '{{ code }}' successfully created",
+            "updated": "Element '{{ code }}' updated successfully",
+            "deleted": "Element '{{code}}' removed successfully",
+            "delete":
+            {
+                "question": "Do you wish to remove the item? {{ code }}?"
+            },
+            "unlink":
+            {
+                "question": "Do you wish to unlink the item? {{ code }}?"
+            },
+            "messages":
+            {
+                "geometry": "Insert the geographical location of the element by painting directly on the map or manually setting the center coordinates."
+            },
+            "detail":
+            {
+                "title": "Element",
+                "fieldset":
+                {
+                   
+                },
+                "validate": {
+                    "maxfilesize": "Files larger than 10MB cannot be uploaded, file: {{name}}",
+                    "selectfile":"Please select an image",
+                    "markphotoonmap":"Please mark the position of the element on the map",
+                    "drawsegmentonmap": "Enter the data requested in the form and paint the affected segment on the map",
+                    "confirmdeletepoint": "This operation will delete the selected point. Are you sure?"                     
+                }
+            },
+            "entityname": "Element",
+            "name":"Nome",
+            "description":"Description",
+            "geometry": "Geographic location",
+            "comment": "Element",
+            "userlogin": "User",
+            "createdtime": "Created in",
+            "help": {
+                "create":"If the position differs from the current one, indicate it on the map, insert the elements and press Add.",
+                "noresults": "There are no elements. Create one by pressing the <i class='ion-plus-round'></i> button"
+            }
+        }
+    }
+}

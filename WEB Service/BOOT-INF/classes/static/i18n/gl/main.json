@@ -1,0 +1,59 @@
+{
+	"main": {
+		"meteo": {
+			"sky_state": "Ceo",
+			"temperature": "Temp",
+			"wind": "Vento",
+			"significative_wave_height": "Altura da onda",
+			"mean_wave_direction": "Dirección",
+			"relative_peak_period": "Periodo",
+			"precipitation_amount": "Precipitación",
+			"locality": "Localidade",
+			"municipality": "Municipio",
+			"province": "Provincia",
+			"degc": "ºC",
+			"High tides": "Pleamar",
+			"Low tides": "Baixamar"
+		}
+	},
+	"entities": {
+		"userLogin": {
+			"userRole": "Perfil"
+		},
+		"userRole": {
+			"ADMINISTRADOR": "Administrador",
+			"MEMBER": "Participante",
+			"SUPERVISOR": "Supervisor",
+			"CUSTOMER": "Cliente",
+			"PUBLIC": "Público",
+			"QUERY": "Sólo consulta"
+		},
+		"layerCategory": {
+			"JOURNEYS": "Patrón de actividade",
+			"POIS": "Capas adicionais"
+		},
+		"journeyMember": {
+			"category": {
+				"individual": "Individual",
+				"couple": "Parella",
+				"group": "Grupo(<10)",
+				"largegroup": "Grupo Numeroso (>10)"
+			},
+			"warning": {
+				"JOURNEYMEMBER_OUT_OF_RESTRICTED_AREA": "O participante está fora da zona da actividade."
+			}
+		}
+
+	},
+	"PAGE_MAP": {
+		"TITLE": "Mapa",
+		"DEFAULT": "Predeterminado",
+		"SATELLITE": "Satélite",
+		"ROUTE": "Ruta",
+		"BUDDIES": "Compañeiros",
+
+		"FOOD": "Comidas",
+		"BEACH": "Praias",
+		"TOURISM": "Turismo"
+	}
+}

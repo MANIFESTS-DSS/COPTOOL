@@ -1,0 +1,80 @@
+{
+
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)=(.*)$":
+    {
+        "$1": "$2"
+    },
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)_([a-z]*)=(.*)$":
+    {
+        "$1":
+        {
+            "$2": "$3"
+        }
+    },
+
+    "app":
+    {
+        "dashboard":
+        {
+            "bookmarks":
+            {
+                "title": "Favoritos"
+            },
+            "pollutionreports":
+            {
+                "title": "Informes POLREP"
+            },
+            "scatreports":
+            {
+                "title": "Informes POLREP Costa"
+            },
+            "pollutionepisodes":
+            {
+                "title": "Continxencias"
+            },
+            "logbookrecords":
+            {
+                "title": "Observacións"
+            },
+            "home":
+            {
+                "title": "Grupo de capas",
+                "createLabel": "Crear novo grupo",
+                "linkLabel": "Asociar grupo",
+                "createOrEditLabel": "Crear ou editar grupo",
+                "search": "Buscar grupo"
+            },
+            "created": "Novo grupo {{ code }} creado correctamente",
+            "updated": "Grupo {{ code }}: actualizado correctamente",
+            "deleted": "Grupo {{code}} eliminado correctamente",
+            "delete":
+            {
+                "question": "Desexas eliminar o grupo {{ code }}?"
+            },
+            "unlink":
+            {
+                "question": "Desexas desvincular o grupo {{ code }}?"
+            },
+            "detail":
+            {
+                "title": "Grupo de capas"
+            },
+
+            "title": "Grupo de capas",
+            "plural": "Grupos de capas",
+            "code": "Código",
+            "description": "Descrición",
+            "id": "UUID",
+            "layers": "Capas",
+            "panel": "Panel",
+            "name": "Nome",
+            "uuid": "UUID",
+            "Versión": "Versión",
+            "help":
+            {
+                "create": "Se a posición difire da actual indícaa no mapa, insere os comentarios e preme Engadir.",
+                "noresults": "Non existen capas. Crea unha premendo o botón <i class='ion-plus-round'></i>"
+            }
+        }
+    }
+}

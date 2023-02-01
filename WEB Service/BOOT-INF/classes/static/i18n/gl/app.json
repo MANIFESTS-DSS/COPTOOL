@@ -1,0 +1,113 @@
+{
+    "app":
+    {
+        "menu":
+        {
+            "dashboard": "Inicio",
+            "pollutionepisodes": "COP manager",
+            "pollutionepisodesmap": "COP viewer",
+            "pollutionreports": "POLREP",
+            "scatreports": "POLREP Costa",
+            "panels": "Paneles",
+            "layergroups": "Grupos de capas",
+            "layers": "Capas",
+            "logbookrecords": "Observacións",
+            "userlogins": "Usuarios"
+        },
+        "page":
+        {
+            "home":
+            {
+                "title": "Inicio",
+				"episodes": "Episodios"
+			},
+            "dashboard":
+            {
+                "title": "Inicio"
+			},
+            "episode":
+            {
+				"title": "EPISODIO"
+			},
+            "gislayouts":
+            {
+                "title": "Mapa estratéxico"
+            },
+
+            "logbookrecords":
+            {
+                "title": "Report"
+            },
+            "pollutionreports":
+            {
+				"title": "POLREP",
+                "map":
+                {
+					"activelayer": "Capa activa",
+					"centermap": "Centrar mapa",
+					"confirm": "Confirma a operación",
+					"confirmdeletepoint": "Esta operación eliminará o punto seleccionado. ¿Estás seguro?",
+					"draw": "Debuxar mapa",
+					"manual": "Manual(Lat/Lon)",
+					"points": "Puntos",
+					"edit": "Editar"
+				}
+			},
+            "pollutionepisodes":
+            {
+                "title": "Gestor COP"
+            },
+            "pollutionepisodesmap":
+            {
+                "title": "Visor COP"
+			},
+            "scatreports":
+            {
+				"title": "POLREP Costa",
+                "map":
+                {
+					"activelayer": "Capa activa",
+					"centermap": "Centrar mapa",
+					"confirm": "Confirmar operación",
+					"confirmdeletepoint": "Esta operación eliminará o punto seleccionado. ¿Estás seguro?",
+					"draw": "Debuxar mapa",
+					"manual": "Manual(Lat/Lon)",
+					"points": "Puntos",
+					"edit": "Editar"
+				}
+			},
+
+            "admin":
+            {
+                "title": "Xestión capas"
+            },
+            "layergroups":
+            {
+				"title": "Grupo de capas"
+			},
+            "panels":
+            {
+				"title": "Paneis"
+            },
+            "layers":
+            {
+                "title": "Capas"
+            },
+            "userlogins":{
+            	"title":"Usuarios"
+			}
+		},
+        "detail":
+        {
+			"home": "Inicio",
+			"batea": "Batea: {{nome}}",
+			"pedido": "Pedido {{numPedido}}: {{ dataPedido | data: 'dd/MM/yy' }}",
+			"delegacion": "Delegación: {{nomeCompleto}}",
+			"listaReparto": "Lista Reparto: {{nome}}",
+			"ordenextraccion": "Orden de Extracción: {{nomeCompleto}}",
+			"productor": "Detalles do productor",
+			"cliente": "Detalles do cliente",
+			"userlogin": "Detalle do userlogin"
+	}
+}
+}

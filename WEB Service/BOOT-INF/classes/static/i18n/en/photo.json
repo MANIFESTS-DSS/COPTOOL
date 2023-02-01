@@ -1,0 +1,97 @@
+{
+
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)=(.*)$":
+    {
+        "$1": "$2"
+    },
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)_([a-z]*)=(.*)$":
+    {
+        "$1":
+        {
+            "$2": "$3"
+        }
+    },
+
+    "app":
+    {
+        "photo":
+        {
+            "title": "Photos",
+             "home":
+             {
+                 "title": "Photos",
+                 "createLabel": "Create new photo",
+                 "linkLabel": "Link Photo",
+                 "createOrEditLabel": "Create or edit photo",
+                 "search": "Search photo"
+            },
+            "createform":
+            {
+                "step1": "Photograph",
+                "step2": "Location"
+            },
+            "help": {
+                "create":"If the position is different from the current one, indicate it on the map, press the camera button to zoom in on the photo, insert comments (max 255 characters) and press Add",
+                "show": "Press the camera button to zoom in, insert your comment (max 255 characters) and finally press Add. ",
+                "label":"Press the camera button to zoom in, insert your comment (max 255 characters) and finally press Add"
+            },
+            "created": "New photo '{{ code }}' successfully created",
+                  "updated": "Photo '{{ code }}' successfully updated",
+                  "deleted": "Photo '{{code}}' successfully deleted",
+                  "delete":
+            {
+                "question": "Do you want to delete the photo {{ code }}?"
+            },
+            "map": {
+                    "activelayer": "Active layer",
+                    "centermap": "Center",
+                    "confirm": "Confirm",
+                    "confirmdeletepoint": "The selected point will be deleted. Do you want to continue?",
+                    "draw": "Draw",
+                    "manual": "Manual(Lat/Lon)",
+                    "points": "Delete",
+                    "currentPoint":"Current location",
+                    "edit": "Edit",
+                    "info": {
+                        "draw":"Mark the points on the map",
+                        "deletePoint":"Indicate the points to remove",
+                        "none":"Enter the coordinates manually or press to collect the current position of your device"
+                    }
+            },
+            "unlink":
+            {
+                "question": "Do you want to delete the photo {{ code }}?"
+            },
+            "messages":
+            {
+                "geometry": "Insert the geographical location of the photograph by painting directly on the map or by manually setting the center coordinates."
+            },
+            "detail":
+            {
+                "title": "Photography",
+                "fieldset":
+                {
+                    "origin": "Origin of contamination",
+                    "cause": "Cause"
+                },
+                "validate": {
+                    "maxfilesize": "Cannot upload files larger than 10MB, file: {{name}}",
+                    "selectfile":"Please select an image",
+                    "markphotoonmap":"Please mark the position of the photo on the map",
+                    "drawsegmentonmap": "Enter the data requested in the form and paint the affected segment on the map",
+                    "confirmdeletepoint": "This operation will delete the selected point. Are you sure?"
+                 }
+            },
+            "entityname": "Photograph",
+                 "comments": "Comments",
+                 "file": "File",
+                 "filename": "File name",
+                 "createdtime": "Created at",
+                 "help": {
+                   "create":"If the position differs from the current one, indicate it on the map, insert the comments and press Add.",
+                   "noresults": "There are no photos. Create one by pressing the <i class='ion-plus-round'></i> button"
+            
+            }
+        }
+    }
+}

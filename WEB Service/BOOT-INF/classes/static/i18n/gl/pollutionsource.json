@@ -1,0 +1,122 @@
+{
+
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)=(.*)$":
+    {
+        "$1": "$2"
+    },
+    "label_eu_arcopol_domain_pollution_spill_([a-z]*)_([a-z]*)=(.*)$":
+    {
+        "$1":
+        {
+            "$2": "$3"
+        }
+    },
+
+    "app":
+    {
+        "pollutionsource":
+        {
+            "title": "Fontes Cont.",
+            "home":
+            {
+                "title": "Fonte Contaminante",
+                "createLabel": "Crear nova fonte contaminante",
+                "linkLabel": "Vincular fonte contaminante",
+                "createOrEditLabel": "Crear ou editar fonte contaminante",
+                "search": "Buscar fonte contaminante"
+            },
+            "createform":
+            {
+                "step1": "Orixe",
+                "step2": "Causa",
+                "step3": "Ubicación"
+            },
+            "created": "Nova fonte contaminante '{{ code }}' creada correctamente",
+            "updated": "Fonte '{{ code }}': Actualizada correctamente",
+            "deleted": "Fonte '{{code}}'' eliminada correctamente",
+            "delete":
+            {
+                "question": "Desexas eliminar a fonte contaminante {{ code }}?"
+            },
+            "unlink":
+            {
+                "question": "Desexas eliminar a fonte contaminante {{ code }}?"
+            },
+            "messages":
+            {
+                "geometry": "Insere a localización xeográfica da fonte contaminante pintando directamente no mapa ou establecendo manualmente as coordenadas do centro.",
+                "affectedarea": "Establece a extensión do área afectada manualmente ou medindo no mapa (premendo no botón de cada campo).",
+                "validate":
+                {
+                    "height":
+                    {
+                        "required": "Debes indicar lonxitude",
+                        "invalid": "Valor da lonxitude non válido"
+                    },
+                    "course":
+                    {
+                        "required": "Debes indicar un valor para a deriva (graos)",
+                        "invalid": "O valor debe estar entre 0 e 360"
+                    }
+                }
+            },
+            "detail":
+            {
+                "title": "Mancha",
+                "tab":
+                {
+                    "caller": "Comunicante",
+                    "observer": "Observador",
+                    "meteo": "Condicións Meteorolóxicas",
+                    "spills": "Manchas",
+                    "pollutionsources": "Fontes",
+                    "photos": "Fotos",
+                    "comments": "Comentarios"
+                },
+                "fieldset":
+                {
+                    "origin": "Orixe da contaminación",
+                    "cause":"Causa"
+                }
+            },
+            "entityname": "Fonte da contaminación",
+            "code": "Código",
+            "causedescription": "Descrición (da causa)",
+            "createdtime": "Hora de creación",
+            "description": "Descrición",
+            "geometry": "Xeometría",
+            "id": "UUID",
+            "name": "Nome",
+            "observedtime": "Data/hora",
+            "plural": "Fontes de contaminación",
+            "pollutioncause": "Causa",
+            "pollutionreport": "Informe POLREP",
+            "positions": "Posicións ",
+            "sourcetrack": "Ruta da fonte",
+            "sourcetype": "Tipo fonte",
+            "help": {
+                "create":"Se a posición difire da actual indícaa no mapa, insere os comentarios e preme Engadir.",
+                "noresults": "Non existen fontes contaminantes. Crea unha premendo o botón <i class='ion-plus-round'></i>"
+            }
+        },
+        "pollutioncause":
+        {
+            "collision": "Colisión",
+            "sink": "Naufraxio",
+            "explosion": "Explosión",
+            "runaground": "Embarrancada",
+            "leak": "Derrame operativo",
+            "loadfuel": "Toma de combustible",
+            "unknown": "Descoñecido",
+            "others": "Outros"
+        },
+
+        "sourcetype":
+        {
+            "ship": "Barco",
+            "land": "Terra",
+            "unknown": "Descoñecido"
+
+        }
+    }
+}

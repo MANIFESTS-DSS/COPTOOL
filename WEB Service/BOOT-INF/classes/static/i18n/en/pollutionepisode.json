@@ -1,0 +1,138 @@
+{
+    "app/[folder(singular)]/[subfloders]": "Name/translate rules",
+    "app":
+    {
+        "pollutionepisodemap":
+        {
+            "title": "Viewfinder"
+        },
+        "pollutionepisode":
+        {
+            "title": "Contingencies",
+			"publicUser": "Public user",
+            "pollutionreports":
+            {
+                "title": "POLREP"
+            },
+            "scatreports":
+            {
+                "title": "POLREP Coast"
+            },
+            "map":
+            {
+                "title": "Map"
+            },
+            "photos":
+            {
+                "title": "Photos"
+            },
+            "home":
+            {
+                "title": "Contingencies",
+                "createLabel": "New Episode",
+                "copyLabel": "Copy Episode",
+
+               "linkLabel": "Assign a new client",
+               "createOrEditLabel": "Create or edit a Customer",
+               "search": "Search Customer"
+            },
+            "createform":
+            {
+                "step1":"Information",
+                "step2": "Affected area",
+                "step3": "Layers",
+                "step4": "Users"
+            },
+            "copydialog":
+            {
+                "title": "Copy Episode",
+                 "message": "A copy of the current Episode will be made. Do you want to continue?",
+                 "success": "Episode copied successfully"
+            },
+
+           "created": "New Episode created. Identifier {{ id }}",
+             "updated": "Episode updated successfully",
+             "deleted": "Episode deleted",
+            "delete":
+            {
+                "question": "Do you want to delete the episode?"
+            },
+
+            "unlink":
+            {
+                "question": "Are you sure you want to unbind Contingency {{ id }}?"
+            },
+            "create":
+            {
+                "title": "New"
+            },
+            "detail":
+            {
+                "title": "{{pollutionepisode.name}}",
+                "tab":
+                {
+                   "info": "Information",
+                   "map": "Map",
+                   "pollutionreports": "POLREPs",
+                   "scatreports": "SCAT",
+                   "photos": "Photos",
+                   "logbookrecords": "Log",
+                   "users": "Users",
+                   "layers": "Layers",
+                   "observers": "Observers",
+                   "gislayouts":"Maps"
+
+                },
+                "pub":
+                {
+                   "linkTitle": "Share link",
+                   "link": "Link to share",
+                   "linkCopy": "Copy the link to share",
+                   "linkCopied": "Link copied to clipboard"
+                },
+                "fieldset":
+                {
+                    "inputPublish":
+                    {
+                        "title": "Allow public access to the episode?"
+                    }
+                }
+            },
+            "search":
+            {
+               "placeholder": "Search by name..."
+            },
+            "code": "Code",
+            "name": "Name",
+            "status": "Status",
+            "description": "Description",
+            "begintime": "Start time",
+            "endtime": "End time",
+            "pollutionreports": "POLREPs",
+            "tags": "Tags",
+            "rating": "Rating",
+            "publish": "Publish?",
+            "publicAccess": "Public Access",
+            "publishclose":"Publish and close",
+            "requireAuthentification": "Requires Authentication"
+        },
+        "episodestatus":
+        {
+            "NEW": "New",
+            "OPEN": "Open",
+            "CLOSE": "Completed",
+            "ARCHIVED":"Archived"
+        },
+        "map":
+        {
+            "draw":
+            {
+              "point": "Point",
+              "linestring": "Line",
+              "polygon": "Polygon",
+              "asset": "Item",
+              "cancel": "Cancel"
+        }
+    }
+}
+}

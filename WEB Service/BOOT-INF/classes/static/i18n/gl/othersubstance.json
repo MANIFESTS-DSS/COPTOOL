@@ -1,0 +1,127 @@
+{
+    "app":
+    {
+        "othersubstance":
+        {
+             "home":
+            {
+                "title": "Outras sustancias",
+                "createLabel": "Crear novo rexistro"
+            },
+            "createform":
+            {
+                "step1": "Detalles",
+                "step2": "Ubicación xeográfica"
+            },
+             "created": "Nova sustancia {{ code }} creada correctamente",
+            "updated": "Sustancia {{ code }}: actualizada correctamente",
+            "deleted": "Sustancia {{code}} eliminada correctamente",
+            "delete":
+            {
+                "question": "Desexas eliminar a sustancia {{ code }}?"
+            },
+            "unlink":
+            {
+                "question": "Desexas eliminar a sustancia {{ code }}?"
+            },
+            "messages":{
+                "geometry": "Insere a localización xeográfica da sustancia pintando directamente no mapa",
+                "affectedarea": "Establece a extensión da área afectada manualmente ou medindo no mapa (premendo no botón de cada campo).",
+                "validate": {
+                    "height": {
+                        "required":"Debes indicar lonxitude",
+                        "invalid":"Valor da lonxitude non válido"
+                    },
+                    "course": {
+                        "required": "Debes indicar un valor para a deriva (graos)",
+                        "invalid":"O valor debe estar entre 0 e 360" 
+                    }
+                }
+            },
+            "help": {
+                "create": "Introduce os datos solicitados no formulario e pinta sobre o mapa a superficie afectada pola sustancia",
+                "edit": "Introduce os datos solicitados no formulario e pinta sobre o mapa a superficie afectada pola sustancia",
+                "create_old":"Se a posición difire da actual indícaa no mapa, insere os comentarios e pulsa Engadir.",
+                "noresults": "Non existen rexistros da sustancia. Crea un premendo o botón <i class='ion-plus-round'></i>"
+            },
+            "detail":
+            {
+                "title": "Sustancia contaminante",
+                "map":
+                {
+                    "deletepoints": "Eliminar puntos",
+                    "edit": "Editar superficie"
+                }
+            },
+            "title": "Sustancia contaminante",
+            "id": "ID",
+            "code": "Código",
+            "distribution": "Distribución",
+            "geometry": "Área xeográfica",
+            "pitid": "ID Cata",
+            "zoneid": "Zona ID",
+            "pitid": "ID Cata",
+            "burieddepth": "Nivel do contaminante (cm)",
+            "buriedthickness": "Espesor contaminado (cm)",
+            "buriedwater": "Nivel da agua (cm)",
+            "cleanbelow": "Limpo debaixo",
+            "pitdepth": "Profundidade da cata (cm)",
+            "burieddepth": "Nivel do contaminante (cm)",
+            "buriedthickness": "Espesor contaminado (cm)",
+            "buriedwater": "Nivel da agua (cm)",
+            "distribution":
+            {
+                "title": "Distribución da contaminación",
+                "trace": "Trazas( < 1 % )",
+                "sporadic": "Esporádico(1 - 10 % )",
+                "patchy": "Discontinuo(11 - 50 % )",
+                "broken": "Fragmentado(51 - 90 % )",
+                "continuous": "Continuo(91 - 100 % )",
+                "extensive": "Común",
+                "frequent": "Frequente",
+                "uncommon": "Pouco común"
+            },
+            "thickness":
+            {
+                "title": "Espesor",
+                "to": "Balsa(BA)",
+                "cv": "Cuberta(CV)",
+                "ct": "Capa(CA)",
+                "st": "Mancha(MA)",
+                "fl": "Película(PE)"
+            },
+            "zonestart": "Inicio contaminación",
+            "zoneend": "Fin contaminación",
+            "subsurface":"Baixo superficie",
+            "description":"Descrición",
+            "cover":"Cobertura da sustancia",
+            "coverlength": "Lonxitude",
+            "coverwidth": "Ancho",
+            "latitude": "Latitude",
+            "longitude": "Lonxitude",
+            "substrate": "Substrato",
+            "plural": "Sustancias contaminantes",
+            "substratumtypes": "Tipos de substrato",
+            "tidalzone": "Zona mareal",
+            "level": "Nivel",
+            "character":
+            {
+                "title": "Apariencia da sustancia",
+                "fr": "Fresco",
+                "ms": "Mousse",
+                "tb": "Bolas de alquitrán",
+                "pt": "Galletas de alquitrán",
+                "sr": "Residuo oleoso superficial",
+                "ap": "Pavimentos de asfalto"
+            },
+            "level":
+            {
+                "title":"Posición mareal",
+                "l": "Inferior",
+                "m": "Media",
+                "u": "Superior",
+                "s": "Supra mareal"
+            }
+        }
+    }
+}
