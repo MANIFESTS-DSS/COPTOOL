@@ -1,0 +1,91 @@
+banner:
+  location: classpath:/logoQualigy.txt
+
+server:
+  address: 127.0.0.1
+  port: ${port:9000}
+  context-path: /
+  compression:
+    enabled: true
+    mime-types:
+    - application/json
+    min-response-size: 0
+
+spring:
+#  main:
+#    banner-mode: off
+  http:
+    multipart:
+      enabled: true
+      location: <yourMultipartLocation>
+      max-file-size: 10MB
+      max-request-size: 10MB
+  application:
+    name: arcopol-api
+ 
+  jpa:
+    database: POSTGRESQL
+    database-platform: org.hibernate.spatial.dialect.postgis.PostgisDialect
+    generate-ddl: false
+    properties:
+      javax.persistence.schema-generation.create-source: metadata
+      javax.persistence.schema-generation.scripts.action: create
+      javax.persistence.schema-generation.scripts.create-target: create.sql
+    hibernate:
+      ddl-auto: validate #update,none,create,
+      naming.implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl 
+      naming.strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    show-sql: false
+
+  datasource:
+    platform: postgres
+    url: <yourDataBaseJDBCUrl>
+    username: <databaseusername>
+    password: <databaseuserpassword>
+
+  jackson:
+    default-property-inclusion: non-null
+    serialization: 
+      INDENT_OUTPUT: false
+  data: 
+    rest:
+      default-page-size: 20
+      max-page-size: 10000
+  #In order to omit _embedded in you response you'll need to add
+  hateoas:
+    use-hal-as-default-json-media-type: false
+    
+security:
+#  user:
+#    password: user
+  sessions: NEVER 
+  oauth2:
+    resource.jwt.keyValue: |
+          -----BEGIN PUBLIC KEY-----
+          <yourJWTKeyValue>
+          -----END PUBLIC KEY-----
+diskfilemanager:
+  repositoryPath: <yourRepositoryPath>
+  fileSeparator: _
+
+#arcopol JWT Security Token
+security.jwt:
+  tokenExpirationTime: 2880 # Number of minutes - 2D:2880,1D: 1440
+  refreshTokenExpTime: 2880 # Minutes
+  tokenIssuer: <yourTOkenIssuer>
+  tokenSigningKey: <yourTokenSigningKey>
+
+arcopol:
+  visor-url: <yourVisorURL>
+  mail:
+    from: <youremail@qualigy.com>
+    base-url: <yourbaseUrl>
+  
+logging:
+  level:
+    root: INFO
+    
+    
+
+  
+  
