@@ -2,9 +2,7 @@ banner:
   location: classpath:/logoQualigy.txt
 
 server:
-  #Only accesible from localhost (secure resource server)
-  #address: 127.0.0.1
-  #Set port at runtime with -Dport=9091 ( -Ddb=arcopol-xxxx )
+  address: 127.0.0.1
   port: ${port:9000}
   context-path: /
   compression:
@@ -13,14 +11,13 @@ server:
     - application/json
     min-response-size: 0
 
-
 spring:
 #  main:
 #    banner-mode: off
   http:
     multipart:
       enabled: true
-      location: C:/APLICACIONES/coptool/temp
+      location: <yourMultipartLocation>
       max-file-size: 10MB
       max-request-size: 10MB
   application:
@@ -29,7 +26,6 @@ spring:
   jpa:
     database: POSTGRESQL
     database-platform: org.hibernate.spatial.dialect.postgis.PostgisDialect
- #   database-platform: org.hibernate.dialect.PostgreSQLDialect
     generate-ddl: false
     properties:
       javax.persistence.schema-generation.create-source: metadata
@@ -37,19 +33,15 @@ spring:
       javax.persistence.schema-generation.scripts.create-target: create.sql
     hibernate:
       ddl-auto: validate #update,none,create,
-      #naming.strategy: eu.arcopol.api.util.LowerCaseNamingStrategy
       naming.implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl 
-      #naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
       naming.strategy: org.hibernate.cfg.ImprovedNamingStrategy
     show-sql: false
 
   datasource:
     platform: postgres
-#    # driverClass deduced by spring from url
-#    #driverClassName: org.postgresql.Driver
-    url: jdbc:postgresql://10.100.0.153:5432/${db:coptool}
-    username: coptool
-    password: c0pt00l
+    url: <yourDataBaseJDBCUrl>
+    username: <databaseusername>
+    password: <databaseuserpassword>
 
   jackson:
     default-property-inclusion: non-null
@@ -62,23 +54,6 @@ spring:
   #In order to omit _embedded in you response you'll need to add
   hateoas:
     use-hal-as-default-json-media-type: false
-  mail:
-    host: smtp.1and1.es
-    port: 587
-    username: info@xesmar.es
-    password: .info.xesmar.1
-    properties: 
-      mail.smtp.auth: true
-      mail.smtp.starttls.enable: true
-      
-      
-#Actuator
-management:
-  port: -1
-  address: 127.0.0.1
-  context-path: /actuator
-  security:
-    enabled: false
     
 security:
 #  user:
@@ -87,52 +62,28 @@ security:
   oauth2:
     resource.jwt.keyValue: |
           -----BEGIN PUBLIC KEY-----
-          MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnGp/Q5lh0P8nPL21oMMrt2RrkT9AW5jgYwLfSUnJVc9G6uR3cXRRDCjHqWU5WYwivcF180A6CWp/ireQFFBNowgc5XaA0kPpzEtgsA5YsNX7iSnUibB004iBTfU9hZ2Rbsc8cWqynT0RyN4TP1RYVSeVKvMQk4GT1r7JCEC+TNu1ELmbNwMQyzKjsfBXyIOCFU/E94ktvsTZUHF4Oq44DBylCDsS1k7/sfZC2G5EU7Oz0mhG8+Uz6MSEQHtoIi6mc8u64Rwi3Z3tscuWG2ShtsUFuNSAFNkY7LkLn+/hxLCu2bNISMaESa8dG22CIMuIeRLVcAmEWEWH5EEforTg+QIDAQAB
+          <yourJWTKeyValue>
           -----END PUBLIC KEY-----
 diskfilemanager:
-  repositoryPath: C:/APLICACIONES/coptool/coptool_repository
+  repositoryPath: <yourRepositoryPath>
   fileSeparator: _
 
-firebase:
-  apiUrl: https://fcm.googleapis.com/fcm/send
-  serverKey: AIzaSyAYI_7EXG2goAqTuANnhYl9dCQyafLvRWY
-  apiKey: AAAAlP6P3VY:APA91bEa18urGBALXul0tXLJbC2zdgvvga_mlNmevVJYNXIAJzpWsUu5WFcStc9fNuWxjMaNlylDHY_rP7RCCZNdRDGmb_hX6FYomUCetDzxGCZ4fQ1ln7uMETpx3noahWje3TQzkmIP
-  subscribeUrl: http://iid.googleapis.com/iid/v1:batchAdd
-  unsubscribeUrl: http://iid.googleapis.com/iid/v1:batchRemove
-
-  #arcopol JWT Security Token
+#arcopol JWT Security Token
 security.jwt:
-  tokenExpirationTime: 10000 # Number of minutes
-  refreshTokenExpTime: 1200 # Minutes
-  tokenIssuer: http://www.arcopol.eu
-  tokenSigningKey: dF9D4S6RlrXX20yrXmFdMpd77vz9W/IiVJz4/tVx3ilb4EK/eMfkfFSmxSy1U4aLdp5MqDKc3jijhsaWBXbXlw==
+  tokenExpirationTime: 2880 # Number of minutes - 2D:2880,1D: 1440
+  refreshTokenExpTime: 2880 # Minutes
+  tokenIssuer: <yourTOkenIssuer>
+  tokenSigningKey: <yourTokenSigningKey>
 
 arcopol:
-  #https://193.144.46.142/xescamgal-visor/?id=297e53aa5c2ec0be015ca07a88720002
-  #http://www.intecmar.gal/xescamgal-visor/?id=8ae4808d6306dd890164cd5c864b0008
-  #visor-url: https://www.plancamgal.gal/coptool-visor
-  #visor-url: http://coptool.plancamgal.gal/coptool-visor/
-  visor-url: http://dev.sixtema.es/visor-plancamgal/stg/
+  visor-url: <yourVisorURL>
   mail:
-    from: info@qualigy.com
-    base-url: http://localhost:8080 #arcopol.qualigy.com
-liquibase:
-  enabled: false #this is optional as enabled by default
-  change-log: classpath:/db/changelog/db-changeLog-master.xml
+    from: <youremail@qualigy.com>
+    base-url: <yourbaseUrl>
   
 logging:
   level:
     root: INFO
-    #Show SQL Parameters
-    #org.hibernate.type.descriptor.sql.BasicBinder: TRACE
-    #org.springframework.data-rest: DEBUG
-    #org.springframework.web.client: DEBUG
-    #org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
-    eu.arcopol.api: INFO
-    eu.arcopol.api.service: DEBUG
-    #org.hibernate.boot.model.naming: TRACE
-    #org.springframework.web.method: DEBUG
-    #    org.springframework.security: DEBUG
     
     
 
